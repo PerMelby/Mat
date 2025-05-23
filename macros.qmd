@@ -1,0 +1,9 @@
+::: {.hidden}
+
+$$
+\newcommand*{\e}{\mathrm{e}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+$$
+
+:::

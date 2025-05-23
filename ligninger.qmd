@@ -1,0 +1,221 @@
+# Ligninger
+
+
+En ligning kan tolkes som et åbent udsagn, $x+2=7$, som vi ønsker at
+gøre sandt. Vi kan ikke umiddelbart afgøre om $x+2=7$ er et sandt
+udsagn, men hvis $x=5$ er udsagnet sandt.
+
+::: {.callout-note}
+## Hvad det vil sige at løse en ligning
+
+At løse en ligning går ud på at finde det tal, som $x$ skal
+repræsentere, sådan at udsagnet bliver sandt, d.v.s så udtrykkene på
+begge sider af lighedstegnet giver det samme.
+:::
+
+For at finde frem til dette tal, som $x$ skal repræsentere, gør vi brug
+af regneoperationer.
+
+## Regneoperationer
+
+::: {.Definition}
+## Regneoperationer
+
+Med \textbf{regneoperation} menes her, at man må: <br> Lægge det samme
+tal til og trække det samme tal fra.
+
+$$
+\begin{aligned}
+a&=b \Leftrightarrow a+c = b+c &  a&=b \Leftrightarrow a-d = b-d 
+\end{aligned}
+$$
+Gange med det samme tal og dividere med det samme tal (0 undtaget).
+
+$$
+\begin{aligned}
+a&=b \Leftrightarrow ka = kb & a&=b \Leftrightarrow \frac{a}{m} = \frac{b}{m} 
+\end{aligned}
+$$
+
+hvor $k,m$ er tal forskellige fra 0.
+:::
+
+Vi bruger regneoperationer for at "få $x$ til at stå alene", eller
+"isolere x".
+
+I eksemplet fra før vil vi trække 2 fra på begge sider (af
+lighedstegnet)
+
+$$
+\begin{aligned}
+x+2&=7 \Leftrightarrow \\
+x+2 \textcolor{red}{-2} &= 7\textcolor{red}{-2} \Leftrightarrow \\
+x&=5
+\end{aligned}
+$$
+
+Bemærk, at vi forbinder linjerne med *biimplikationspilene*
+$\Leftrightarrow$.
+
+## Ligninger ud fra tekst
+
+Jeg tænker på et tal. Når jeg gør tallet 4 gange så stort og lægger 10
+til, får jeg 50. Vi når forhåbentligt frem til, at det ukendte tal i
+denne gåde er 10, fordi 4 gange 10 plus 10 er lig 50,
+$4 \cdot 10 +10=50$. Matematisk skriver vi
+
+$$
+\begin{aligned}
+4x+10=50
+\end{aligned}
+$$
+og $x$ betegner det tal, der gør udsagnet sandt (og i dette tilfælde
+tallet der tænkes på).
+
+Løsningsmetoden har ikke ændret sig. Det går stadig ud på at "få $x$ til
+at stå alene" v.h.a regneoperationer.
+
+Vi går i dette tilfælde "baglæns", d.v.s trækker 10 fra og dividerer med
+4, hvilket vi skriver som:
+
+$$
+\begin{aligned}
+4x+10&=50 \Leftrightarrow \\
+4x+10\textcolor{red}{-10}&=50\textcolor{red}{-10} \Leftrightarrow \\
+4x&=40 \Leftrightarrow \\
+\frac{4x}{\textcolor{red}{4}} &= \frac{40}{\textcolor{red}{4}} \Leftrightarrow \\
+x&=10
+\end{aligned}
+$$
+::: {.Eksempel}
+## Eksempel løsning af næsten den samme gåde
+
+Vi kunne også formulere en anden gåde, der lyder "næsten" på samme måde
+og så alligevel slet ikke. Når jeg lægger 10 til og derefter gør
+resultatet fire gange så stort, så får jeg 50. Her er svaret **ikke** 10, fordi $(10+10)\cdot 4 = 80$. 
+
+Ligningen vi løser i stedet er:
+
+$$
+\begin{aligned}
+(x+10) \cdot 4 &= 50 & (x+10) \cdot 4 &= 50 \Leftrightarrow \\
+4(x+10)&=50 & 4(x+10)&=50\Leftrightarrow \\
+4x+40&=50 & x+10 &= \frac{50}{4} \Leftrightarrow \\
+4x&=10 & x+10& =12,5\Leftrightarrow \\
+x&=2,5 & x&=2,5
+\end{aligned}
+$$
+Bemærk, der er to måder at "komme i mål på", og den ene er ikke mere
+rigtig end den anden.
+:::
+
+::: {.Eksempel}
+## Eksempel på løsning med x på begge sider af lighedstegnet
+
+Vi kan gå videre med at udtrykke ligninger som gåder ved at påstå, at et
+tal ganget med 5 og derefter lagt 6 til, giver det samme, som hvis
+tallet ganges med 2 og der lægges 12 til. Her ender vi med en ligning
+"*med x'er på begge sider af lighedstegnet*"
+
+Som det første sørger vi for at fjerne det laveste antal x'er på begge
+sider, så vi har en ligning som før:
+
+$$
+\begin{aligned}
+5x+6 &= 2x+12\Leftrightarrow \\
+5x+6\textcolor{red}{-2x} &= 2x+12\textcolor{red}{-2x}  \Leftrightarrow \\
+3x+6 &= 12 \Leftrightarrow \\
+3x + 6 \textcolor{red}{- 6} &= 12 \textcolor{red}{-6} \Leftrightarrow \\
+3x &= 6 \Leftrightarrow \\
+\frac{3x}{\textcolor{red}{3}} &= \frac{6}{\textcolor{red}{3}} \Leftrightarrow \\
+x &= 2
+\end{aligned}
+$$
+:::
+
+
+## At gøre prøve
+
+*At gøre prøve* vil sige, at man indsætter resultatet på $x's$ plads i
+ligningen og tjekker, at man får samme resultat på venstre og højre
+side.
+
+::: {.Eksempel}
+
+## Eksempel på at gøre prøve
+
+Vi løste tidligere ligningen $5x+6 = 2x+12$ og fandt frem til, at
+løsningen måtte være $x=2$.
+
+Vi indsætter og tjekker efter (og undervejs bruger vi naturligvis
+regnearternes hierarki):
+
+$$
+\begin{aligned}
+5 \cdot \textcolor{blue}{2}+6 &= 2 \cdot \textcolor{blue}{2}+12\Leftrightarrow \\
+10 + 6 & = 4 + 12 \Leftrightarrow \\
+16 &= 16 \: \: \: \surd
+\end{aligned}
+$$
+:::
+
+::: {.callout-note}
+## At løse en ligning er ikke det samme som at gætte
+
+Bemærk, at man **ikke** løser en ligning ved at *gætte* en løsning,
+indsætte og tjekke at det passer. (Omend vi ikke er afvisende over for
+den form for indsigt).
+
+At løse ligninger handler om at mestre teknikkerne til at nå frem til et
+svar, mere end det handler om at gætte rigtigt.
+
+Er løsningen ikke et helt tal, er det nærmest umuligt at gætte
+alligevel.
+:::
+
+::: {.callout-caution icon="false" collapse="true"}
+## Løs følgende ligninger:
+
+$$
+\begin{aligned}
+x-3&=3 &  2x - 3 &= 7 \\
+ 3-x&=7 &  21&=4x+9 \\
+5x-21&=-41  &   2x&=-14 \\
+ 3x+100 &= 250 &   \frac{1}{3}x&=5 \\
+ \frac{x}{3} &= 8 &  3(x-3) &= 12  \\
+ 2(x+3)&=14 & (8-x)4&=20  
+\end{aligned}
+$$
+:::
+
+
+::: {.callout-caution icon="false" collapse="true"}
+## Løs følgende ligninger og "gør prøve":
+
+
+$$
+\begin{aligned}
+3x + 10 &= 18 + x  &   -x + 16 &= 10 + x \\
+2x + 3 &= -3x + 6 &    1,2x + 4,4 &= 0,8x + 5,2 \\
+x+24&=2x+12 & 11x-100 &= 4x-30 \\
+ 4x-11 &=22+x & 5(x-5) &= 2x-7  \\ 
+6+(x-5) &=2x-7 & 7x-3&=4(x+2)+2x-8 \\
+2+5(x-4)-2x&=x+6 & \frac{x+12}{2} &= 10 \\
+ \frac{6-2x}{4}  -2 &= 0 & 2x+5 &= 3x+9
+\end{aligned}
+$$
+:::
+
+::: {.callout-caution icon="false" collapse="true"}
+## Opstil ligninger fra tekst
+
+Opstil ligninger og løs disse ud fra følgende beskrivelser: <br> 
+**a)**
+Når et tal ganges med 4 og der lægges 4 til bagefter, giver det samme
+resultat, som hvis man fordobler tallet og lægger 8 til.<br> 
+**b)** Når
+der lægges 11 til et tal og resultatet ganges med 2, får man samme
+resultat, som hvis tallet ganges med 5 og resultatet fratrækkes 8. <br>
+**c)** Hvis der trækkes 1/8 fra tallet og resultatet ganges med 4 kan
+jeg trække 1/2 fra og få tallet plus én.
+:::

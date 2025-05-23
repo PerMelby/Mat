@@ -1,0 +1,641 @@
+# Eksponentialfunktion og eksponentiel udvikling
+
+::: {.Definition}
+
+## Eksponentialfuntion og eksponentiel udvikling
+
+En **eksponentialfunktion** er en funktion på formen:
+$$
+\begin{aligned}
+f(x)=a^x
+\end{aligned}
+$$
+$a$ kaldes *grundtallet*
+
+En **eksponentiel udvikling** er en funktion på formen:
+
+$$
+\begin{aligned}
+f(x)=b \cdot a^x
+\end{aligned}
+$$
+
+hvor $a,b \in \mathbb{R}_+$, $a \neq 1$. 
+
+$a$ kaldes **fremskrivningsfaktoren** <BR>
+$b$ kaldes **begyndelsesværdien** <BR>
+
+For både eksponentialfunktioner og eksponentielle udviklinger gælder, at: <BR>
+Dm($f$)=$\mathbb{R}$ og Vm($f$)=$\mathbb{R}_+$ 
+
+:::
+
+**Bemærk:** En eksponentiel udvikling med $b=1$ kaldes en `eksponentialfunktion`.
+
+Da værdimængden kun kan antage positive reelle værdier findes grafen for en eksponentiel udvikling kun i 1. og 2. kvadrant.
+
+::: {.Eksempel}
+
+## Eksempel på eksponentialfunktion og eksponentiel udvikling
+
+En eksponentialfunktion er givet ved: $f(x)=2^x$. Her er $a=2$.
+
+En eksponentiel udvikling er givet ved: $g(x)=3 \cdot 1,5^x$. Her er $a=1,5$ og $b=3$ 
+
+:::
+
+::: {.Sætning}
+
+## Skæring med y-aksen
+
+For en eksponentiel udvikling $f(x)=b \cdot a^x$ gælder, at $f(0)=b$.
+
+:::
+
+*Bevis* <br>
+$f(0)= b \cdot a^0 = b \cdot 1 = b$
+$\square$
+
+
+::: {.Sætning}
+
+## Vækstegenskab
+
+Hvis $x$ vokser med $1$ ganges funktionsværdien med $a$. D.v.s $f(x+1)=f(x) \cdot a$. 
+
+:::
+
+*Bevis* <br>
+$f(x+1)= b \cdot a^{x+1} = b \cdot a^x \cdot a^1 = b \cdot a^x \cdot a = f(x) \cdot a$
+$\square$
+
+## Tabel og graf for eksponentiel udvikling
+
+Vi sætter og $f(x)=2 \cdot 2^x$ og indsætter nogle værdier fra definitionsmængden sammen med tilhørende funktionsværdier i en tabel.
+
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for funktionen f(x)=2 &middot; 2<sup>x</sup></caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">x</th>
+    <td>-1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">f(x)</th>
+    <td>1</td>
+    <td>2</td>
+    <td>4</td>
+    <td>8</td>
+    <td>16</td>
+    <td>32</td>
+  </tr>
+</table>
+```
+For at udfylde nederste række, har vi udført følgende beregninger: 
+$$
+\begin{aligned}
+f(\textcolor{red}{0})&=2 \cdot 2^{\textcolor{red}{-1}} = 2 \cdot 1/2=1 \\
+f(\textcolor{red}{1})&=2 \cdot 2^{\textcolor{red}{1}} = 2 \cdot 2=4 \\
+f(\textcolor{red}{0})&=2 \cdot 2^{\textcolor{red}{0}} = 2 \cdot 1=2 \\
+f(\textcolor{red}{1})&=2 \cdot 2^{\textcolor{red}{1}} = 2 \cdot 2=4 \\
+f(\textcolor{red}{2})&=2 \cdot 2^{\textcolor{red}{2}} = 2 \cdot 4=8 \\
+f(\textcolor{red}{3})&=2 \cdot 2^{\textcolor{red}{3}} = 2 \cdot 8=16 \\
+f(\textcolor{red}{4})&=2 \cdot 2^{\textcolor{red}{4}} = 2 \cdot 16=32
+\end{aligned}
+$$
+Vi kan ligesom hos de lineære funktioner aflæse $b$-værdien i feltet under $x=0$. Forskellen på de lineære funktioner ses i rækken med funktionsværdier. 
+
+Hvor vi før under lineære funktioner havde $+a$, når $x$ voksede med 1, har vi nu $\cdot a$, når $x$ vokser med 1. 
+
+Grafen for en eksponentiel udvikling kan derfor heller ikke være en ret linje, hvilket også kan ses på figuren herunder
+
+```{python}
+#| echo: false
+
+
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.arange(-1, 4., 0.02)
+lin = 2*2**x
+
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+
+# Move left y-axis and bottom x-axis to centre, passing through (0,0)
+ax.spines['left'].set_position('zero')
+ax.spines['bottom'].set_position('zero')
+
+# Eliminate upper and right axes
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+
+# Show ticks in the left and lower axes only
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+plt.plot([-1, 1, 2, 3, 4],[1, 4, 8, 16, 32],'bo', label="Tabellens punkter")
+plt.plot([0],[2],'go', markersize=10, label="Skæring med y-akse")
+
+plt.plot(x,lin, 'r', label='$f(x)=2 * 2^{x}$')
+# plt.axis('scaled')
+plt.legend(loc='upper center')
+plt.grid()
+
+plt.show()
+```
+
+**Bemærk** at vi før viste, at $f(0) = b$. Her er $b=2$, så grafisk ses det som, at skæringspunktet mellem grafen for $f$ og *y*-aksen er $(0,2)$, som er vist med den grønne (forstørrede) prik.
+
+Ligesom i tilfældet med grafen for lineære funktioner kan vi v.h.a to punkter på grafen for en eksponentiel udvikling bestemme $a$ og $b$ som formuleret i følgende sætning.
+
+::: {.Sætning}
+
+## Topunksformlen for eksponentielle udviklinger
+
+Lad to punkter $(x_1,y_1)$ og $(x_2,y_2)$ være givet på grafen for $f(x)=b \cdot a^x$, hvor $x_1 \neq x_2$. Da er:
+
+$$
+\begin{aligned}
+a&=\sqrt[x_2-x_1]{\frac{y_2}{y_1}} \qquad \text{og} \qquad b=\frac{y_i}{a^{x_i}}, \quad i=1,2
+\end{aligned}
+$$
+:::
+
+*Bevis for bestemmelse af $a$*
+$$
+\begin{align*}
+y_2&=b \cdot a^{x_2} \Leftrightarrow  \\
+\frac{y_2}{y_1} &= \frac{b \cdot a^{x_2}}{y_1} \Leftrightarrow \\
+\frac{y_2}{y_1} &= \frac{b \cdot a^{x_2}}{b \cdot a^{x_1}} \\
+&= \frac{a^{x_2}}{a^{x_1}} \\
+&=a^{x_2-x_1} \Leftrightarrow \\
+a&=\sqrt[x_2-x_1]{\frac{y_2}{y_1}}
+\end{align*}
+$$
+
+
+*Bevis for b* <br>
+Lad $i$ være lig med 1 eller 2.
+$$
+\begin{aligned}
+b \cdot a^{x_1} &= y_i \\
+b&= \frac{y_i}{a^{x_i}}
+\end{aligned}
+$$
+
+::: {.Eksempel}
+
+## Eksempel på brug af to-punktsformel
+
+På figuren ovenfor er der bl.a indtegnet punkterne (1,4) og (3,16) og vi sætter $(x_1,y_1)=(1,4)$ og $(x_2,y_2)=(3,16)$. 
+
+Hvis vi bruger de to punkter i topunktsformlen skulle vi gerne få $a=2$ og $b=2$. 
+
+$$
+\begin{aligned}
+a&=\sqrt[x_2-x_1]{\frac{y_2}{y_1}} = \sqrt[3-1]{\frac{16}{4}} = \sqrt{4}=2 \\
+b&= \frac{y_1}{a^{x_1}} =  \frac{4}{2^{1}}=2 \\
+ &=\frac{y_2}{a^{x_2}} =  \frac{16}{2^{3}}=\frac{16}{8}=2
+\end{aligned} 
+$$
+:::
+
+
+En generel egenskab ved eksponentielle voksende udviklinger er, at der findes en fast størrelse, $T_2$, der, når den lægges til $x$-værdien, fordobler $y$-værdien. Ligeså findes der en fast størrelse, $T_{\frac{1}{2}}$, hørende til aftagende eksponentielle udviklinger, der, når den lægges til $x$-værdien, halverer $y$-værdien. 
+
+Inden vi går videre, skal vi derfor definere, hvad vi mener med en voksende og en aftagende eksponentiel udvikling.
+
+::: {.Definition}
+
+## Voksende og aftagende eksponentiel udvikling
+
+Lad en eksponentiel udvikling, $f(x)=b \cdot a^x$, være givet.
+
+Hvis $a>1$, d.v.s $r$ er positiv (husk $a=1+r$), $r>0$, er funktionen **voksende** 
+
+Hvis $0<a<1$, d.v.s $r$ er negativ men større end -1, $-1<r<0$, er funktionen **aftagende**
+
+For $a=1$ er den eksponentielle udvikling ikke defineret, og her er $f(x)=b \cdot 1^x=b$ og er dermed en **konstant funktion** 
+
+:::
+
+Samme definition gælder for eksponentialfunktionen, $f(x)=a^x$.
+
+Kort fortalt: er vækstraten, $r$, positiv, er den eksponentielle udvikling/funktion voksende. 
+
+Er vækstraten negativ er den eksponentielle udvikling/funktion aftagende.
+
+
+På figuren herunder kan vi se graferne for to eksponentielle udviklinger. Den røde graf er grafen for en voksende funktion og den blå graf grafen for en aftagende funktion.
+
+**Bemærk** at grafer ikke kan være voksende eller aftagende. Grafer er punktmængder.
+
+```{python}
+#| echo: false
+
+
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.arange(-1, 4., 0.02)
+lin = 2*2**x
+lin2 = 16*(1/2)**x
+
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+
+# Move left y-axis and bottom x-axis to centre, passing through (0,0)
+ax.spines['left'].set_position('zero')
+ax.spines['bottom'].set_position('zero')
+
+# Eliminate upper and right axes
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+
+# Show ticks in the left and lower axes only
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+plt.plot(x,lin, 'r', label='$f(x)=2 * 2^{x}$')
+plt.plot(x,lin2, 'b', label='$g(x)=16 * 1/2^{x}$')
+# plt.axis('scaled')
+plt.legend(loc='upper center')
+plt.grid()
+
+plt.show()
+```
+
+## Fordobling- og halveringskonstant
+
+Fordobling- og halveringskonstanten kan nu defineres
+
+::: {.Definition}
+
+# Definitionen på fordoblings- og halveringskonstanten.
+
+**Fordoblingskonstanten**, betegnet $T_2$, for en voksende eksponentiel udvikling opfylder
+
+$$
+f(x+T_2) = 2 \cdot f(x)
+$$
+
+**Halveringskonstanten**, betegnet $T_{\frac{1}{2}}$, for en aftagende eksponentiel udvikling opfylder
+
+$$
+f(x+T_{\frac{1}{2}}) = \frac{1}{2} \cdot f(x)
+$$
+
+:::
+
+V.h.a definitionerne for $T_2$ og $T_{\frac{1}{2}}$ har vi følgende ligninger
+
+$$
+\begin{aligned}
+2 \cdot f(x) &= f(x+T_2) \Leftrightarrow & \frac{1}{2} \cdot f(x) &= f(x+T_{\frac{1}{2}}) \Leftrightarrow \\
+2 \cdot b \cdot a^x &= b \cdot a^{x+T_2} \Leftrightarrow & \frac{1}{2} \cdot b \cdot a^x &= b \cdot a^{x+T_{\frac{1}{2}}} \Leftrightarrow \\
+2 \cdot a^x &=  a^{x+T_2} \Leftrightarrow  & \frac{1}{2} \cdot a^x &= a^{x+T_{\frac{1}{2}}}\Leftrightarrow \\
+2  &= \frac{a^{x+T_2}}{a^x}  \Leftrightarrow  & \frac{1}{2} &= \frac{a^{x+T_{\frac{1}{2}}}}{a^x}  \Leftrightarrow \\
+2 &= a^{x+T_2-x} \Leftrightarrow & \frac{1}{2} &= a^{x+T_{\frac{1}{2}}-x} \Leftrightarrow \\
+2 &= a^{T_2} & \frac{1}{2} &= a^{T_{\frac{1}{2}}}
+\end{aligned}
+$$
+
+hvor $a>1$ til venstre og $0<a<1$ til højre.
+
+Herfra kan vi indtil videre ikke komme længere. De størrelser, vi ønsker at finde og dermed isolere i de to ligninger, står som eksponenter, og hvordan vi "får dem ned derfra" ved vi endnu ikke. Men heldigvis findes der et værktøj, der kan hjælpe os videre. Det simpleste er at definere en funktion, der klarer problemet for os. 
+
+Denne funktion kaldes en `logaritme`
+
+Under antagelse af, at du har læst kapitlet om `logaritmer` kan vi nu forsætte.
+
+Jvf. afsnittet om løsning af eksponentielle ligninger har vi nu:
+
+$$
+y=2b \Rightarrow x=\dfrac{\log(\frac{2b}{b})}{\log(a)} = \dfrac{\log(2)}{\log(a)}
+$$
+og  
+
+$$
+y=\frac{1}{2}b \Rightarrow x=\dfrac{\log(\frac{\frac{1}{2}b}{b})}{\log(a)} = \dfrac{\log(\frac{1}{2})}{\log(a)}
+$$
+
+Disse resultater er formlerne for **fordobling-** og **halveringskonstanten**.
+
+Vi får samme resultat ved at kigge på ligningerne, som vi tidligere måtte forlade:
+
+$$
+\begin{aligned}
+2 &= a^{T_2} \quad \text{og} \quad  \frac{1}{2} = a^{T_{\frac{1}{2}}}
+\end{aligned}
+$$
+og kan nu formulere følgende sætning:
+
+::: {.Sætning}
+
+## Fordobling og halveringskonstanterne
+
+Fordoblings- og halveringskonstanerne $T_2$ og $T_{\frac{1}{2}}$ er givet ved:
+
+$$
+\begin{aligned}
+T_2=\frac{\log(2)}{\log(a)} = \frac{\ln(2)}{\ln(a)} &\qquad  T_{\frac{1}{2}}=\frac{\log(\frac{1}{2})}{\log(a)} = \frac{\ln(\frac{1}{2})}{\ln(a)}
+\end{aligned}
+$$
+
+Kender vi $T_2$ eller $T_{\frac{1}{2}}$ kan vi løse ligningen m.h.t til $a$.
+
+$$
+\begin{aligned}
+a^{T_2} &= 2 \Leftrightarrow a=\sqrt[T_2]{2} & a^{T_{\frac{1}{2}}} &= \frac{1}{2} \Leftrightarrow a=\sqrt[T_{\frac{1}{2}}]{\frac{1}{2}}
+\end{aligned}
+$$
+:::
+
+
+
+Ligesom tilfældet med de lineære funktioner, kan vi bestemme en forskrift, når vi kender ét punkt og én ting mere. Kender vi fordoblingskonstanten kan vi udregne fremskrivningsfaktoren, $a$, og dermed vækstraten og den procentvise ændring. Kender vi vækstraten kan vi nemt beregne fremskrivningsfaktoren, og kender vi fremskrivningsfaktoren har vi næsten en funktionsforskrift. Bliver fordobling- eller halveringskonstanten givet i en opgave, har vi lige set, hvordan man beregner $a$. I de andre tilfælde bruger vi
+
+$$
+\begin{aligned}
+a &= 1+r = 1+\frac{p}{100} \Leftrightarrow r=a-1 \; \text{og} \; p=(a-1)\cdot 100 \\
+b &=\frac{y_0}{a^{x_0}} 
+\end{aligned}
+$$
+
+hvor $(x_0,y_0)$ er det oplyste punkt.
+
+::: {.Eksempel}
+
+## En eksponentiel udvikling med bestemt vækst og kendt punkt
+
+En eksponentiel udvikling vokser med 11\% og grafen går gennem punktet $(3,11)$. Funktionsforskriften bestemmes nu ved
+
+$$
+\begin{aligned}
+a&=1+\frac{p}{100} = 1+\frac{11}{100} = 1,11 \\
+b&=\frac{y_0}{a^{x_0}} = \frac{11}{1,11^3} = 8,04 \approx 8
+\end{aligned}
+$$
+
+Funktionsforskriften for den eksponentielle udvikling bliver så: $$f(x)=8 \cdot 1,11^x$$
+
+:::
+
+
+## Eksponentiel model
+
+### Fortolkning af model
+
+::: {.Eksempel}
+
+## Eksempel med lægemiddel
+
+Et husdyr får en indsprøjtning med et lægemiddel mod lungebetændelse.
+
+Sammenhængen mellem koncentrationen af lægemidlet i dyrets blod målt i $\mu$g/ml og antal timer efter indsprøjtningen kan beskrives ved funktionsforskriften:
+
+$$
+\begin{align*}
+f(x) = 0.33 \cdot 0.91^x
+\end{align*}
+$$
+
+hvor $x$ er antal timer efter indsprøjtningen. 
+
+**Spørgsmål** Forklar, hvad tallene 0.33 og 0.91 fortæller om koncentrationen af lægemidlet i dyrets blod. 
+
+Vores $b$-værdi er lig 0,33, d.v.s det er startkoncentrationen af lægemidlet i dyrets blod, altså den mængde af lægemiddel, der er i selve indsprøjtningen. Vores $a$-værdi er lig 0,91. Vi husker at $a=1+p\% \Rightarrow p=(a-1) \cdot 100 = (0,91 -1) \cdot 100 = -9$, så koncentrationen af lægemidlet aftager med 9\% pr. time efter indsprøjtningen.
+
+Vi kan endvidere beregne halveringstiden ved
+
+$$
+\begin{aligned}
+T_{\frac{1}{2}} = \frac{\log(\frac{1}{2})}{\log(a)} = \frac{\log(\frac{1}{2})}{\log(0.91)} = 7,35
+\end{aligned}
+$$
+
+D.v.s 7,35 timer efter indsprøjtningen er koncentrationen af lægemidlet halveret. Efter $2 \cdot 7,35=14,7$ timer er koncentrationen faldet til en fjerdedel.
+:::
+
+
+
+### Opstilling af model
+
+
+::: {.Eksempel}
+
+Eksempel på model med kilometerpris og antal år
+
+Kilometerprisen for turistkørsel er i perioden fra 1990 til 2000 i gennemsnit steget med 3\% om året.
+
+I 1990 var kilometerprisen 12 kr. 
+
+Opstil en model der angiver sammenhængen mellem kilometerprisen og antal år efter 1990.
+
+Som i tilfældet med lineære modeller skal vi identificere $x$, $f(x)$, $a$ og $b$.
+
+Den uafhængige variabel, når årstal er involveret, er \\
+ $x$: år efter 1990. 
+
+År 1990 vælges, fordi vi kender funktionsværdien i det år, d.v.s $b=12$ og <BR>
+ $f(x)$: Kilometerpris for turistkørsel.
+
+Vi husker at $a=1+p\%=1+\dfrac{3}{100} = 1,03$. Vi kan nu opskrive en funktionsforskrift, der beskriver udviklingen i kilometerprisen for turistkørsel i årene 1990-2000
+
+Alt i alt bliver modellen $f(x)=12 \cdot 1,03^x$
+:::
+
+
+::: {.Eksempel}
+
+## Eksempel med fosforkoncentration i Sø
+
+Fosforkoncentrationen (målt i $\mu g$ fosfor pr. liter) i Kruså Sø faldt fra 230 i 1998 til 64 i 2005. 
+
+I en model går man ud fra, at fosforkoncentrationen som funktion af år er eksponentielt aftagende. 
+
+Vi sætter fosforkoncentrationen for $y$ og vi sætter $x$ til antal år efter 1998. Vi skal bestemme $a$ og $b$
+
+Vi gør, som vi gjorde med de lineære modeller, d.v.s identificerer de to punkter $(x_1,y_1)=(0,230)$ og $(x_1,y_1)=(7,68)$ og bruger topunktsformlen
+
+$$
+\begin{aligned}
+a=\sqrt[x_2-x_1]{\frac{y_2}{y_1}} = \sqrt[7-0]{\frac{68}{230}} = 0,840
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+b&=\frac{y_1}{a^{x_1}} = \frac{230}{0.840^0} = 230 \\
+ &= \frac{y_2}{a^{x_2}} =  \frac{68}{0.840^7} = 230
+\end{aligned}
+$$
+
+
+Vi kan nu opskrive en model for fosforkoncentrationen i Krusø Sø i perioden 1998-2005
+
+$$
+\begin{aligned}
+f(x)=230 \cdot 0,840^x
+\end{aligned}
+$$
+
+Vi kan endvidere beregne den procentvise ændring i fosforkoncentration pr. år
+
+$$
+\begin{align*}
+p=(a-1) \cdot 100 = (0,840-1) \cdot 100 = -16
+\end{align*}
+$$
+
+Så fosforkoncentrationen i Kruså Sø aftog sig med 16\% pr. år i årene 1998-2005.
+:::
+
+::: {.Opgave}
+
+## Bestemmelse af **a** og **b**
+
+Hvad er $a$, og hvad er $b$ i følgende eksponentielle udviklinger?
+$$
+\begin{aligned}
+f_1(x)&=3^x  &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_2(x)&=2,2 \cdot 1,2^x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_3(x)&=5 \cdot 0,78^x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_4(x)&=0.5 \cdot 1,88^x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} 
+\end{aligned}
+$$
+:::
+
+::: {.Opgave}
+
+## Opgave om brug af topunktsformel
+
+Brug punkterne (2,8) og (4,32) til at eftervise at $a=2$ og $b=2$. 
+
+Brug begge punkter til beregning af $b$.
+:::
+
+::: {.Opgave}
+
+## Bestemmelse af funktionsforskrift for eksponentielle udviklinger
+
+Bestem funktionsforskriften når:  <BR>
+**a)** Grafen går gennem punktet (2,5) og vækstraten er 12\%. <BR>
+**b)**  $(x_0,y_0)= (1,11)$ og vækstraten er 0,04.  <BR>
+**c)**  $(x_0,y_0)= (0,31)$ og vækstraten er 0,91\%.  <BR>
+**d)**  $(x_0,y_0)= (2,500)$ og fordoblingskonstanten er 15. <BR>
+**e)**  $(x_0,y_0)= (10,320)$ og halveringskonstanten er 28,6.
+
+:::
+
+::: {.Opgave}
+
+## Spørgsmål
+
+Hvorfor kan $r$ ikke være mindre end $-1$?
+
+Hvordan ser grafen ud, hvis $a=1$?
+
+:::
+
+::: {.Opgave}
+
+## Udvikling i antal af elever, der har valgt 9. klasse på efterskole
+
+Udviklingen i antallet af elever, der har valgt 9. klasse på efterskole i perioden 2000-2003, beskrives ved modellen
+
+$$
+\begin{align*}
+f(x) = 6410 \cdot 1.06^x
+\end{align*}
+$$
+
+hvor $f(x)$ er antal elever i 9. klasse på efterskole, og $x$ er antal år efter 2000.
+
+**a)** Hvad fortæller tallene 6410 og 1.06 om antal elever i 9. klasse på efterskole?
+
+**b)** Hvor lang tid går der, hvis udviklingen fortsætter, før elevantallet er fordoblet?
+
+:::
+
+
+::: {.Opgave}
+
+## Løn
+
+Lønnen for en sygeplejerske er i perioden fra 1950 til 1970 i gennemsnit steget med 2.8\% om året.
+
+I 1950 var lønnen 52000 kr.
+
+Opstil en model der angiver sammenhængen mellem lønnen og antal år efter 1950.
+:::
+
+::: {.Opgave}
+
+## Befolkningstal
+
+I 1995 var Nepals befolkningstal 20.1 millioner. Det antages at befolkningstallet vokser med  2.1\% om året. 
+
+Opstil en regneforskrift der angiver sammenhængen mellem befolkningstallet i Nepal og antal år efter 1995
+:::
+
+::: {.Opgave}
+
+## Procentvækst, når fordoblingstiden kendes
+
+Bestem den procentvise vækst, når fordoblingstiden for en bestemt celleart i et givet vækstmiljø er 4 timer. Hvor mange celler er der efter et døgn, når man begynder med 100 celler.
+
+:::
+
+::: {.Opgave}
+
+## Radioaktivt Iod
+
+Ved en atomulykke kan der eksempelvis slippe radioaktiv Iod ud i atmosfæren. Dette er farligt, fordi al iod, vi får ind i organismen, opsamles i skjoldbrudskirtlerne foran på halsen og dermed bestråler disse og halsregionen.
+
+**a)** Bestem først fremskrivningsfaktoren og dernæst den procentvise ændring (den er negativ), når halveringstiden for radioaktivt Iod er 8,02 døgn. 
+
+**b)** Hvis der var 100 gram radioaktivt Iod til at begynde med, hvor meget er der så tilbage efter 10 dage?
+
+:::
+
+::: {.Opgave}
+
+## Antallet af danskere over 100 år
+
+Antallet af danskere over 100 år er vokset fra 158 personer i 1980 til 628 personer i 2005. 
+
+Det antages, at antallet af personer over 100 år kan beskrives ved en eksponentiel model
+
+$$
+\begin{aligned}
+f(x)=b \cdot a^x
+\end{aligned}
+$$
+
+hvor $x$ er antal år efter 1980, og $f(x)$ er antal personer over 100 år.
+
+**a)** Bestem tallene a og b. <BR>
+**b)** Hvornår vil antallet af danskere over 100 år ifølge modellen nå op på 2500? <BR>
+**c)** Bestem fordoblingskonstanten 
+
+:::

@@ -1,0 +1,419 @@
+# Matematisk sprog
+
+::: {.hidden}
+$$
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+$$
+:::
+
+
+## Symboler
+
+Vi vil i matematik ofte bruge bogstaverne $a$, $b$, $c$ og $d$ og behandle disse som var de (ukendte) tal. Dette kaldes at regne med *symboler*. Symbolerne behøver ikke være disse fire bogstaver, og senere skal vi se på sammensatte symboler som $x_1$, $f(x)$ og $f(x+1)$.
+
+$$ 
+2a = 2 \cdot a \quad 3xy = 3 \cdot x \cdot y \quad ax = a \cdot x \quad 2f(x)=2 \cdot f(x) 
+$$
+Vi skriver ikke gangetegnet mellem tal og symboler samt mellem flere symboler, så:
+
+Vi siger at gangetegnet er *underforstået*.
+
+Ligeså skriver vi ikke gangetegnet før og efter en parentes:
+
+$$ 2(3+1)= \textcolor{red}{2\cdot(3+1)} =2 \cdot 4 = 8$$
+
+Det med rødt vil vi derfor normalt udelade.
+
+## Udtryk og udsagn
+
+Et lukket *udtryk* er f.eks $2+2$. Det er lukket, fordi vi kan beregne det og skrive $2+2=4$.
+
+Et lukket *udsagn* består af to lukkede udtryk forbundet af et lighedstegn, f.eks $3+4=7$. Et udsagn kan være sandt eller falskt men ikke begge dele. I dette tilfælde er udsagnet sandt, da begge sider af lighedstegnet giver 7. $3+4=8$ er et eksempel på et lukket falsk udsagn.
+
+Et udsagn er dog ikke begrænset til at være tal og lighedstegn. "Danmark er et land i Europa" er et sandt udsang. "Danmark er en by i Sverige" er et falskt udsagn. "Der er piger i denne gymnasieklasse" er et udsagn. Du kan nok selv hurtigt afgøre, om det er sandt eller falskt.
+
+Når vi har et lukket udtryk kun med tal, som f.eks $4 \cdot 7-10$ kan vi beregne udtrykket og nå frem til en værdi. Når et symbol repræsenter en (vilkårlig) talværdi i et udtryk som f.eks $a+7$ er dette ikke muligt. $a+7$ er et åbent udtryk. Et åbent udtryk kan vi altså ikke beregne. Vi er nødt til at vide, hvilket tal, bogstavet $a$ repræsenterer, for at kunne beregne udtrykket. Eksempelvis kan vi beregne udtrykket, hvis får at vide, at $a=3$.
+
+## Led og faktorer
+
+Tallene mellem plus og minus kaldes for *led*. Resultatet af led lagt til og trukket fra hinanden kaldes *summen*.
+
+Ser vi på $2+3=5$ er 5 summen af leddene 2 og 3.
+
+::: {.Eksempel}
+
+## Eksempel på led og sum
+
+$$
+\begin{aligned}
+\underbrace{3}_\text{led}+\underbrace{4}_\text{led}+\underbrace{5}_\text{led}&=\underbrace{12}_\text{sum} \\
+\underbrace{a}_\text{led}+\underbrace{b}_\text{led}+\underbrace{c}_\text{led}&=\underbrace{d}_\text{sum}
+\end{aligned}
+$$
+
+:::
+
+At lægge et tal til kaldes også for *addition* og at trække et tal fra kaldes *subtraktion*
+
+Tallene mellem gange kaldes for *faktorer*. Resultatet af faktorer ganget sammen kaldes *produktet*.
+
+::: {.Eksempel}
+
+## Eksempel på faktorer og produkt
+
+$$
+\begin{aligned}
+\underbrace{2}_{\text{faktor}} \cdot \underbrace{3}_{\text{faktor}} &= \underbrace{6}_{\text{produkt}}  \\
+\underbrace{a}_{\text{faktor}} \cdot \underbrace{b}_{\text{faktor}} &= \underbrace{c}_{\text{produkt}}  
+\end{aligned}
+$$
+:::
+
+Vi kan i samme udsagn have både led og faktorer
+
+::: {.Eksempel}
+
+## Eksempel med både led og faktorer
+
+$$
+\begin{aligned}
+\overbrace{\underbrace{3}_{\text{faktor}} \cdot \underbrace{2}_{\text{faktor}}}^{\text{led}} + \overbrace{4}^{\text{led}} + \overbrace{\underbrace{7}_{\text{faktor}} \cdot \underbrace{1}_{\text{faktor}}}^{\text{led}} 
+\end{aligned}
+$$
+
+Her er der tre led, nemlig $3 \cdot 2$, $4$ og $7 \cdot 1$, mens der er fire faktorer: $3,2,7$ og 1.
+:::
+
+
+
+At gange med et tal kaldes også for *multiplicere* og det omvendte kaldes at *dividere*. Vi skriver "12 divideret med 4" som
+
+$$ \frac{12}{4}=3 $$ fordi $12=3 \cdot 4$.
+
+Hvis $b$ er et tal forskelligt fra nul, kan vi generelt skrive
+
+$$
+\frac{a}{b}=c
+$$
+
+hvor $a$ kaldes *dividend*, $b$ kaldes *divisor* og $c$ kaldes *kvotient*.
+
+## Regnerækkefølge
+
+Rækkefølgen mellem to tal lagt sammen er ligegyldig, og rækkefølgen af to tal ganget sammen er ligegyldig.
+
+$$ 3 + 4 = 4+3 \quad a + b = b+a \quad 3 \cdot 4 = 4 \cdot 3 \quad a \cdot b = b \cdot a $$
+
+Forestil dig, hvis det **ikke** var tilfældet. Så ville man betale noget forskelligt i supermarkedet afhængigt af, i hvilken rækkefølge man lagde sine varer på båndet, og arealet af en bordplade ville ændre sig afhængigt af, hvilken side man målte først.
+
+Man siger, at tal *kommuterer* m.h.t + og $\cdot$. Dette er (åbenlyst) ikke rigtigt for minus (subtraktion) og division. $2 = 7-5 \neq 5-7 = -2$ og $1/3 \neq 3/1$
+
+## Fortegn
+
+Når vi begynder at blande led og faktorer er det en god idé at huske reglerne for fortegn.
+
+::: {.Definition}
+
+## Fortegnsregler for + og - i en sum
+
+$$
+\begin{aligned}
+++ &= +  \\
++-&=-   \\
+-+&=-  \\
+--&=+  
+\end{aligned}
+$$
+:::
+
+::: {.Eksempel}
+
+## Eksempel på brug af fortegnsregler for + og - i en sum
+
+$$
+\begin{aligned}
+ 4+3 &=7 \\ 
+ 4-3 &= 1 \\ 
+ 4+(-3) &= 4-3 = 1 \\
+ 4-(-3) &= 4+3 = 7  
+\end{aligned}
+$$
+Bemærk, at man i skriftligt arbejde typisk samler '+-' til '-' og '- -' til '+', så man viser, at man forstår, hvad det betyder.
+:::
+
+::: {.Definition}
+
+## Fortegnsregler for + og - i et produkt
+
+$$
+\begin{aligned}
++ \cdot + = + \\
++ \cdot -=- \\
+- \cdot + = - \\
+- \cdot - = + \\
+\end{aligned}
+$$
+:::
+
+::: {.Eksempel}
+
+## Eksempel på brug af fortegnsregler for + og - i produkt
+
+$$
+\begin{aligned}
+4 \cdot 3 &= 12 \\ 
+4 \cdot (-3) &= -12 \\
+(-4) \cdot 3 &= -12 \\
+(-4) \cdot (-3) &= 12 \\ 
+\end{aligned}
+$$
+Bemærk, at man i skriftligt arbejde altid sætter parentes omkring negative tal, og man skriver f.eks aldrig $-4 \cdot -3$.
+:::
+
+## Potenser
+
+En *potens* består af to tal, det ene "hævet" over det andet. 
+
+$$
+a^n
+$$ 
+
+Det hævede tal, $n$, kaldet *eksponenten*, angiver, hvor mange gange det ikke-hævede tal, $a$, kaldet *grundtallet*, skal ganges med sig selv. 
+
+$$
+a^n = \underbrace{a \cdot a \cdot a \cdot \ldots \cdot a \cdot a}_{n \: \text{faktorer}} 
+$$
+
+$$
+\begin{aligned}
+3^2 &= \underbrace{3 \cdot 3}_{2 \: \text{faktorer}} \qquad 4^3 = \underbrace{4 \cdot 4 \cdot 4}_{3 \: \text{faktorer}}  \qquad 6^{10} = \underbrace{6 \cdot 6 \cdot \ldots \cdot 6 \cdot 6}_{10 \: \text{faktorer}} 
+\end{aligned}
+$$
+
+Hvis grundtallet er negativt i en potens sætter vi også altid parentes omkring. Ellers løber vi hurtigt ind i problemer som f.eks
+
+$$
+\begin{aligned}
+-3^2 = -3 \cdot 3 = -9 \quad \text{men} \quad (-3)^2=(-3) \cdot (-3)=9
+\end{aligned}
+$$
+## Regnearternes hierarki
+
+Når vi ønsker at beregne et udtryk, er vi nødt til at have nogle fælles regler for, hvordan vi gør. Vi kan f.eks ikke regne fra venstre mod højre, som når vi læser, for så løber vi ind i et problem som følgende 
+
+$$ 3+4 = 4+3 \Leftrightarrow 3+2 \cdot 2 = 2 \cdot 2 +3 $$ 
+Kan du selv se problemet?
+
+::: {.Definition}
+
+## Regnearternes hierarki
+
+1.  Potenser/Rødder
+2.  Gange (Multiplicere) og dividere
+3.  Plus og minus (Addition og subtraktion)
+:::
+
+Regnearternes hierarki siger bl.a, at man skal udregne hvert led for sig, inden man til sidst samler leddene.
+
+::: {.Eksempel}
+
+## Eksempel på brug af regnearternes hierarki
+
+$$
+\begin{aligned}
+3+\textcolor{red}{4 \cdot 5} &= 3 + \textcolor{red}{20} = 23  \\
+\textcolor{blue}{3^3} + \textcolor{red}{4^2} \cdot 5 &= \textcolor{blue}{27} + \textcolor{red}{16} \cdot 5 = 27 + 80 = 107
+\end{aligned}
+$$
+:::
+
+
+## Parentes
+
+Parentesen "trumfer" regnearternes hierarki og fortæller os, at vi i dette tilfælde skal lægge de to tal sammen (beregne summen af ledende i parentesen) *før* vi ganger. En parentes kan altså oversættes til; "gør dette først".
+
+::: {.Eksempel}
+
+## Eksempel på at parentes ændrer regnerækkefølgen
+
+$$
+\begin{aligned}
+3 \cdot 4 + 5 &= 12 + 5 = 17\\
+3 \cdot (4 + 5) &= 3 \cdot 9 = 27\\
+\end{aligned}
+$$
+:::
+
+### Hæve en parentes
+
+::: {.Definition}
+
+## Hævning af parentes
+
+Plusparentes hæves uden videre: <br> $a+(b+c) = a+ b +c$
+
+I minusparentes ændres fortegnet: <br> $a -(b+c) = a - b - c$
+:::
+
+::: {.Eksempel}
+
+## Argument for hævning af minusparentes
+
+Du har 500 kr. og køber en trøje til 200 kr. i den første butik og bukser til 300 kr. i en anden butik. Regnestykket er så: $500 - 200 - 300$.
+
+Køber du både trøje og bukser i samme butik, bliver beløbet, du skal af med, regnet sammen ved kassen, så regnestykket lyder: <br> $500-(200+300)$.
+
+I begge tilfælde skal resultatet være det samme, nemlig $0$kr.
+
+Vi har altså følgende: <br> $500 - 200 - 300 = 500-(200+300)$
+:::
+
+::: {.Eksempel}
+
+## Et andet argument for hævning af minusparentes
+
+Ser vi på $11-(2+4)$ har vi nu to muligheder for at nå frem til et facit. Vi kan udregne parentesen først eller vi kan hæve parentesen. Vi gør her begge dele og tjekker, at vi får samme svar uanset fremgangsmåde.
+
+$$
+\begin{aligned}
+11-(2+4) &= 11-6 = 5 \\
+11-(2+4) &= 11-2-4 = 9-4=5
+\end{aligned}
+$$
+:::
+
+
+### Gange ind i en parentes
+
+Gange ind i en parentes gøres ledvist:<br> $\textcolor{red}{2}(3+4) = \textcolor{red}{2} \cdot 3 + \textcolor{red}{2} \cdot 4 =6 + 8 = 14 \qquad \textcolor{red}{a}(b+c) = \textcolor{red}{a}b + \textcolor{red}{a}c$<br> $\textcolor{red}{2}(3-4) = \textcolor{red}{2} \cdot 3 - \textcolor{red}{2} \cdot 4 =6 - 8 = -2 \qquad \textcolor{red}{a}(b-c) = \textcolor{red}{a}b - \textcolor{red}{a}c$<br> $\textcolor{red}{(-2)}(3+4) = \textcolor{red}{(-2)} \cdot 3 + \textcolor{red}{(-2)} \cdot 4 =-6 - 8 = -14 \qquad \textcolor{red}{(-a)}(b+c) = -ab - ac$
+
+Kan parentesen som ovenfor i eksemplerne til venstre udregnes uden at gange ind, er dette klart at foretrække:<br> $2(3+4) = 2 \cdot 7 = 14$, $\quad 2(3 - 4) = 2 \cdot (-1) = -2$ og $(-2)(3+4) = (-2)\cdot 7 = -14$
+
+
+Bemærk, at man kan regne begge veje, når vi har med parenteser at gøre, sådan at man kan sætte en fælles faktor uden for parentesen. <br> $2a+2b=\textcolor{red}{2} \cdot a + \textcolor{red}{2} \cdot b  = \textcolor{red}{2} \cdot (a+b) = 2(a+b)$ <br> $10a - 5b = \textcolor{red}{5} \cdot 2 \cdot a - \textcolor{red}{5} \cdot b  = \textcolor{red}{5} \cdot (2 \cdot a-b) = 5(2a-b)$
+
+
+## Reducere
+
+Hvis man samler ensbenævnte størrelser ved at sætte fælles faktor efter en parentes *reducerer* man.
+
+$3a+4a= 3 \cdot \textcolor{red}{a}  + 4 \cdot \textcolor{red}{a}  =  (3+4) \cdot \textcolor{red}{a}  = 7 \cdot a  = 7a$
+
+Idét $x+x=2x$, $x+x+x=3x$ og så videre skriver vi altså
+
+$$
+\begin{aligned}
+2x+3x &= \underbrace{x+x}_{\text{2 x'er}}+\underbrace{x+x+x}_{\text{3 x'er}}=5x \\
+4x+6x &= \underbrace{x+x+x+x}_{\text{4 x'er}}+\underbrace{x+x+x+x+x+x}_{\text{6 x'er}}=10x \\
+4w+6w &= \underbrace{w+w+w+w}_{\text{4 w'er}}+\underbrace{w+w+w+w+w+w}_{\text{6 w'er}}=10w \\
+3a+5a - 2a &=  \underbrace{a+a+a}_{\text{3 a'er}} + \underbrace{a+a+a+a+a}_{\text{5 a'er}} - \underbrace{a-a}_{\text{2 a'er}} = 6a
+\end{aligned}
+$$
+
+::: {.Eksempel}
+
+## Eksempel på reduktion med både tal og symboler involveret
+
+Er der både symboler og tal indblandet samler man led med samme symbol for sig og tal for sig. Det samme gælder for regning med parenteser.
+
+$$
+\begin{aligned}
+3a+5a-2a +11-6 &= 6a+5 \\
+3a-2a+6b-4b+11-7 &= a+2b+4 \\
+3(a+2)&=3 \cdot a+3 \cdot 2 = 3a+6 \\
+3(a+b)&=3 \cdot a+3 \cdot b = 3a+3b \\
+3(a+b)-a-2b&=3 \cdot a+3 \cdot b -a-2b= 3a+3b-a-2b = 2a+b \\
+3(a+b) - 2(a-b) &= 3a+3b - (2a-2b) = 3a+3b - 2a+2b = a + 5b
+\end{aligned}
+$$
+Bemærk, at man i sidste linje beholder parentesen, efter der er ganget ind med 2-tallet. D.v.s gang ind og hæv derefter parentesen.
+
+Gør man begge dele "på en gang" risikerer man nemt en fortegnsfejl.
+:::
+
+::: {.Opgave}
+## Antal led og faktorer
+
+Hvor mange led og faktorer er der i følgende udtryk?
+
+$$
+\begin{aligned}
+3 \cdot 1  &+ 7 \cdot 3 \\
+3 \cdot 3  &- 5 \cdot 2 + 4 - 9 \\
+ 3 \cdot 3  &- 5 \cdot 4 + 4 \cdot 11 - 9 
+\end{aligned}
+$$
+
+Hvilket led har den største værdi?
+:::
+
+::: {.Opgave}
+## Beregn v.h.a regnearternes hierarki
+
+Beregn v.h.a regnearternes hierarki følgende udtryk
+
+a)  $\; 2 \cdot 6-4$
+b)  $\; 15-3 \cdot 4$
+c)  $\; 2^2 \cdot 5 - 4 \cdot 3$
+d)  $\; 7-3 \cdot 3^2 + 25$
+
+Hvad sker der, hvis du regner fra venstre mod højre i b)?
+:::
+
+::: {.Opgave}
+## Beregn på to måder
+
+Beregn følgende udtryk på to måder og tjek, at du får samme resultat begge gange.
+
+Husk regnearternes hierarki.
+
+a)  $\; 2+(6-4)$
+b)  $\; 15-(3 -4)$
+c)  $\; 2^2 + 3-(5 - 4)$
+d)  $\; 7-3+(3^2 - 5 \cdot 2)$
+:::
+
+::: {.Opgave}
+## Sæt uden for parentes
+
+Sæt størst mulige faktor uden for en parentes
+
+a)  $\; 8a+4b$
+b)  $\; 15w+25z $
+c)  $\; 51s-17st$
+d)  $\; 26vw+65w^2$
+:::
+
+::: {.Opgave}
+## Beregn
+
+Beregn følgende
+
+$$
+\begin{aligned}
+&3(3-2) &\qquad &(2-3)2 &\qquad &4(5+1) \\
+&15+3(3-2) &\qquad &15-2(2-3) &\qquad &22-(5+1)4+6 \\
+&10(3-2+4) &\qquad &(2^2-3)6 &\qquad &4(15-2\cdot 3^2) \\
+&8^2-(3+2\cdot (-4)^2) &\qquad &16-(2^2-3) &\qquad &250-4(9+2\cdot (-5)^2)
+\end{aligned}
+$$
+
+:::
+
+::: {.Opgave}
+## Reducér
+
+Reducer følgende udtryk mest muligt
+
+$$
+\begin{aligned}
+&2s-4s+8s &\qquad & 11w+14w-10w-3w &\qquad & 4s-11w+4s+14w \\
+&3(3-b) &\qquad &2(a-b) &\qquad &4(5+a) \\
+&5a+3(3-a) &\qquad &5a-2(a-b) &\qquad &22a-(5a+2)4+6 \\
+&10(a-b+c) &\qquad &6(2s-3t)+ 10t &\qquad &12t-4(s-2t-7)+4s 
+\end{aligned}
+$$
+:::
+
+

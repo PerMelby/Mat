@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Matematik stx - 5&nbsp; Procentregning</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./eksponentiel.html" rel="next">
+<link href="./linear.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/foldbox/foldbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+.Eksempel {
+  --color1: #85ffac;
+  --color2: #33ff30;
+}
+.Definition {
+  --color1: #ff5c5c;
+  --color2: #ff4040;
+}
+.Sætning {
+  --color1: #56c7ff;
+  --color2: #5677ff;
+}
+</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./procent.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Procentregning</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Matematik stx</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forord</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduktion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./regnearter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matematisk sprog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ligninger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ligninger</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Brøker</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./første_g.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.g / C-niveau.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./procent.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Procentregning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eksponentiel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logaritmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Logaritmer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Indholdsfortegnelse</h2>
+   
+  <ul>
+  <li><a href="#procenttegnet" id="toc-procenttegnet" class="nav-link active" data-scroll-target="#procenttegnet"><span class="header-section-number">5.1</span> Procenttegnet</a></li>
+  <li><a href="#fremskrivningsfaktor" id="toc-fremskrivningsfaktor" class="nav-link" data-scroll-target="#fremskrivningsfaktor"><span class="header-section-number">5.2</span> Fremskrivningsfaktor</a></li>
+  <li><a href="#kapitalfremskrivning" id="toc-kapitalfremskrivning" class="nav-link" data-scroll-target="#kapitalfremskrivning"><span class="header-section-number">5.3</span> Kapitalfremskrivning</a></li>
+  <li><a href="#gennemsnitlig-rente" id="toc-gennemsnitlig-rente" class="nav-link" data-scroll-target="#gennemsnitlig-rente"><span class="header-section-number">5.4</span> Gennemsnitlig rente</a></li>
+  <li><a href="#årlig-månedlige-og-kvartalvis-rente" id="toc-årlig-månedlige-og-kvartalvis-rente" class="nav-link" data-scroll-target="#årlig-månedlige-og-kvartalvis-rente"><span class="header-section-number">5.5</span> Årlig, månedlige og kvartalvis rente</a></li>
+  <li><a href="#vækstrate---relativ-tilvækstafvigelse" id="toc-vækstrate---relativ-tilvækstafvigelse" class="nav-link" data-scroll-target="#vækstrate---relativ-tilvækstafvigelse"><span class="header-section-number">5.6</span> Vækstrate - Relativ tilvækst/afvigelse</a></li>
+  <li><a href="#procentpoint" id="toc-procentpoint" class="nav-link" data-scroll-target="#procentpoint"><span class="header-section-number">5.7</span> Procentpoint</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./procent.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Procentregning</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Procentregning</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="procenttegnet" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="procenttegnet"><span class="header-section-number">5.1</span> Procenttegnet</h2>
+<div id="definition-på-procent" class="Definition" title="Definition på procent">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 5.1: </strong>Definition på procent</summary><div>Tegnet for procent, <span class="math inline">\(\%\)</span>, betyder <span class="math inline">\(\frac{1}{100}\)</span>. <span class="math display">\[
+\begin{aligned}
+p\%= p \cdot \frac{1}{100}= \frac{p}{100}
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<div id="lønforhøjelse" class="Eksempel" title="Lønforhøjelse?">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.2: </strong>Lønforhøjelse?</summary><div>Chefen fortæller, du har fået lønforhøjelse. Du får først 25% ekstra i løn, og derefter trækker chefen 20% af beløbet fra, og dermed har du så fået 5% i lønforhøjelse. Eller har du?<p></p>
+<p>Lad os antage lønsedlen lyder på 10000 kr. 25% af 10000 er <span class="math inline">\(25/100 \cdot 10000=2500 kr\)</span>. Så med det beløb lagt oveni er lønnen nu på 12500 kr. 20% af dette beløb er <span class="math inline">\(20/100 \cdot 12500=2500 kr\)</span>. Med det beløb trukket fra er vi tilbage på 10000 kr., og du har ikke fået nogen lønforhøjelse.</p>
+<p>Du kan så evt. overveje at få de 20% fratrukket først og derefter lagt de 25% til og på den måde få en lønforhøjelse på 5%. Men det er en ligeså dårlig idé.</p>
+<p>20% af 10000 er <span class="math inline">\(20/100 \cdot 10000=2000 kr\)</span>. Så med det beløb fratrukket er lønnen nu på 8000 kr. 25% af dette beløb er <span class="math inline">\(25/100 \cdot 8000=2000 kr\)</span>. Med det beløb lagt til de 8000 kr. er vi tilbage på 10000 kr., og du har stadig ikke fået nogen lønforhøjelse.</p>
+</div></details>
+</div>
+<p>Vi siger altså, at 20% af 10000 er <span class="math inline">\(\frac{20}{100} \cdot 10000 = 2000\)</span> og skriver dette generelt:</p>
+<div id="procentregneregel-1" class="Definition" title="Procentregneregel 1">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 5.3: </strong>Procentregneregel 1</summary><div><span class="math inline">\(p\%\)</span> af en størrelse <span class="math inline">\(K\)</span> er lig<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+p\% \cdot K=  \frac{p}{100} \cdot K
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+<div id="elever-på-et-gymnasium" class="Eksempel" title="Elever på et gymnasium">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.4: </strong>Elever på et gymnasium</summary><div>På et gymnasium er der 262 drenge ud af 570 elever. Hvor mange procent af eleverne er drenge på dette gymnasium?<p></p>
+<p>Vi beregner hvor stor den brøkdel af eleverne, der er drenge ved at beregne <span class="math inline">\(\frac{262}{570} =0,46\)</span> og skriver dette tal som procent ved at gange med 100% (hvilket ikke ændrer noget, for det er det samme som at gange med 1).</p>
+<p>Alt i alt skriver vi: Antal procent drenge = <span class="math inline">\(\frac{262}{570} \cdot 100 \% = 46\%\)</span>.</p>
+</div></details>
+</div>
+<p>Udregningen brugt i ovenstående eksempel skriver vi generelt</p>
+<div id="procentregneregel-2" class="Definition" title="Procentregneregel 2">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 5.5: </strong>Procentregneregel 2</summary><div>En størrelse <span class="math inline">\(s\)</span> udgør <span class="math display">\[
+\begin{aligned}
+\frac{s}{K} \cdot 100\%
+\end{aligned}
+\]</span> af en anden størrelse <span class="math inline">\(K\)</span><p></p>
+</div></details>
+</div>
+<div id="renters-rente" class="Eksempel" title="Renters rente">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.6: </strong>Renters rente</summary><div>10000 kr. sættes i banken til 2% om året i tre år. Hvor mange penge står der i banken, når de tre år er gået? Lad os opskrive beregningerne i en tabel<p></p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>Tabel for 10000 kr. til 2% om året</caption>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Antal år</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Beløb</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Rentetilskrivning</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Efter rentetilskrivning</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>10000</td>
+<td>2/100 · 10000 = 200</td>
+<td>10000+200 = 10200</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>10200</td>
+<td>2/100 · 10200 = 204</td>
+<td>10200+204 = 10404</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>10404</td>
+<td>2/100 · 10404 = 208,08</td>
+<td>10404+208,08 = 10612,08</td>
+</tr>
+</tbody>
+</table>
+<p>Bemærk, at man ikke udregner rentebeløbet for første år (200 kr.) og lægger det til startbeløbet tre gange <span class="math inline">\((10000+3\cdot 200=10600)\)</span>. De ekstra 12,08 kr. er <em>renters rente</em>, d.v.s rentetilskrivningen i år 3 af renterne fra år 1 og 2, hvor rentetilskrivning i år 2 også afhænger af rentetilskrivning fra år 1. Og så fremdeles.</p>
+</div></details>
+</div>
+<p>Skulle man lade pengene stå i 30 år, kan det blive en uoverkommelig affære at udregne slutbeløbet v.h.a en tabel som før (omend kendskab til et regneark vil gøre jobbet lettere. Vi vil gøre livet lidt nemmere for os selv ved indførelse af en <code>fremskrivningsfaktor</code>.</p>
+</section>
+<section id="fremskrivningsfaktor" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="fremskrivningsfaktor"><span class="header-section-number">5.2</span> Fremskrivningsfaktor</h2>
+<div id="fremskrivningsfaktor-1" class="Definition" title="Fremskrivningsfaktor">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 5.7: </strong>Fremskrivningsfaktor</summary><div><strong>Fremskrivningsfaktoren</strong>, <span class="math inline">\(F\)</span>, er givet ved<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+F=1+p\% = 1+\frac{p}{100}
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+<div id="moms" class="Eksempel" title="Moms">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.8: </strong>Moms</summary><div>Når du køber en vare, er der i prisen inkluderet moms på 25%. Ellers også er prisen angivet ekskl. moms, d.v.s du skal selv lægge 25% til den angivne pris for at finde ud af, hvor meget du skal betale for varen. Man lægger moms til et beløb ved at gange beløbet med fremskrivningsfaktoren <span class="math inline">\(a=1+\frac{25}{100}=1,25\)</span>. Hvis en vare koster fx 350 kr. ekskl. moms, fås prisen inkl. moms som <span class="math display">\[350 \cdot (1 + \frac{25}{100}) = 350 \cdot 1,25 = 437,50 \text{kr.}\]</span><p></p>
+<p>Bemærk, at man ved at gange ind i parentesen får <span class="math inline">\(350 \cdot (1 + \frac{25}{100}) = 350 \cdot 1 + 350 \cdot \frac{25}{100}\)</span>, d.v.s de oprindelige 350 kroner plus 25% af 350.</p>
+</div></details>
+</div>
+<p>På samme måde lægger man 7% til et tal ved at gange det med 1,07, man lægger 12,9% til ved at gange med 1,129 osv.</p>
+<p>Hvis man i stedet for at lægge procenter til skal trække procenter fra, skrives antallet af procenter som et negativt tal. Trækker man 6% fra, lægger man <span class="math inline">\(-6\%\)</span> til, og man skriver derfor fremskrivningsfaktoren som <span class="math inline">\(a=1+\frac{-6}{100}= 1-0,06=0,94\)</span></p>
+<div id="brug-af-fremskrivningsfaktor" class="Eksempel" title="Brug af fremskrivningsfaktor">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.9: </strong>Brug af fremskrivningsfaktor</summary><div>Hvis man skal trække 6% fra 350 kr. vil man skrive: <span class="math display">\[350 \cdot (1 + \frac{-6}{100}) = 350 \cdot (1-0,06) = 350 \cdot 0,94 = 329 \text{ kr.}\]</span><p></p>
+<p>Her vil man også ved at gange ind i parentesen få <span class="math display">\[350 \cdot (1-0,06) = 350 \cdot 1 - 350 \cdot 0,06\]</span> d.v.s. de oprindelige 350 fratrukket 6% af 360.</p>
+<p>Hvis man skal trække 1,1% eller 11% fra et tal, skal man gange med henholdsvis <span class="math display">\[1+\frac{1,1}{100} = 1-0,011= 0,989\]</span> (dvs. med 98,9%) og <span class="math display">\[1+\frac{11}{100} = 1-0,11 = 0,89\]</span> (dvs. med 89%) for at få resultatet.</p>
+</div></details>
+</div>
+<div id="mere-moms" class="Eksempel" title="Mere moms">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.10: </strong>Mere moms</summary><div>Hvis man køber varer til sit eget firma kan man få momsen refunderet. Eksempelvis kan man købe et skrivebord til 4000 kr. inkl. moms og tro, at man beregner 25% af de 4000, d.v.s <span class="math inline">\(\frac{25}{100} \cdot 4000\text{ kr}.=1000\)</span> kr. og dét er så beløbet, man kan få refunderet. Men det er forkert.<p></p>
+<p>Vi kan få en idé om, hvad der går galt, ved at beregne de 3000 kr. + moms, d.v.s <span class="math inline">\(3000 \cdot 1,25 = 3750\)</span> kr. hvilket ikke giver de 4000 kr. som det skal.</p>
+<p>I stedet skal man løse ligningen <span class="math inline">\(B \cdot 1,25 = 4000 kr.\)</span>, hvor <span class="math inline">\(B\)</span> er beløbet eksklusiv moms. Det er <span class="math inline">\(B\)</span> vi ønsker at beregne, så vi får <span class="math display">\[
+\begin{aligned}
+B \cdot 1,25 = 4000 kr. \Leftrightarrow B=\frac{4000 kr.}{1,25} = 3200 kr.
+\end{aligned}
+\]</span> Man får altså “kun” 800 kr. refunderet i tilbagebetalt moms.</p>
+</div></details>
+</div>
+</section>
+<section id="kapitalfremskrivning" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="kapitalfremskrivning"><span class="header-section-number">5.3</span> Kapitalfremskrivning</h2>
+<p>Hvis vi kort opsummerer, vil vi sige, at vil man lægge <span class="math inline">\(p\%\)</span> til et beløb <span class="math inline">\(K\)</span> udregner vi: <span class="math display">\[
+\begin{aligned}
+\textcolor{red}{1} \cdot K + \textcolor{red}{p\%} \cdot K = K \cdot (\textcolor{red}{1}+ \textcolor{red}{p\%} ) = K \cdot \left(\textcolor{red}{1}+\textcolor{red}{\frac{p}{100}}\right)
+\end{aligned}
+\]</span> Hvis man lægger den samme procent til to gange udregnes det :</p>
+<p><span class="math display">\[
+\begin{align*}
+(K + p\% \cdot K) + p\% \cdot (K + p\% \cdot K) &amp;= (K + p\% \cdot K)(1+p\%) \\
+&amp;= K \cdot(1+p\%) \cdot (1+p\%) \\
+&amp;= K \cdot \left(1+\frac{p}{100}\right) \cdot \left(1+\frac{p}{100}\right) \\
+&amp;= K \cdot \left(1+\frac{p}{100}\right)^2
+\end{align*}
+\]</span></p>
+<p>Når man lægger 2% til 10000 vil vi skrive:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\textcolor{red}{1} \cdot 10000 + \textcolor{red}{2\%} \cdot 10000 = 10000 \cdot (\textcolor{red}{1}+\textcolor{red}{2\%}) =  10000 \cdot \left(\textcolor{red}{1}+\textcolor{red}{\frac{2}{100}} \right)=10000 \cdot 1,02.
+\end{aligned}
+\]</span> Lægger man yderligere 2% til skriver vi:</p>
+<p><span class="math display">\[
+\begin{aligned}
+10000 \cdot \left(1+\frac{2}{100} \right) + \frac{2}{100} \cdot 10000 \cdot \left(1+\frac{2}{100} \right) &amp;= 10000 \cdot \left(1+\frac{2} {100} \right) \cdot \left(1+\frac{2}{100} \right) \\
+&amp;=10000 \cdot (1,02)^2
+\end{aligned}
+\]</span></p>
+<p>V.h.a fremskrivningsfaktoren kan vi altså omskrive tabellen fra før:</p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>Tabel for 10000 kr. til 2% om året</caption>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Antal år</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Beløb</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Efter rentetilskrivning</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>10000</td>
+<td>10000 · 1.02 = 10200</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>10200</td>
+<td>10200 · (1.02)<sup>2</sup> = 10404</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>10404</td>
+<td>10200 · (1.02)<sup>3</sup> = 10612,08</td>
+</tr>
+</tbody>
+</table>
+<p>Med denne fremgangsmåde er det relativt nemt at udregne beløbet efter 5- og 10 år:</p>
+<p>Efter 5 år: <span class="math inline">\(10000 \cdot 1,02^5= 11040,81\)</span> <br> Efter 10 år: <span class="math inline">\(10000 \cdot 1,02^{10} = 12189,94\)</span> <br></p>
+<p>Igen er det vigtigt at pointere, at man ikke udregner rentetilskrivningen fra første år (200 kr.) og lægger den til 10 gange (2000 kr.). De ekstra 189,94 er som pointeret før <em>renters rente</em>, altså rentetilskrivning af tidligere rentetilskrivninger.</p>
+<div id="renteformlen" class="Sætning" title="Renteformlen">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 5.11: </strong>Renteformlen</summary><div>En fremskrivningsfaktor <span class="math inline">\(1+\frac{p}{100}\)</span> fremskriver med <span class="math inline">\(p\%\)</span>.<p></p>
+<p>Specielt fremskriver man en <code>begyndelseskapital</code>, <span class="math inline">\(K_0\)</span>, <span class="math inline">\(n\)</span> gange - kaldet <code>antal terminer</code> - ved at gange med <span class="math inline">\((1+\frac{p}{100})^n\)</span>. Herved opnår man <code>renteformlen</code></p>
+<p><span class="math display">\[
+\begin{align*}
+K_n=K_0 \cdot  (1+r)^n
+\end{align*}
+\]</span></p>
+<p>hvor <span class="math inline">\(r=p\%\)</span>, når det handler om penge, kaldes <code>rentefoden</code> eller kort <code>renten</code>.</p>
+<p>Vi kan isolere <span class="math inline">\(K_0\)</span>, så vi kan beregne startbeløbet, når vi kender slutbeløbet, renten og antallet af terminer ved at dividere med <span class="math inline">\((1+r)^n\)</span> på begge sider.</p>
+<p><span class="math display">\[
+\begin{align*}
+K_0=\frac{K_n}{(1+r)^n}
+\end{align*}
+\]</span></p>
+<p>Vi kan isolere renten, når vi kender startbeløbet, slutbeløbet og antallet af terminer</p>
+<p><span class="math display">\[
+\begin{align*}
+K_n&amp;=K_0 \cdot  (1+r)^n \Leftrightarrow \\
+\frac{K_n}{K_0} &amp;= (1+r)^n \Leftrightarrow \\
+1+r &amp;= \sqrt[n]{\frac{K_n}{K_0}} \Leftrightarrow \\
+r&amp;=\sqrt[n]{\frac{K_n}{K_0}}-1
+\end{align*}
+\]</span></p>
+</div></details>
+</div>
+<p>Vi kan også isolere antallet af terminer, men det må vente til vi har gennemgået <code>logaritmer</code>.</p>
+</section>
+<section id="gennemsnitlig-rente" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="gennemsnitlig-rente"><span class="header-section-number">5.4</span> Gennemsnitlig rente</h2>
+<p>Hvis vi i stedet for en konto med fast rente pr. termin eksempelvis har sat pengene i værdipapirer, der hver måned tilskrives en rente baseret på forskellige markedsforhold, så kan vi ikke bruge den samme fremskrivningsfaktor måned efter måned.</p>
+<div id="eksempel-på-gennemsnitlig-rente" class="Eksempel" title="Eksempel på gennemsnitlig rente">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.12: </strong>Eksempel på gennemsnitlig rente</summary><div>Vi indsætter 5000 kr. i værdipapirer, hvor renten varierer.<p></p>
+<p>Den første måned tilskrives en rente på 3,1%, den næste måned en rente på 1,2%, den tredje en rente på -0,9%, den fjerde en rente på 1,1% og den femte en rente på -0,2%.</p>
+<p>Lad os udregne værdien af vores værdipapirer måned for måned i en tabel.</p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>5000 kr. i værdipapirer med varierende rente</caption>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Antal år</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Beløb</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Fremskrivningsfaktor</td>
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">Efter rentetilskrivning</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>5000</td>
+<td>1,031</td>
+<td>5000 · 1.031 = 5155</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>5155</td>
+<td>1,012</td>
+<td>5155 · 1.012 = 5216,86</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>5216,86</td>
+<td>0,991</td>
+<td>5216,86 · 0,991 = 5169,91</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>5169,91</td>
+<td>1,011</td>
+<td>5169,91 · 1,011 = 5226,78</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>5226,78</td>
+<td>0,998</td>
+<td>5226,78 · 0,998 = 5216,32</td>
+</tr>
+</tbody>
+</table>
+<p>Lad os endvidere skrive det på den korte måde og tjekke, at vi får det samme som før:</p>
+<p><span class="math display">\[
+\begin{aligned}
+K_5 &amp;= 5000 \cdot  \left(1+\frac{3,1}{100} \right) \cdot \left(1+\frac{1,2}{100} \right) \cdot \left(1+\frac{-0,9}{100} \right) \cdot \left(1+\frac{1,1}{100} \right) \cdot \left(1+\frac{-0,2}{100} \right) \\
+&amp;= 5000 \cdot 1,031 \cdot 1,012 \cdot 0,991 \cdot 1,011 \cdot 0,998 \\
+&amp;= 5216,32
+\end{aligned}
+\]</span></p>
+<p>Vi antager nu, at der findes en <code>gennemsnitlig fremskrivningsfaktor</code>, <span class="math inline">\(\overline{a}\)</span>, og at vi kan skrive</p>
+<p><span class="math display">\[
+\begin{aligned}
+K_5&amp;=5000 \cdot \overline{a}^5
+\end{aligned}
+\]</span> Sammenligner vi med ovenfor må der gælde, at</p>
+<p><span class="math display">\[
+\begin{aligned}
+\overline{a}^5 =  1,031 \cdot 1,012 \cdot 0,991 \cdot 1,011 \cdot 0,998 \Leftrightarrow \\
+\overline{a} = \sqrt[5]{1,031 \cdot 1,012 \cdot 0,991 \cdot 1,011 \cdot 0,998} =1,00851
+\end{aligned}
+\]</span></p>
+<p>Herfra kan vi konkludere, at den gennemsnitlige rente for værdipapirerne er 0,851%.</p>
+</div></details>
+</div>
+<p>Vi sammenfatter resultatet af eksemplet i følgende sætning</p>
+<div id="gennemsnitlig-rente-1" class="Sætning" title="Gennemsnitlig rente">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 5.13: </strong>Gennemsnitlig rente</summary><div>Hvis et starbeløb, <span class="math inline">\(K_0\)</span>, over en periode på <span class="math inline">\(n\)</span> terminer vokser med renteprocenterne <span class="math inline">\(p_1, p_2, \dots, p_n\)</span> og dermed med fremskrivningsfaktorerne <span class="math inline">\(a_1, a_2, \dots , a_n\)</span>, hvor <span class="math inline">\(a_i = 1+ \frac{p_i}{100} = 1+r_i\)</span>, er den gennemsnitlige fremskrivningsfaktor pr. temin givet ved<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+\overline{a} &amp;= \sqrt[n]{a_1 \cdot a_2 \cdot \dots \cdot a_n}
+\end{aligned}
+\]</span></p>
+<p>Den gennemsnitlige rente er givet ved</p>
+<p><span class="math display">\[
+\begin{aligned}
+\overline{r} &amp;= \overline{a} -1 = \sqrt[n]{(1+r_1) \cdot (1+r_2) \cdot \dots \cdot (1+r_n)} - 1
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="årlig-månedlige-og-kvartalvis-rente" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="årlig-månedlige-og-kvartalvis-rente"><span class="header-section-number">5.5</span> Årlig, månedlige og kvartalvis rente</h2>
+<div id="billån" class="Eksempel" title="Billån">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.14: </strong>Billån</summary><div>Vi er blevet tilbudt to forskellige lån til finansiering af en ny udestue. Det ene lån tilbyder 8% om året i rente mens det andet lån tilbyder 0,7% i rente om måneden. Spørgsmålet er nu; hvilket lån tilbyder den laveste rente?<p></p>
+<p>Vi har 12 måneder på et år, så den månedlige rente fremskrives 12 gange, d.v.s vi udregner</p>
+<p><span class="math display">\[
+\begin{aligned}
+a_{\text{år}} = a_{\text{måned}}^{12} = \left(1+\frac{0,7}{100}\right)^{12} = (1,007)^{12} =  1,087
+\end{aligned}
+\]</span></p>
+<p>Den årlige rente på dette lån er altså</p>
+<p><span class="math display">\[
+\begin{aligned}
+p=(a-1) \cdot 100 = (1,087-1) \cdot 100 = 8,7 \%
+\end{aligned}
+\]</span></p>
+<p>Vi kunne også have udregnet den månedlige rente for lånet med 8% om året.</p>
+<p><span class="math display">\[
+\begin{aligned}
+a_{\text{måned}}^{12} &amp;= a_{\text{år}} \Leftrightarrow \\
+a_{\text{måned}} &amp;= \sqrt[12]{a_{\text{år}}} = \sqrt[12]{1 + \frac{8}{100}} = \sqrt[12]{1,08} = 1,0064
+\end{aligned}
+\]</span></p>
+<p>Hvilket svarer til en månedlig rente på</p>
+<p><span class="math display">\[
+\begin{aligned}
+p=(a-1) \cdot 100 = (1,0064-1) \cdot 100 = 0,64 \%
+\end{aligned}
+\]</span></p>
+<p>I begge tilfælde ser vi, at lånet med 8% om året er det billigste.</p>
+</div></details>
+</div>
+</section>
+<section id="vækstrate---relativ-tilvækstafvigelse" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="vækstrate---relativ-tilvækstafvigelse"><span class="header-section-number">5.6</span> Vækstrate - Relativ tilvækst/afvigelse</h2>
+<p>Når vi ikke regner med konti og pengene på disse, kalder vi <span class="math inline">\(r\)</span> for <code>vækstraten</code> eller <code>den relative tilvækst/afgivelse</code>.</p>
+<p>Fremskrivningsfaktoren er forholdet mellem slutværdi, <span class="math inline">\(S\)</span>, og begyndelsesværdi, <span class="math inline">\(B\)</span>, og dermed gælder</p>
+<p><span class="math display">\[
+\begin{aligned}
+B\cdot a =S \Leftrightarrow a=\frac{S}{B} \Leftrightarrow 1+r=\frac{S}{B}
+\end{aligned}
+\]</span></p>
+<p>En anden måde at udtrykke vækstraten på er derfor</p>
+<p><span class="math display">\[
+\begin{aligned}
+r= \frac{S}{B}-1 = \frac{S-B}{B}
+\end{aligned}
+\]</span></p>
+<p>Det kan vi sammenfatte i følgende definition</p>
+<div id="vækstrate-relativ-ændringafvigelse" class="Definition" title="Vækstrate, relativ ændring/afvigelse">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 5.15: </strong>Vækstrate, relativ ændring/afvigelse</summary><div><code>Vækstraten, den relative ændring/afvigelse</code>, <span class="math inline">\(r\)</span>, er givet ved<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+r&amp;=p\% = a-1 \\
+&amp;= \frac{\text{Slutværdi}-\text{Begyndelsesværdi}}{\text{Begyndelsesværdi}} \\
+&amp;= \frac{\text{Målt værdi}- \text{Tabelværdi}}{\text{Tabelværdi}}
+\end{aligned}
+\]</span></p>
+<p>Slutværdi - Begyndelsesværdi er den absolutte tilvækst, mens <span class="math inline">\(\frac{\text{Slutværdi}-\text{Begyndelsesværdi}}{\text{Begyndelsesværdi}}\)</span> er den absolutte tilvækst <code>i forhold til begyndelsesværdien</code>, deraf navnet <code>relativ tilvækst</code>.</p>
+</div></details>
+</div>
+<p>I naturvidenskab bruger man ofte størrelsen <span class="math inline">\(r=\frac{\text{Målt værdi}- \text{Tabelværdi}}{\text{Tabelværdi}}\)</span> til at afgøre, om ens forsøg har været “godt” i forhold til en opgiven tabelværdi. Man beregner altså, hvor meget ens egne målinger <em>afviger</em> fra tabelværdien og heraf navnet <em>relativ</em> afvigelse.</p>
+<div id="relativ-afvigelse-i-fysikforsøg" class="Eksempel" title="Relativ afvigelse i fysikforsøg">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.16: </strong>Relativ afvigelse i fysikforsøg</summary><div>I fysik har man i et forsøg om diffraktion målt en grøn laser til at have bølgelængden 537 nm. Den opgivne værdi på laserpennen er 520 nm. Her er den <em>absolutte afvigelse</em> lig <span class="math inline">\(537\text{nm}-520\text{nm}=17\text{nm}\)</span>, mens <em>den relative afvigelse</em> er<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+r= \frac{537\text{nm}- 520\text{nm}}{520\text{nm}} = 0,033 = 3,3\%
+\end{aligned}
+\]</span></p>
+<p>Bemærk, at den absolutte afvigelse har enheden nm (nanometer), mens den relative afvigelse er enhedsløs.</p>
+</div></details>
+</div>
+<p>Når det handler om priser og prisændringer, snakker vi om absolut (pris)tilvækst og relativ (pris)tilvækst.</p>
+<div id="mobiltelefon" class="Eksempel" title="Mobiltelefon">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.17: </strong>Mobiltelefon</summary><div>En mobiltelefon falder fra 4995 kr. til 4295 kr. Her er slutværdien, <span class="math inline">\(S=4295\)</span>kr., og begyndelsesværdien <span class="math inline">\(B=4995\)</span>kr., så den absolutte tilvækst er <span class="math inline">\(-700\)</span>kr., mens den relative prisændring er<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+r=\frac{4295}{4995}-1=-0,14 = -14\%
+\end{aligned}
+\]</span></p>
+<p>Mobiltelefonen er altså nedsat med 14%. Vi har også, at <span class="math inline">\(a=1+r=1-0,14=0,86\)</span>, så de 4995 kr. er fremskrevet med 0,86 sådan at <span class="math inline">\(4995 \cdot 0,86=4295\)</span>.</p>
+<p>D.v.s hvis en vare nedsættes i pris ganges prisen med en fremskrivningsfaktor, der er mindre end 1.</p>
+</div></details>
+</div>
+<p>Ligesom med en konto, hvor der tilskrives rente over flere terminer, kan vi have andre størrelser, der falder eller stiger et vist antal procent i flere dage, uger, måneder, år o.s.v.</p>
+<div id="gymnasiedrift" class="Eksempel" title="Gymnasiedrift">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.18: </strong>Gymnasiedrift</summary><div>Gymnasiedriften på et middelstort gymnasium skal i grønthøsterbidrag skæres med 2% i årene 2017-2020, d.v.s i 4 år. Hvis der bruges 50 mio. på driften i dag, hvor mange millioner skal der så spares i nævnte periode?<p></p>
+<p>Ved fremskrivning i fire år med <span class="math inline">\(-2\%\)</span> får vi en samlet fremskrivningsfaktor på <span class="math inline">\(a^4=(1+(-0,02))^4=(0,98)^4=0,922\)</span>. D.v.s gymnasiedriften skal skæres med samlet 7,8%. Begyndelsesdriften er 50 mio. kr. og slutdriften er <span class="math inline">\(S=B \cdot a^4 = 50 \cdot 0,922=46,1\)</span>mio. kr. Der skal altså spares <span class="math inline">\(B-S=50-46,1=3,9\)</span>mio. kroner på gymnasiedriften i årene 2017-2020.</p>
+</div></details>
+</div>
+<p>Ved fremskrivning <span class="math inline">\(n\)</span> gange skriver vi <span class="math inline">\(a^n=(1+r)^n\)</span> som i tilfældet med kapitalfremskrivning.</p>
+<div id="to-fabrikker" class="Eksempel" title="To fabrikker">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.19: </strong>To fabrikker</summary><div>En fabriks produktion vokser med 2% om året. Hvor mange procent vokser produktionen med på 9 år.<p></p>
+<p>Vi beregner fremskrivningsfaktoren efter de 9 år: <span class="math inline">\(a^9=(1+\frac{2}{100})^9 = 1,02^9=1,195\)</span>. Vækstraten er <span class="math inline">\(r^9=a^9-1=1,195-1=0,195=19,5\%\)</span>, hvilket er fabrikkens relative tilvækst i produktion over de 9 år.</p>
+<p>En anden fabriks produktion er vokset 11% på 5 år. Hvad er den gennemsnitlige procentvise vækst pr. år?</p>
+<p>Vi har at <span class="math inline">\(a^5=1,11=a^n\)</span> og dermed, at <span class="math inline">\(a=\sqrt[n]{1,11}=1,021\)</span>. <span class="math inline">\(p\%=r=a-1=1,021-1=0,021 \Rightarrow p=2,1\)</span>, hvilket er den gennemsnitlige relative ændring i produktion pr. år i de fem år.</p>
+</div></details>
+</div>
+</section>
+<section id="procentpoint" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="procentpoint"><span class="header-section-number">5.7</span> Procentpoint</h2>
+<div id="et-partis-tilbagegang" class="Eksempel" title="Et partis tilbagegang">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.20: </strong>Et partis tilbagegang</summary><div>Et parti går ved et valg tilbage fra 21,3% af stemmerne fra sidste valg til 19,7% af stemmerne ved det nuværende valg.<p></p>
+<p>Spørgsmålet er nu: <strong>Hvor mange procent af vælgerne er partiet gået tilbage</strong>.</p>
+<p>Her kan man fristes til at beregne det som <span class="math inline">\(19,7\% - 21,3\%= -1,6\%\)</span> og herfra konkludere, at partiet er gået 1,6% tilbage. Men det er forkert.</p>
+<p>Lad os illustrere problemet ved at omregne procentdele til andele af 1000 vælgere. Så er partiet gået fra at 213 stemte på partiet til at kun 197 nu stemmer på partiet. Den absolutte tilvækst af vælgere er 197-213=-16 og den relative tilvækst af vælgere er</p>
+<p><span class="math display">\[
+\begin{aligned}
+r=\frac{197-213}{213} = \frac{-16}{213} =-0,075
+\end{aligned}
+\]</span></p>
+<p>D.v.s partiet er gået, <span class="math inline">\(p=-0,075=-7,5\%\)</span> frem, altså 7,5% tilbage i forhold til sidste valg. Den absolutte tilvækst i procent, altså de -1,6% fra før kaldes <code>Procentpoint</code></p>
+</div></details>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./linear.html" class="pagination-link" aria-label="Lineære funktioner">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./eksponentiel.html" class="pagination-link" aria-label="Eksponentialfunktion og eksponentiel udvikling">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

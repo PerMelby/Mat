@@ -1,0 +1,692 @@
+
+# Procentregning
+
+## Procenttegnet
+
+::: {.Definition}
+
+## Definition på procent
+
+Tegnet for procent, $\%$, betyder $\frac{1}{100}$. 
+$$
+\begin{aligned}
+p\%= p \cdot \frac{1}{100}= \frac{p}{100}
+\end{aligned}
+$$
+:::
+
+::: {.Eksempel}
+
+## Lønforhøjelse?
+
+Chefen fortæller, du har fået lønforhøjelse. Du får først 25% ekstra i
+løn, og derefter trækker chefen 20% af beløbet fra, og dermed har du så
+fået 5% i lønforhøjelse. Eller har du?
+
+Lad os antage lønsedlen lyder på 10000 kr. 25% af 10000 er
+$25/100 \cdot 10000=2500 kr$. Så med det beløb lagt oveni er lønnen nu
+på 12500 kr. 20% af dette beløb er $20/100 \cdot 12500=2500 kr$. Med det
+beløb trukket fra er vi tilbage på 10000 kr., og du har ikke fået nogen
+lønforhøjelse.
+
+Du kan så evt. overveje at få de 20% fratrukket først og derefter lagt
+de 25% til og på den måde få en lønforhøjelse på 5%. Men det er en
+ligeså dårlig idé.
+
+20% af 10000 er $20/100 \cdot 10000=2000 kr$. Så med det beløb
+fratrukket er lønnen nu på 8000 kr. 25% af dette beløb er
+$25/100 \cdot 8000=2000 kr$. Med det beløb lagt til de 8000 kr. er vi
+tilbage på 10000 kr., og du har stadig ikke fået nogen lønforhøjelse.
+:::
+
+Vi siger altså, at 20% af 10000 er $\frac{20}{100} \cdot 10000 = 2000$
+og skriver dette generelt:
+
+::: {.Definition}
+
+## Procentregneregel 1
+
+$p\%$ af en størrelse $K$ er lig 
+
+$$
+\begin{aligned}
+p\% \cdot K=  \frac{p}{100} \cdot K
+\end{aligned}
+$$
+:::
+
+::: {.Eksempel}
+
+## Elever på et gymnasium
+
+På et gymnasium er der 262 drenge ud af 570 elever. Hvor mange procent
+af eleverne er drenge på dette gymnasium?
+
+Vi beregner hvor stor den brøkdel af eleverne, der er drenge ved at
+beregne $\frac{262}{570} =0,46$ og skriver dette tal som procent ved at
+gange med 100% (hvilket ikke ændrer noget, for det er det samme som at
+gange med 1).
+
+Alt i alt skriver vi: Antal procent drenge =
+$\frac{262}{570} \cdot 100 \% = 46\%$.
+:::
+
+Udregningen brugt i ovenstående eksempel skriver vi generelt
+
+::: {.Definition}
+
+## Procentregneregel 2
+
+En størrelse $s$ udgør $$
+\begin{aligned}
+\frac{s}{K} \cdot 100\%
+\end{aligned}
+$$ af en anden størrelse $K$
+:::
+
+::: {.Eksempel}
+
+## Renters rente
+
+10000 kr. sættes i banken til 2% om året i tre år. Hvor mange penge står
+der i banken, når de tre år er gået? Lad os opskrive beregningerne i en
+tabel
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for 10000 kr. til 2% om året</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Antal år</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Beløb</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Rentetilskrivning</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Efter rentetilskrivning</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>10000</td>
+    <td>2/100 &#183; 10000 = 200 </td>
+    <td>10000+200 = 10200</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>10200</td>
+    <td>2/100 &#183; 10200 = 204 </td>
+    <td>10200+204 = 10404</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>10404</td>
+    <td>2/100 &#183; 10404 = 208,08 </td>
+    <td>10404+208,08 = 10612,08</td>
+  </tr>
+</table>
+```
+Bemærk, at man ikke udregner rentebeløbet for første år (200 kr.) og
+lægger det til startbeløbet tre gange $(10000+3\cdot 200=10600)$. De
+ekstra 12,08 kr. er *renters rente*, d.v.s rentetilskrivningen i år 3 af
+renterne fra år 1 og 2, hvor rentetilskrivning i år 2 også afhænger af
+rentetilskrivning fra år 1. Og så fremdeles.
+:::
+
+Skulle man lade pengene stå i 30 år, kan det blive en uoverkommelig
+affære at udregne slutbeløbet v.h.a en tabel som før (omend kendskab til
+et regneark vil gøre jobbet lettere. Vi vil gøre livet lidt nemmere for
+os selv ved indførelse af en `fremskrivningsfaktor`.
+
+## Fremskrivningsfaktor
+
+::: {.Definition}
+
+## Fremskrivningsfaktor
+
+**Fremskrivningsfaktoren**, $F$, er givet ved 
+
+$$
+\begin{aligned}
+F=1+p\% = 1+\frac{p}{100}
+\end{aligned}
+$$
+:::
+
+::: {.Eksempel}
+
+## Moms
+
+Når du køber en vare, er der i prisen inkluderet moms på 25%. Ellers
+også er prisen angivet ekskl. moms, d.v.s du skal selv lægge 25% til den
+angivne pris for at finde ud af, hvor meget du skal betale for varen.
+Man lægger moms til et beløb ved at gange beløbet med
+fremskrivningsfaktoren $a=1+\frac{25}{100}=1,25$. Hvis en vare koster fx
+350 kr. ekskl. moms, fås prisen inkl. moms som
+$$350 \cdot (1 + \frac{25}{100}) = 350 \cdot 1,25 = 437,50 \text{kr.}$$
+
+Bemærk, at man ved at gange ind i parentesen får
+$350 \cdot (1 + \frac{25}{100}) = 350 \cdot 1 + 350 \cdot \frac{25}{100}$,
+d.v.s de oprindelige 350 kroner plus 25% af 350.
+:::
+
+På samme måde lægger man 7% til et tal ved at gange det med 1,07, man
+lægger 12,9% til ved at gange med 1,129 osv.
+
+Hvis man i stedet for at lægge procenter til skal trække procenter fra,
+skrives antallet af procenter som et negativt tal. Trækker man 6% fra,
+lægger man $-6\%$ til, og man skriver derfor fremskrivningsfaktoren som
+$a=1+\frac{-6}{100}= 1-0,06=0,94$
+
+::: {.Eksempel}
+
+## Brug af fremskrivningsfaktor
+
+Hvis man skal trække 6% fra 350 kr. vil man skrive:
+$$350 \cdot (1 + \frac{-6}{100}) = 350 \cdot (1-0,06) = 350 \cdot 0,94 = 329 \text{ kr.}$$
+
+Her vil man også ved at gange ind i parentesen få
+$$350 \cdot (1-0,06) = 350 \cdot 1 - 350 \cdot 0,06$$ d.v.s. de
+oprindelige 350 fratrukket 6% af 360.
+
+Hvis man skal trække 1,1% eller 11% fra et tal, skal man gange med
+henholdsvis $$1+\frac{1,1}{100} = 1-0,011= 0,989$$ (dvs. med 98,9%) og
+$$1+\frac{11}{100} = 1-0,11 = 0,89$$ (dvs. med 89%) for at få
+resultatet.
+:::
+
+::: {.Eksempel}
+
+## Mere moms
+
+Hvis man køber varer til sit eget firma kan man få momsen refunderet.
+Eksempelvis kan man købe et skrivebord til 4000 kr. inkl. moms og tro,
+at man beregner 25% af de 4000, d.v.s
+$\frac{25}{100} \cdot 4000\text{ kr}.=1000$ kr. og dét er så beløbet,
+man kan få refunderet. Men det er forkert.
+
+Vi kan få en idé om, hvad der går galt, ved at beregne de 3000 kr. +
+moms, d.v.s $3000 \cdot 1,25 = 3750$ kr. hvilket ikke giver de 4000 kr.
+som det skal.
+
+I stedet skal man løse ligningen $B \cdot 1,25 = 4000 kr.$, hvor $B$ er
+beløbet eksklusiv moms. Det er $B$ vi ønsker at beregne, så vi får $$
+\begin{aligned}
+B \cdot 1,25 = 4000 kr. \Leftrightarrow B=\frac{4000 kr.}{1,25} = 3200 kr.
+\end{aligned}
+$$ Man får altså "kun" 800 kr. refunderet i tilbagebetalt moms.
+:::
+
+## Kapitalfremskrivning
+
+Hvis vi kort opsummerer, vil vi sige, at vil man lægge $p\%$ til et
+beløb $K$ udregner vi: $$
+\begin{aligned}
+\textcolor{red}{1} \cdot K + \textcolor{red}{p\%} \cdot K = K \cdot (\textcolor{red}{1}+ \textcolor{red}{p\%} ) = K \cdot \left(\textcolor{red}{1}+\textcolor{red}{\frac{p}{100}}\right)
+\end{aligned}
+$$ Hvis man lægger den samme procent til to gange udregnes det :
+
+$$
+\begin{align*}
+(K + p\% \cdot K) + p\% \cdot (K + p\% \cdot K) &= (K + p\% \cdot K)(1+p\%) \\
+&= K \cdot(1+p\%) \cdot (1+p\%) \\ 
+&= K \cdot \left(1+\frac{p}{100}\right) \cdot \left(1+\frac{p}{100}\right) \\
+&= K \cdot \left(1+\frac{p}{100}\right)^2
+\end{align*}
+$$
+
+Når man lægger 2% til 10000 vil vi skrive: 
+
+$$
+\begin{aligned}
+\textcolor{red}{1} \cdot 10000 + \textcolor{red}{2\%} \cdot 10000 = 10000 \cdot (\textcolor{red}{1}+\textcolor{red}{2\%}) =  10000 \cdot \left(\textcolor{red}{1}+\textcolor{red}{\frac{2}{100}} \right)=10000 \cdot 1,02.
+\end{aligned}
+$$ 
+Lægger man yderligere 2% til skriver vi: 
+
+$$
+\begin{aligned}
+10000 \cdot \left(1+\frac{2}{100} \right) + \frac{2}{100} \cdot 10000 \cdot \left(1+\frac{2}{100} \right) &= 10000 \cdot \left(1+\frac{2} {100} \right) \cdot \left(1+\frac{2}{100} \right) \\
+&=10000 \cdot (1,02)^2
+\end{aligned}
+$$
+
+V.h.a fremskrivningsfaktoren kan vi altså omskrive tabellen fra før:
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for 10000 kr. til 2% om året</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Antal år</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Beløb</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Efter rentetilskrivning</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>10000</td>
+    <td>10000 &#183; 1.02  = 10200</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>10200</td>
+    <td>10200 &#183; (1.02)<sup>2</sup> = 10404</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>10404</td>
+    <td>10200 &#183; (1.02)<sup>3</sup> = 10612,08</td>
+  </tr>
+</table>
+```
+Med denne fremgangsmåde er det relativt nemt at udregne beløbet efter 5-
+og 10 år:
+
+Efter 5 år: $10000 \cdot 1,02^5= 11040,81$ <br> Efter 10 år:
+$10000 \cdot 1,02^{10} = 12189,94$ <br>
+
+Igen er det vigtigt at pointere, at man ikke udregner
+rentetilskrivningen fra første år (200 kr.) og lægger den til 10 gange
+(2000 kr.). De ekstra 189,94 er som pointeret før *renters rente*, altså
+rentetilskrivning af tidligere rentetilskrivninger.
+
+::: {.Sætning}
+
+## Renteformlen
+
+En fremskrivningsfaktor $1+\frac{p}{100}$ fremskriver med $p\%$.
+
+Specielt fremskriver man en `begyndelseskapital`, $K_0$, $n$ gange -
+kaldet `antal terminer` - ved at gange med $(1+\frac{p}{100})^n$. Herved
+opnår man `renteformlen`
+
+$$
+\begin{align*}
+K_n=K_0 \cdot  (1+r)^n
+\end{align*}
+$$ 
+
+hvor $r=p\%$, når det handler om penge, kaldes `rentefoden` eller
+kort `renten`.
+
+Vi kan isolere $K_0$, så vi kan beregne startbeløbet, når vi kender
+slutbeløbet, renten og antallet af terminer ved at dividere med
+$(1+r)^n$ på begge sider.
+
+$$
+\begin{align*}
+K_0=\frac{K_n}{(1+r)^n}
+\end{align*}
+$$
+
+Vi kan isolere renten, når vi kender startbeløbet, slutbeløbet og
+antallet af terminer
+
+$$
+\begin{align*}
+K_n&=K_0 \cdot  (1+r)^n \Leftrightarrow \\
+\frac{K_n}{K_0} &= (1+r)^n \Leftrightarrow \\
+1+r &= \sqrt[n]{\frac{K_n}{K_0}} \Leftrightarrow \\
+r&=\sqrt[n]{\frac{K_n}{K_0}}-1
+\end{align*}
+$$
+:::
+
+Vi kan også isolere antallet af terminer, men det må vente til vi har
+gennemgået `logaritmer`.
+
+## Gennemsnitlig rente
+
+Hvis vi i stedet for en konto med fast rente pr. termin eksempelvis har
+sat pengene i værdipapirer, der hver måned tilskrives en rente baseret
+på forskellige markedsforhold, så kan vi ikke bruge den samme
+fremskrivningsfaktor måned efter måned.
+
+::: {.Eksempel}
+
+## Eksempel på gennemsnitlig rente
+
+Vi indsætter 5000 kr. i værdipapirer, hvor renten varierer.
+
+Den første måned tilskrives en rente på 3,1%, den næste måned en rente
+på 1,2%, den tredje en rente på -0,9%, den fjerde en rente på 1,1% og
+den femte en rente på -0,2%.
+
+Lad os udregne værdien af vores værdipapirer måned for måned i en tabel.
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+<table style="width:80%">
+<caption>5000 kr. i værdipapirer med varierende rente</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Antal år</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Beløb</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Fremskrivningsfaktor</th>
+    <th style="font-weight: bold; background-color: #D6EEEE;">Efter rentetilskrivning</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>5000</td>
+    <td>1,031</td>
+    <td>5000 &#183; 1.031  = 5155</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>5155</td>
+    <td>1,012</td>
+    <td>5155 &#183; 1.012 = 5216,86</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>5216,86</td>
+    <td>0,991</td>
+    <td>5216,86 &#183; 0,991 = 5169,91</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>5169,91</td>
+    <td>1,011 </td>
+    <td>5169,91 &#183; 1,011 = 5226,78</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>5226,78</td>
+    <td>0,998 </td>
+    <td>5226,78 &#183; 0,998 = 5216,32</td>
+  </tr>
+</table>
+```
+Lad os endvidere skrive det på den korte måde og tjekke, at vi får det
+samme som før:
+
+$$
+\begin{aligned}
+K_5 &= 5000 \cdot  \left(1+\frac{3,1}{100} \right) \cdot \left(1+\frac{1,2}{100} \right) \cdot \left(1+\frac{-0,9}{100} \right) \cdot \left(1+\frac{1,1}{100} \right) \cdot \left(1+\frac{-0,2}{100} \right) \\
+&= 5000 \cdot 1,031 \cdot 1,012 \cdot 0,991 \cdot 1,011 \cdot 0,998 \\
+&= 5216,32
+\end{aligned}
+$$
+
+Vi antager nu, at der findes en `gennemsnitlig fremskrivningsfaktor`,
+$\overline{a}$, og at vi kan skrive
+
+$$
+\begin{aligned}
+K_5&=5000 \cdot \overline{a}^5
+\end{aligned}
+$$ 
+Sammenligner vi med ovenfor må der gælde, at 
+
+$$
+\begin{aligned}
+\overline{a}^5 =  1,031 \cdot 1,012 \cdot 0,991 \cdot 1,011 \cdot 0,998 \Leftrightarrow \\
+\overline{a} = \sqrt[5]{1,031 \cdot 1,012 \cdot 0,991 \cdot 1,011 \cdot 0,998} =1,00851
+\end{aligned}
+$$
+
+Herfra kan vi konkludere, at den gennemsnitlige rente for værdipapirerne
+er 0,851%.
+:::
+
+Vi sammenfatter resultatet af eksemplet i følgende sætning
+
+::: {.Sætning}
+
+## Gennemsnitlig rente
+
+Hvis et starbeløb, $K_0$, over en periode på $n$ terminer vokser med
+renteprocenterne $p_1, p_2, \dots, p_n$ og dermed med
+fremskrivningsfaktorerne $a_1, a_2, \dots , a_n$, hvor
+$a_i = 1+ \frac{p_i}{100} = 1+r_i$, er den gennemsnitlige
+fremskrivningsfaktor pr. temin givet ved
+
+$$
+\begin{aligned}
+\overline{a} &= \sqrt[n]{a_1 \cdot a_2 \cdot \dots \cdot a_n}
+\end{aligned}
+$$ 
+
+Den gennemsnitlige rente er givet ved
+
+$$
+\begin{aligned}
+\overline{r} &= \overline{a} -1 = \sqrt[n]{(1+r_1) \cdot (1+r_2) \cdot \dots \cdot (1+r_n)} - 1
+\end{aligned}
+$$
+:::
+
+## Årlig, månedlige og kvartalvis rente
+
+::: {.Eksempel}
+
+## Billån
+
+Vi er blevet tilbudt to forskellige lån til finansiering af en ny
+udestue. Det ene lån tilbyder 8% om året i rente mens det andet lån
+tilbyder 0,7% i rente om måneden. Spørgsmålet er nu; hvilket lån
+tilbyder den laveste rente?
+
+Vi har 12 måneder på et år, så den månedlige rente fremskrives 12 gange,
+d.v.s vi udregner
+
+$$
+\begin{aligned}
+a_{\text{år}} = a_{\text{måned}}^{12} = \left(1+\frac{0,7}{100}\right)^{12} = (1,007)^{12} =  1,087
+\end{aligned}
+$$
+
+Den årlige rente på dette lån er altså
+
+$$
+\begin{aligned}
+p=(a-1) \cdot 100 = (1,087-1) \cdot 100 = 8,7 \%
+\end{aligned}
+$$
+
+Vi kunne også have udregnet den månedlige rente for lånet med 8% om
+året.
+
+$$
+\begin{aligned}
+a_{\text{måned}}^{12} &= a_{\text{år}} \Leftrightarrow \\
+a_{\text{måned}} &= \sqrt[12]{a_{\text{år}}} = \sqrt[12]{1 + \frac{8}{100}} = \sqrt[12]{1,08} = 1,0064
+\end{aligned}
+$$
+
+Hvilket svarer til en månedlig rente på
+
+$$
+\begin{aligned}
+p=(a-1) \cdot 100 = (1,0064-1) \cdot 100 = 0,64 \%
+\end{aligned}
+$$
+
+I begge tilfælde ser vi, at lånet med 8% om året er det billigste.
+:::
+
+## Vækstrate - Relativ tilvækst/afvigelse
+
+Når vi ikke regner med konti og pengene på disse, kalder vi $r$ for
+`vækstraten` eller `den relative tilvækst/afgivelse`.
+
+Fremskrivningsfaktoren er forholdet mellem slutværdi, $S$, og
+begyndelsesværdi, $B$, og dermed gælder
+
+$$
+\begin{aligned}
+B\cdot a =S \Leftrightarrow a=\frac{S}{B} \Leftrightarrow 1+r=\frac{S}{B}
+\end{aligned}
+$$
+
+En anden måde at udtrykke vækstraten på er derfor
+
+$$
+\begin{aligned}
+r= \frac{S}{B}-1 = \frac{S-B}{B}
+\end{aligned}
+$$
+
+Det kan vi sammenfatte i følgende definition
+
+::: {.Definition}
+
+## Vækstrate, relativ ændring/afvigelse
+
+`Vækstraten, den relative ændring/afvigelse`, $r$, er givet ved
+
+$$
+\begin{aligned}
+r&=p\% = a-1 \\
+ &= \frac{\text{Slutværdi}-\text{Begyndelsesværdi}}{\text{Begyndelsesværdi}} \\
+ &= \frac{\text{Målt værdi}- \text{Tabelværdi}}{\text{Tabelværdi}}
+\end{aligned}
+$$
+
+Slutværdi - Begyndelsesværdi er den absolutte tilvækst, mens
+$\frac{\text{Slutværdi}-\text{Begyndelsesværdi}}{\text{Begyndelsesværdi}}$
+er den absolutte tilvækst `i forhold til begyndelsesværdien`, deraf
+navnet `relativ tilvækst`.
+:::
+
+I naturvidenskab bruger man ofte størrelsen
+$r=\frac{\text{Målt værdi}- \text{Tabelværdi}}{\text{Tabelværdi}}$ til
+at afgøre, om ens forsøg har været "godt" i forhold til en opgiven
+tabelværdi. Man beregner altså, hvor meget ens egne målinger *afviger*
+fra tabelværdien og heraf navnet *relativ* afvigelse.
+
+::: {.Eksempel}
+
+## Relativ afvigelse i fysikforsøg
+
+I fysik har man i et forsøg om diffraktion målt en grøn laser til at
+have bølgelængden 537 nm. Den opgivne værdi på laserpennen er 520 nm.
+Her er den *absolutte afvigelse* lig
+$537\text{nm}-520\text{nm}=17\text{nm}$, mens *den relative afvigelse*
+er
+
+$$
+\begin{aligned}
+r= \frac{537\text{nm}- 520\text{nm}}{520\text{nm}} = 0,033 = 3,3\%
+\end{aligned}
+$$
+
+Bemærk, at den absolutte afvigelse har enheden nm (nanometer), mens den
+relative afvigelse er enhedsløs.
+:::
+
+Når det handler om priser og prisændringer, snakker vi om absolut
+(pris)tilvækst og relativ (pris)tilvækst.
+
+::: {.Eksempel}
+
+## Mobiltelefon
+
+En mobiltelefon falder fra 4995 kr. til 4295 kr. Her er slutværdien,
+$S=4295$kr., og begyndelsesværdien $B=4995$kr., så den absolutte
+tilvækst er $-700$kr., mens den relative prisændring er
+
+$$
+\begin{aligned}
+r=\frac{4295}{4995}-1=-0,14 = -14\%
+\end{aligned}
+$$
+
+Mobiltelefonen er altså nedsat med 14%. Vi har også, at
+$a=1+r=1-0,14=0,86$, så de 4995 kr. er fremskrevet med 0,86 sådan at
+$4995 \cdot 0,86=4295$.
+
+D.v.s hvis en vare nedsættes i pris ganges prisen med en
+fremskrivningsfaktor, der er mindre end 1.
+:::
+
+Ligesom med en konto, hvor der tilskrives rente over flere terminer, kan
+vi have andre størrelser, der falder eller stiger et vist antal procent
+i flere dage, uger, måneder, år o.s.v.
+
+::: {.Eksempel}
+
+## Gymnasiedrift
+
+Gymnasiedriften på et middelstort gymnasium skal i grønthøsterbidrag
+skæres med 2% i årene 2017-2020, d.v.s i 4 år. Hvis der bruges 50 mio.
+på driften i dag, hvor mange millioner skal der så spares i nævnte
+periode?
+
+Ved fremskrivning i fire år med $-2\%$ får vi en samlet
+fremskrivningsfaktor på $a^4=(1+(-0,02))^4=(0,98)^4=0,922$. D.v.s
+gymnasiedriften skal skæres med samlet 7,8%. Begyndelsesdriften er 50
+mio. kr. og slutdriften er $S=B \cdot a^4 = 50 \cdot 0,922=46,1$mio. kr.
+Der skal altså spares $B-S=50-46,1=3,9$mio. kroner på gymnasiedriften i
+årene 2017-2020.
+:::
+
+Ved fremskrivning $n$ gange skriver vi $a^n=(1+r)^n$ som i tilfældet med
+kapitalfremskrivning.
+
+::: {.Eksempel}
+
+## To fabrikker
+
+En fabriks produktion vokser med 2% om året. Hvor mange procent vokser
+produktionen med på 9 år.
+
+Vi beregner fremskrivningsfaktoren efter de 9 år:
+$a^9=(1+\frac{2}{100})^9 = 1,02^9=1,195$. Vækstraten er
+$r^9=a^9-1=1,195-1=0,195=19,5\%$, hvilket er fabrikkens relative
+tilvækst i produktion over de 9 år.
+
+En anden fabriks produktion er vokset 11% på 5 år. Hvad er den
+gennemsnitlige procentvise vækst pr. år?
+
+Vi har at $a^5=1,11=a^n$ og dermed, at $a=\sqrt[n]{1,11}=1,021$.
+$p\%=r=a-1=1,021-1=0,021 \Rightarrow p=2,1$, hvilket er den
+gennemsnitlige relative ændring i produktion pr. år i de fem år.
+:::
+
+## Procentpoint
+
+::: {.Eksempel}
+
+## Et partis tilbagegang
+
+Et parti går ved et valg tilbage fra 21,3% af stemmerne fra sidste valg
+til 19,7% af stemmerne ved det nuværende valg.
+
+Spørgsmålet er nu: **Hvor mange procent af vælgerne er partiet gået
+tilbage**.
+
+Her kan man fristes til at beregne det som $19,7\% - 21,3\%= -1,6\%$ og
+herfra konkludere, at partiet er gået 1,6% tilbage. Men det er forkert.
+
+Lad os illustrere problemet ved at omregne procentdele til andele af
+1000 vælgere. Så er partiet gået fra at 213 stemte på partiet til at kun
+197 nu stemmer på partiet. Den absolutte tilvækst af vælgere er
+197-213=-16 og den relative tilvækst af vælgere er
+
+$$
+\begin{aligned}
+r=\frac{197-213}{213} = \frac{-16}{213} =-0,075
+\end{aligned}
+$$
+
+D.v.s partiet er gået, $p=-0,075=-7,5\%$ frem, altså 7,5% tilbage i
+forhold til sidste valg. Den absolutte tilvækst i procent, altså de
+-1,6% fra før kaldes `Procentpoint`
+:::

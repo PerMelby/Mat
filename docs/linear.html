@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Lineære funktioner – Matematik stx</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./procent.html" rel="next">
+<link href="./første_g.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/foldbox/foldbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+.Eksempel {
+  --color1: #00dc9c;
+  --color2: #189200;
+}
+.Definition {
+  --color1: #ff8800;
+  --color2: #ee8810;
+}
+.Sætning {
+  --color1: #19ccf5;
+  --color2: #12c0e8;
+}
+.Opgave {
+  --color1: #e9ef8f;
+  --color2: #dee481;
+}
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./linear.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Matematik stx</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forord</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduktion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./regnearter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matematisk sprog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ligninger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ligninger</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Brøker</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kvadrat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kvadratsætningerne</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./første_g.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.g / C-niveau.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./procent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Procentregning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eksponentiel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logaritmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./potensfkt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Potensfunktioner</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./anden_g.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.g / B-niveau.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andengrads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Andengradsligningen</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Indholdsfortegnelse</h2>
+   
+  <ul>
+  <li><a href="#tabel-hørende-til-lineær-funktion" id="toc-tabel-hørende-til-lineær-funktion" class="nav-link active" data-scroll-target="#tabel-hørende-til-lineær-funktion"><span class="header-section-number">5.1</span> Tabel hørende til lineær funktion</a></li>
+  <li><a href="#vækstegenskab" id="toc-vækstegenskab" class="nav-link" data-scroll-target="#vækstegenskab"><span class="header-section-number">5.2</span> Vækstegenskab</a></li>
+  <li><a href="#grafen-for-en-lineær-funktion" id="toc-grafen-for-en-lineær-funktion" class="nav-link" data-scroll-target="#grafen-for-en-lineær-funktion"><span class="header-section-number">5.3</span> Grafen for en lineær funktion</a></li>
+  <li><a href="#aflæs-a-og-b-ud-fra-grafen-for-funktionen" id="toc-aflæs-a-og-b-ud-fra-grafen-for-funktionen" class="nav-link" data-scroll-target="#aflæs-a-og-b-ud-fra-grafen-for-funktionen"><span class="header-section-number">5.4</span> Aflæs <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span> ud fra grafen for funktionen</a></li>
+  <li><a href="#skæringspunkt" id="toc-skæringspunkt" class="nav-link" data-scroll-target="#skæringspunkt"><span class="header-section-number">5.5</span> Skæringspunkt</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./linear.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="definition-på-en-lineær-funktion" class="Definition" title="Definition på en lineær funktion">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 5.1: </strong>Definition på en lineær funktion</summary><div>En <strong>lineær funktion</strong> er en funktion på formen:<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+f(x)=ax+b
+\end{aligned}
+\]</span></p>
+<p>hvor <span class="math inline">\(a,b \in \mathbb{R}\)</span>.</p>
+<p><span class="math inline">\(a\)</span> kaldes <strong>hældningskoefficienten</strong></p>
+<p><span class="math inline">\(b\)</span> kaldes <strong>konstantledet</strong></p>
+<p>For lineære funktioner gælder, at:</p>
+<p>Dm(<span class="math inline">\(f\)</span>)=<span class="math inline">\(\mathbb{R}\)</span> og Vm(<span class="math inline">\(f\)</span>)=<span class="math inline">\(\mathbb{R}\)</span></p>
+</div></details>
+</div>
+<p><span class="math inline">\(f(x)=ax+b\)</span> kaldes <code>funktionsforskriften</code>. Det kaldes dog ikke en lineær funktionsforskrift. Faktisk kalder vi det en funktionsforskrift, hvis vi skriver <span class="math inline">\(f(x)=\dots\)</span>, hvor prikkerne på højresiden kan repræsentere “alt muligt”, og en stor del af matematik på stx handler om at se eksempler- og regne på funktioner, der indeholder “alt muligt”.</p>
+<p>Indtil videre holder vi os til de lineære funktioner.</p>
+<div id="eksempel" class="Eksempel" title="Eksempel">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.2: </strong>Eksempel</summary><div>En lineær funktion er givet ved: <span class="math inline">\(f(x)=2x-2\)</span>. Her er <span class="math inline">\(a=2\)</span> og <span class="math inline">\(b=-2\)</span><p></p>
+<p>En lineær funktion er givet ved: <span class="math inline">\(g(x)=x-1\)</span>. Her er <span class="math inline">\(a=1\)</span> og <span class="math inline">\(b=-1\)</span></p>
+</div></details>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Opgave Lineær 4.1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Hvad er <span class="math inline">\(a\)</span>, og hvad er <span class="math inline">\(b\)</span> i følgende lineære funktioner?</p>
+<p><span class="math display">\[
+\begin{aligned}
+f_1(x)&amp;=3x + 1  &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\underline{\hspace{1cm}} \\
+f_2(x)&amp;=-2x  - 1 &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\underline{\hspace{1cm}} \\
+f_3(x)&amp;=x &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\underline{\hspace{1cm}} \\
+f_4(x)&amp;=3 &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\underline{\hspace{1cm}} \\
+f_5(x)&amp;=4-2x &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\underline{\hspace{1cm}}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+</div>
+<section id="tabel-hørende-til-lineær-funktion" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="tabel-hørende-til-lineær-funktion"><span class="header-section-number">5.1</span> Tabel hørende til lineær funktion</h2>
+<p>En tabel for hørende til en lineær funktion kunne se ud som nedenstående:</p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>Tabel for funktionen f(x)=2x+1</caption>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">x</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">f(x)</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>For at udfylde nederste række, har vi udført følgende beregninger: <span class="math display">\[
+\begin{align*}
+f(\textcolor{red}{0})&amp;=2 \cdot \textcolor{red}{0} +1 = 0+1=1 &amp;\qquad  f(\textcolor{red}{1})&amp;=2 \cdot \textcolor{red}{1} +1 = 2+1=3 \\
+f(\textcolor{red}{2})&amp;=2 \cdot \textcolor{red}{2} +1 = 4+1=5 &amp;\qquad  f(\textcolor{red}{3})&amp;=2 \cdot \textcolor{red}{3} +1 = 6+1=7 \\
+f(\textcolor{red}{4})&amp;=2 \cdot \textcolor{red}{4} +1 = 8+1=9
+\end{align*}
+\]</span></p>
+</section>
+<section id="vækstegenskab" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="vækstegenskab"><span class="header-section-number">5.2</span> Vækstegenskab</h2>
+<p>Vi ser, at hver gang, vi går en celle til højre i øverste række, vokser <span class="math inline">\(x\)</span>-værdien med én. Det samme er ikke tilfældet med nederste række. Her vokser funktionsværdien, <span class="math inline">\(f(x)\)</span>, med to, hver gang vi går en celle til højre. (Hold musen over cellerne i nederste række.)</p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+
+.value:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>Tabel for funktionen f(x)=2x+1</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">x</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">f(x)</td>
+<td>1</td>
+<td><div class="value">
+3
+</div>
+<div class="hide">
+1+2
+</div></td>
+<td><div class="value">
+5
+</div>
+<div class="hide">
+3+2
+</div></td>
+<td><div class="value">
+7
+</div>
+<div class="hide">
+5+2
+</div></td>
+<td><div class="value">
+9
+</div>
+<div class="hide">
+7+2
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Vi kan prøve lykken igen med funktionen <span class="math inline">\(f(x) = 3x+1\)</span>.</p>
+<p>På samme måde som før beregner vi værdierne i nederste række ved følgende udregninger:</p>
+<p><span class="math display">\[
+\begin{align*}
+f(\textcolor{red}{0})&amp;=3 \cdot \textcolor{red}{0} +1 = 0+1=1 &amp;\qquad  f(\textcolor{red}{1})&amp;=3 \cdot \textcolor{red}{1} +1 = 3+1=4 \\
+f(\textcolor{red}{2})&amp;=3 \cdot \textcolor{red}{2} +1 = 6+1=7 &amp;\qquad  f(\textcolor{red}{3})&amp;=3 \cdot \textcolor{red}{3} +1 = 9+1=10 \\
+f(\textcolor{red}{4})&amp;=3 \cdot \textcolor{red}{4} +1 = 12+1=13
+\end{align*}
+\]</span></p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+
+.value:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>Tabel for funktionen f(x)=3x+1</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">x</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">f(x)</td>
+<td>1</td>
+<td><div class="value">
+4
+</div>
+<div class="hide">
+1+3
+</div></td>
+<td><div class="value">
+7
+</div>
+<div class="hide">
+4+3
+</div></td>
+<td><div class="value">
+10
+</div>
+<div class="hide">
+7+3
+</div></td>
+<td><div class="value">
+13
+</div>
+<div class="hide">
+10+3
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Nu vokser funktionsværdien, <span class="math inline">\(f(x)\)</span>, med tre, hver gang vi går en celle til højre. (Hold musen over cellerne i nederste række.)</p>
+<p>Hvad med negative værdier for <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span>? Vi prøver nu med funktionen <span class="math inline">\(f(x) = -x-2\)</span>. Bemærk, at her er <span class="math inline">\(a=-1\)</span>.</p>
+<p>På samme måde som før beregner vi værdierne i nederste række ved følgende udregninger:</p>
+<p><span class="math display">\[
+\begin{align*}
+f(\textcolor{red}{0})&amp;=(-1) \cdot \textcolor{red}{0} -2 = 0-2=-2 &amp;\qquad  f(\textcolor{red}{1})&amp;=(-1) \cdot \textcolor{red}{1} - 2 = -1-2=-3 \\
+f(\textcolor{red}{2})&amp;=-1 \cdot \textcolor{red}{2} -2  = -2-3=-4 &amp;\qquad  f(\textcolor{red}{3})&amp;=(-1) \cdot \textcolor{red}{3} -2 = -3-2=-5 \\
+f(\textcolor{red}{4})&amp;=(-1) \cdot \textcolor{red}{4} -2 = -4-2=-6
+\end{align*}
+\]</span></p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+
+.value:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>Tabel for funktionen f(x)=-x-2</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">x</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">f(x)</td>
+<td>-2</td>
+<td><div class="value">
+-3
+</div>
+<div class="hide">
+-2+(-1)
+</div></td>
+<td><div class="value">
+-4
+</div>
+<div class="hide">
+-3+(-1)
+</div></td>
+<td><div class="value">
+-5
+</div>
+<div class="hide">
+-4+(-1)
+</div></td>
+<td><div class="value">
+-6
+</div>
+<div class="hide">
+-5+(-1)
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Nu vokser funktionsværdien, <span class="math inline">\(f(x)\)</span>, med minus 1, hver gang vi går en celle til højre. (Hold musen over cellerne i nederste række.). Vi kan også sige, at <span class="math inline">\(f(x)\)</span> aftager med 1, hver gang vi går en celle til højre.</p>
+<p>Generelt kan vi formulere ovenstående eksempler som en <code>generel vækstegenskab</code>.</p>
+<div id="vækstegenskab-for-lineær-funktion" class="Sætning" title="Vækstegenskab for lineær funktion">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 5.3: </strong>Vækstegenskab for lineær funktion</summary><div>Når <span class="math inline">\(x\)</span> vokser med 1, vokser <span class="math inline">\(f(x)\)</span> med <span class="math inline">\(a\)</span>.<p></p>
+</div></details>
+</div>
+<p><em>Bevis</em>: <span class="math display">\[
+f(x + 1) = a \cdot (x+1)+b = ax + a + b = ax+b + a = f(x) + a
+\]</span></p>
+<p>Man kan udvide vækstegenskaben.</p>
+<p>Hvis vi indfører en <em>generel tilvækst</em> og betegner den <span class="math inline">\(\Delta x\)</span>, kan vi omskrive ovenstående sætning til</p>
+<div id="udvidet-vækstegenskab-for-lineær-funktion" class="Sætning" title="Udvidet vækstegenskab for lineær funktion">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 5.4: </strong>Udvidet vækstegenskab for lineær funktion</summary><div>Når <span class="math inline">\(x\)</span> vokser med <span class="math inline">\(\Delta x\)</span>, vokser <span class="math inline">\(f(x)\)</span> med <span class="math inline">\(a \Delta x\)</span>.<p></p>
+</div></details>
+</div>
+<p><em>Bevis</em>: <span class="math display">\[
+f(x + \Delta x) = a \cdot (x+ \Delta x)+b = ax + a \Delta x + b = ax+b + a \Delta x = f(x) + a \Delta x
+\]</span></p>
+<div id="eksempel-på-udvidet-vækstegenskab" class="Eksempel" title="Eksempel på udvidet vækstegenskab">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 5.5: </strong>Eksempel på udvidet vækstegenskab</summary><div>Hvis <span class="math inline">\(f(x) = 3x - 1\)</span> kan vi eksempelvis beregne <span class="math inline">\(f(1) = 3 \cdot 1 - 1 = 3-1 = 2\)</span>.<p></p>
+<p>Hvis x vokser med 3 (<span class="math inline">\(\Delta x = 3\)</span>) kan vi v.h.a den udvidede vækstegenskab beregne <span class="math inline">\(f(4) = f(1) + 3 \cdot 3 = 2+9=11\)</span></p>
+<p>Vi kan også beregne <span class="math inline">\(f(4)\)</span> direkte og tjekke, at vi får samme resultat:</p>
+<p><span class="math display">\[
+f(4) = 3 \cdot 4 - 1 = 12-1 = 11
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="grafen-for-en-lineær-funktion" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="grafen-for-en-lineær-funktion"><span class="header-section-number">5.3</span> Grafen for en lineær funktion</h2>
+<p>Vi betragter funktionen <span class="math inline">\(f(x)=x+2\)</span> og en tilhørende tabel for nogle udvalgte værdier i definitionsmængden:</p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+
+<table class="caption-top table" data-quarto-postprocess="true">
+<caption>Tabel for funktionen f(x)=x+2</caption>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">x</td>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th" style="font-weight: bold; background-color: #D6EEEE">f(x)</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>og grafisk består denne tabel af de seks sammenhørende punkter:</p>
+<div id="f9cafa8c" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="linear_files/figure-html/cell-2-output-1.png" width="403" height="402" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Udvider vi tabellen til uendligt mange punkter får vi <em>grafen for lineær funktion</em>, som vi kalder <strong>en ret linje</strong>.</p>
+<div id="305c71fa" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="linear_files/figure-html/cell-3-output-1.png" width="403" height="402" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="aflæs-a-og-b-ud-fra-grafen-for-funktionen" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="aflæs-a-og-b-ud-fra-grafen-for-funktionen"><span class="header-section-number">5.4</span> Aflæs <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span> ud fra grafen for funktionen</h2>
+</section>
+<section id="skæringspunkt" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="skæringspunkt"><span class="header-section-number">5.5</span> Skæringspunkt</h2>
+<div id="1678898f" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="linear_files/figure-html/cell-4-output-1.png" width="554" height="402" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I et skæringspunkt er de to linjer samme <span class="math inline">\(x\)</span> og <span class="math inline">\(y\)</span>-værdi. Så vi skal løse ligningen <span class="math display">\[
+\begin{aligned}
+f(x) &amp;= g(x) \Rightarrow \\
+2x+2 &amp;= -x+5 \Leftrightarrow \\
+3x &amp;= 3 \Leftrightarrow \\
+x &amp;= \frac{3}{3} = 1
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(y\)</span>-værdien finder vi ved at beregne <span class="math inline">\(f(1)\)</span> eller <span class="math inline">\(g(1)\)</span>. Her gør vi begge dele og tjekker, at vi rent faktisk får samme funktionsværdi. Var dette ikke tifældet, havde vi løst ligningen til at finde <span class="math inline">\(x\)</span>-værdien forkert.</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(1) &amp;= 2 \cdot 1 + 2 = 2+2 = 4 \\
+g(1) &amp;= -1 + 5 = 4
+\end{aligned}
+\]</span></p>
+<p>Så skæringspunktet er, som grafvinduet også viser, lig <span class="math inline">\((1,4)\)</span>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./første_g.html" class="pagination-link" aria-label="1.g / C-niveau.">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1.g / C-niveau.</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./procent.html" class="pagination-link" aria-label="Procentregning">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Procentregning</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

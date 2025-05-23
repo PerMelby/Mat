@@ -1,0 +1,62 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Matematik stx"
+  tools: 
+      - icon: github
+        href: https://github.com
+  chapters:
+      - index.qmd
+      - part: intro.qmd
+        chapters: 
+          - regnearter.qmd
+          - ligninger.qmd
+          - fractions.qmd
+          - kvadrat.qmd
+      - part: første_g.qmd
+        chapters: 
+          - linear.qmd
+          - procent.qmd
+          - eksponentiel.qmd
+          - logaritmer.qmd
+          - trigonometri.qmd
+          - potensfkt.qmd
+      - part: anden_g.qmd
+        chapters:
+          - andengrads.qmd 
+      
+custom-numbered-blocks:
+  groups:
+    thmlike:
+      listin: [allthingsmath]
+      collapse: false
+  classes:
+    Definition:
+      colors: [ff8800, ee8810]
+      group: thmlike
+    Eksempel:
+      colors: [00dc9c, 189200]
+      group: thmlike
+    Sætning:
+      colors: [19ccf5, 12c0e8]
+      group: thmlike
+    Opgave:
+      colors: [e9ef8f, dee481]
+        
+filters: 
+  - custom-numbered-blocks
+
+format:
+  html:
+    code-fold: true
+    <-- callout-icon: false -->
+    theme: 
+      light: flatly
+      dark: Superhero
+    css: styles.css
+    toc: true
+    toc-title: "Indholdsfortegnelse"
+
+editor: visual

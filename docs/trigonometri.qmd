@@ -1,0 +1,42 @@
+# Trigonometri
+
+## Ensvinklede trekanter
+
+``` {python}
+
+#| echo: false
+
+import matplotlib.pyplot as plt
+from matplotlib.patches import Polygon
+
+# Define vertices of the first triangle
+triangle1 = [[0, 0], [2, 0], [1, 2]]  # A right triangle
+
+# Define vertices of the second triangle (same angles, scaled and shifted)
+triangle2 = [[3, 1], [5, 1], [4, 3]]  # Same shape, shifted and scaled
+
+# Create the figure and axis
+fig, ax = plt.subplots()
+
+# Add the first triangle
+poly1 = Polygon(triangle1, closed=True, fill=True, edgecolor='blue', alpha=0.5)
+ax.add_patch(poly1)
+
+# Add the second triangle
+poly2 = Polygon(triangle2, closed=True, fill=True, edgecolor='red', alpha=0.5)
+ax.add_patch(poly2)
+
+# Set the axis limits
+ax.set_xlim(-1, 6)
+ax.set_ylim(-1, 4)
+
+# Set aspect ratio to equal
+ax.set_aspect('equal')
+
+# Add grid for better visualization
+ax.grid(True)
+
+# Show the plot
+plt.show()
+```
+

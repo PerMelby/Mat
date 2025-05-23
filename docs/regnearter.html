@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Matematik stx - 1&nbsp; Matematisk sprog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ligninger.html" rel="next">
+<link href="./intro.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/foldbox/foldbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+.Definition {
+  --color1: #ff8800;
+  --color2: #ee8810;
+}
+.Eksempel {
+  --color1: #00dc9c;
+  --color2: #189200;
+}
+.Opgave {
+  --color1: #e9ef8f;
+  --color2: #dee481;
+}
+.Sætning {
+  --color1: #19ccf5;
+  --color2: #12c0e8;
+}
+</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduktion</a></li><li class="breadcrumb-item"><a href="./regnearter.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matematisk sprog</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Matematik stx</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forord</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduktion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./regnearter.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matematisk sprog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ligninger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ligninger</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Brøker</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kvadrat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kvadratsætningerne</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./første_g.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.g / C-niveau.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./procent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Procentregning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eksponentiel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logaritmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./potensfkt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Potensfunktioner</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andengrads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Andengradsligningen</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Indholdsfortegnelse</h2>
+   
+  <ul>
+  <li><a href="#symboler" id="toc-symboler" class="nav-link active" data-scroll-target="#symboler"><span class="header-section-number">1.1</span> Symboler</a></li>
+  <li><a href="#udtryk-og-udsagn" id="toc-udtryk-og-udsagn" class="nav-link" data-scroll-target="#udtryk-og-udsagn"><span class="header-section-number">1.2</span> Udtryk og udsagn</a></li>
+  <li><a href="#led-og-faktorer" id="toc-led-og-faktorer" class="nav-link" data-scroll-target="#led-og-faktorer"><span class="header-section-number">1.3</span> Led og faktorer</a></li>
+  <li><a href="#regnerækkefølge" id="toc-regnerækkefølge" class="nav-link" data-scroll-target="#regnerækkefølge"><span class="header-section-number">1.4</span> Regnerækkefølge</a></li>
+  <li><a href="#fortegn" id="toc-fortegn" class="nav-link" data-scroll-target="#fortegn"><span class="header-section-number">1.5</span> Fortegn</a></li>
+  <li><a href="#potenser" id="toc-potenser" class="nav-link" data-scroll-target="#potenser"><span class="header-section-number">1.6</span> Potenser</a></li>
+  <li><a href="#parentes" id="toc-parentes" class="nav-link" data-scroll-target="#parentes"><span class="header-section-number">1.7</span> Parentes</a>
+  <ul class="collapse">
+  <li><a href="#hæve-en-parentes" id="toc-hæve-en-parentes" class="nav-link" data-scroll-target="#hæve-en-parentes"><span class="header-section-number">1.7.1</span> Hæve en parentes</a></li>
+  <li><a href="#gange-ind-i-en-parentes" id="toc-gange-ind-i-en-parentes" class="nav-link" data-scroll-target="#gange-ind-i-en-parentes"><span class="header-section-number">1.7.2</span> Gange ind i en parentes</a></li>
+  </ul></li>
+  <li><a href="#reducere" id="toc-reducere" class="nav-link" data-scroll-target="#reducere"><span class="header-section-number">1.8</span> Reducere</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduktion</a></li><li class="breadcrumb-item"><a href="./regnearter.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matematisk sprog</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matematisk sprog</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="hidden">
+<p><span class="math display">\[
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\]</span></p>
+</div>
+<section id="symboler" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="symboler"><span class="header-section-number">1.1</span> Symboler</h2>
+<p>Vi vil i matematik ofte bruge bogstaverne <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(c\)</span> og <span class="math inline">\(d\)</span> og behandle disse som var de (ukendte) tal. Dette kaldes at regne med <em>symboler</em>. Symbolerne behøver ikke være disse fire bogstaver, og senere skal vi se på sammensatte symboler som <span class="math inline">\(x_1\)</span>, <span class="math inline">\(f(x)\)</span> og <span class="math inline">\(f(x+1)\)</span>.</p>
+<p><span class="math display">\[
+2a = 2 \cdot a \quad 3xy = 3 \cdot x \cdot y \quad ax = a \cdot x \quad 2f(x)=2 \cdot f(x)
+\]</span> Vi skriver ikke gangetegnet mellem tal og symboler samt mellem flere symboler, så:</p>
+<p>Vi siger at gangetegnet er <em>underforstået</em>.</p>
+<p>Ligeså skriver vi ikke gangetegnet før og efter en parentes:</p>
+<p><span class="math display">\[ 2(3+1)= \textcolor{red}{2\cdot(3+1)} =2 \cdot 4 = 8\]</span></p>
+<p>Det med rødt vil vi derfor normalt udelade.</p>
+</section>
+<section id="udtryk-og-udsagn" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="udtryk-og-udsagn"><span class="header-section-number">1.2</span> Udtryk og udsagn</h2>
+<p>Et lukket <em>udtryk</em> er f.eks <span class="math inline">\(2+2\)</span>. Det er lukket, fordi vi kan beregne det og skrive <span class="math inline">\(2+2=4\)</span>.</p>
+<p>Et lukket <em>udsagn</em> består af to lukkede udtryk forbundet af et lighedstegn, f.eks <span class="math inline">\(3+4=7\)</span>. Et udsagn kan være sandt eller falskt men ikke begge dele. I dette tilfælde er udsagnet sandt, da begge sider af lighedstegnet giver 7. <span class="math inline">\(3+4=8\)</span> er et eksempel på et lukket falsk udsagn.</p>
+<p>Et udsagn er dog ikke begrænset til at være tal og lighedstegn. “Danmark er et land i Europa” er et sandt udsang. “Danmark er en by i Sverige” er et falskt udsagn. “Der er piger i denne gymnasieklasse” er et udsagn. Du kan nok selv hurtigt afgøre, om det er sandt eller falskt.</p>
+<p>Når vi har et lukket udtryk kun med tal, som f.eks <span class="math inline">\(4 \cdot 7-10\)</span> kan vi beregne udtrykket og nå frem til en værdi. Når et symbol repræsenter en (vilkårlig) talværdi i et udtryk som f.eks <span class="math inline">\(a+7\)</span> er dette ikke muligt. <span class="math inline">\(a+7\)</span> er et åbent udtryk. Et åbent udtryk kan vi altså ikke beregne. Vi er nødt til at vide, hvilket tal, bogstavet <span class="math inline">\(a\)</span> repræsenterer, for at kunne beregne udtrykket. Eksempelvis kan vi beregne udtrykket, hvis får at vide, at <span class="math inline">\(a=3\)</span>.</p>
+</section>
+<section id="led-og-faktorer" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="led-og-faktorer"><span class="header-section-number">1.3</span> Led og faktorer</h2>
+<p>Tallene mellem plus og minus kaldes for <em>led</em>. Resultatet af led lagt til og trukket fra hinanden kaldes <em>summen</em>.</p>
+<p>Ser vi på <span class="math inline">\(2+3=5\)</span> er 5 summen af leddene 2 og 3.</p>
+<div id="eksempel-på-led-og-sum" class="Eksempel" title="Eksempel på led og sum">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.1: </strong>Eksempel på led og sum</summary><div><span class="math display">\[
+\begin{aligned}
+\underbrace{3}_\text{led}+\underbrace{4}_\text{led}+\underbrace{5}_\text{led}&amp;=\underbrace{12}_\text{sum} \\
+\underbrace{a}_\text{led}+\underbrace{b}_\text{led}+\underbrace{c}_\text{led}&amp;=\underbrace{d}_\text{sum}
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<p>At lægge et tal til kaldes også for <em>addition</em> og at trække et tal fra kaldes <em>subtraktion</em></p>
+<p>Tallene mellem gange kaldes for <em>faktorer</em>. Resultatet af faktorer ganget sammen kaldes <em>produktet</em>.</p>
+<div id="eksempel-på-faktorer-og-produkt" class="Eksempel" title="Eksempel på faktorer og produkt">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.2: </strong>Eksempel på faktorer og produkt</summary><div><span class="math display">\[
+\begin{aligned}
+\underbrace{2}_{\text{faktor}} \cdot \underbrace{3}_{\text{faktor}} &amp;= \underbrace{6}_{\text{produkt}}  \\
+\underbrace{a}_{\text{faktor}} \cdot \underbrace{b}_{\text{faktor}} &amp;= \underbrace{c}_{\text{produkt}}  
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<p>Vi kan i samme udsagn have både led og faktorer</p>
+<div id="eksempel-med-både-led-og-faktorer" class="Eksempel" title="Eksempel med både led og faktorer">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.3: </strong>Eksempel med både led og faktorer</summary><div><span class="math display">\[
+\begin{aligned}
+\overbrace{\underbrace{3}_{\text{faktor}} \cdot \underbrace{2}_{\text{faktor}}}^{\text{led}} + \overbrace{4}^{\text{led}} + \overbrace{\underbrace{7}_{\text{faktor}} \cdot \underbrace{1}_{\text{faktor}}}^{\text{led}}
+\end{aligned}
+\]</span><p></p>
+<p>Her er der tre led, nemlig <span class="math inline">\(3 \cdot 2\)</span>, <span class="math inline">\(4\)</span> og <span class="math inline">\(7 \cdot 1\)</span>, mens der er fire faktorer: <span class="math inline">\(3,2,7\)</span> og 1.</p>
+</div></details>
+</div>
+<p>At gange med et tal kaldes også for <em>multiplicere</em> og det omvendte kaldes at <em>dividere</em>. Vi skriver “12 divideret med 4” som</p>
+<p><span class="math display">\[ \frac{12}{4}=3 \]</span> fordi <span class="math inline">\(12=3 \cdot 4\)</span>.</p>
+<p>Hvis <span class="math inline">\(b\)</span> er et tal forskelligt fra nul, kan vi generelt skrive</p>
+<p><span class="math display">\[
+\frac{a}{b}=c
+\]</span></p>
+<p>hvor <span class="math inline">\(a\)</span> kaldes <em>dividend</em>, <span class="math inline">\(b\)</span> kaldes <em>divisor</em> og <span class="math inline">\(c\)</span> kaldes <em>kvotient</em>.</p>
+</section>
+<section id="regnerækkefølge" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="regnerækkefølge"><span class="header-section-number">1.4</span> Regnerækkefølge</h2>
+<p>Rækkefølgen mellem to tal lagt sammen er ligegyldig, og rækkefølgen af to tal ganget sammen er ligegyldig.</p>
+<p><span class="math display">\[ 3 + 4 = 4+3 \quad a + b = b+a \quad 3 \cdot 4 = 4 \cdot 3 \quad a \cdot b = b \cdot a \]</span></p>
+<p>Forestil dig, hvis det <strong>ikke</strong> var tilfældet. Så ville man betale noget forskelligt i supermarkedet afhængigt af, i hvilken rækkefølge man lagde sine varer på båndet, og arealet af en bordplade ville ændre sig afhængigt af, hvilken side man målte først.</p>
+<p>Man siger, at tal <em>kommuterer</em> m.h.t + og <span class="math inline">\(\cdot\)</span>. Dette er (åbenlyst) ikke rigtigt for minus (subtraktion) og division. <span class="math inline">\(2 = 7-5 \neq 5-7 = -2\)</span> og <span class="math inline">\(1/3 \neq 3/1\)</span></p>
+</section>
+<section id="fortegn" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="fortegn"><span class="header-section-number">1.5</span> Fortegn</h2>
+<p>Når vi begynder at blande led og faktorer er det en god idé at huske reglerne for fortegn.</p>
+<div id="fortegnsregler-for-og---i-en-sum" class="Definition" title="Fortegnsregler for + og - i en sum">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 1.4: </strong>Fortegnsregler for + og - i en sum</summary><div><span class="math display">\[
+\begin{aligned}
+++ &amp;= +  \\
++-&amp;=-   \\
+-+&amp;=-  \\
+--&amp;=+  
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<div id="eksempel-på-brug-af-fortegnsregler-for-og---i-en-sum" class="Eksempel" title="Eksempel på brug af fortegnsregler for + og - i en sum">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.5: </strong>Eksempel på brug af fortegnsregler for + og - i en sum</summary><div><span class="math display">\[
+\begin{aligned}
+4+3 &amp;=7 \\
+4-3 &amp;= 1 \\
+4+(-3) &amp;= 4-3 = 1 \\
+4-(-3) &amp;= 4+3 = 7  
+\end{aligned}
+\]</span> Bemærk, at man i skriftligt arbejde typisk samler ‘+-’ til ‘-’ og ‘- -’ til ‘+’, så man viser, at man forstår, hvad det betyder.<p></p>
+</div></details>
+</div>
+<div id="fortegnsregler-for-og---i-et-produkt" class="Definition" title="Fortegnsregler for + og - i et produkt">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 1.6: </strong>Fortegnsregler for + og - i et produkt</summary><div><span class="math display">\[
+\begin{aligned}
++ \cdot + = + \\
++ \cdot -=- \\
+- \cdot + = - \\
+- \cdot - = + \\
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<div id="eksempel-på-brug-af-fortegnsregler-for-og---i-produkt" class="Eksempel" title="Eksempel på brug af fortegnsregler for + og - i produkt">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.7: </strong>Eksempel på brug af fortegnsregler for + og - i produkt</summary><div><span class="math display">\[
+\begin{aligned}
+4 \cdot 3 &amp;= 12 \\
+4 \cdot (-3) &amp;= -12 \\
+(-4) \cdot 3 &amp;= -12 \\
+(-4) \cdot (-3) &amp;= 12 \\
+\end{aligned}
+\]</span> Bemærk, at man i skriftligt arbejde altid sætter parentes omkring negative tal, og man skriver f.eks aldrig <span class="math inline">\(-4 \cdot -3\)</span>.<p></p>
+</div></details>
+</div>
+</section>
+<section id="potenser" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="potenser"><span class="header-section-number">1.6</span> Potenser</h2>
+<p>En <em>potens</em> består af to tal, det ene “hævet” over det andet.</p>
+<p><span class="math display">\[
+a^n
+\]</span></p>
+<p>Det hævede tal, <span class="math inline">\(n\)</span>, kaldet <em>eksponenten</em>, angiver, hvor mange gange det ikke-hævede tal, <span class="math inline">\(a\)</span>, kaldet <em>grundtallet</em>, skal ganges med sig selv.</p>
+<p><span class="math display">\[
+a^n = \underbrace{a \cdot a \cdot a \cdot \ldots \cdot a \cdot a}_{n \: \text{faktorer}}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+3^2 &amp;= \underbrace{3 \cdot 3}_{2 \: \text{faktorer}} \qquad 4^3 = \underbrace{4 \cdot 4 \cdot 4}_{3 \: \text{faktorer}}  \qquad 6^{10} = \underbrace{6 \cdot 6 \cdot \ldots \cdot 6 \cdot 6}_{10 \: \text{faktorer}}
+\end{aligned}
+\]</span></p>
+<p>Hvis grundtallet er negativt i en potens sætter vi også altid parentes omkring. Ellers løber vi hurtigt ind i problemer som f.eks</p>
+<p><span class="math display">\[
+\begin{aligned}
+-3^2 = -3 \cdot 3 = -9 \quad \text{men} \quad (-3)^2=(-3) \cdot (-3)=9
+\end{aligned}
+\]</span> ## Regnearternes hierarki</p>
+<p>Når vi ønsker at beregne et udtryk, er vi nødt til at have nogle fælles regler for, hvordan vi gør. Vi kan f.eks ikke regne fra venstre mod højre, som når vi læser, for så løber vi ind i et problem som følgende</p>
+<p><span class="math display">\[ 3+4 = 4+3 \Leftrightarrow 3+2 \cdot 2 = 2 \cdot 2 +3 \]</span> Kan du selv se problemet?</p>
+<div id="regnearternes-hierarki" class="Definition" title="Regnearternes hierarki">
+<details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 1.8: </strong>Regnearternes hierarki</summary><div>
+<ol type="1">
+<li>Potenser/Rødder</li>
+<li>Gange (Multiplicere) og dividere</li>
+<li>Plus og minus (Addition og subtraktion)</li>
+</ol>
+</div></details>
+</div>
+<p>Regnearternes hierarki siger bl.a, at man skal udregne hvert led for sig, inden man til sidst samler leddene.</p>
+<div id="eksempel-på-brug-af-regnearternes-hierarki" class="Eksempel" title="Eksempel på brug af regnearternes hierarki">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.9: </strong>Eksempel på brug af regnearternes hierarki</summary><div><span class="math display">\[
+\begin{aligned}
+3+\textcolor{red}{4 \cdot 5} &amp;= 3 + \textcolor{red}{20} = 23  \\
+\textcolor{blue}{3^3} + \textcolor{red}{4^2} \cdot 5 &amp;= \textcolor{blue}{27} + \textcolor{red}{16} \cdot 5 = 27 + 80 = 107
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+</section>
+<section id="parentes" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="parentes"><span class="header-section-number">1.7</span> Parentes</h2>
+<p>Parentesen “trumfer” regnearternes hierarki og fortæller os, at vi i dette tilfælde skal lægge de to tal sammen (beregne summen af ledende i parentesen) <em>før</em> vi ganger. En parentes kan altså oversættes til; “gør dette først”.</p>
+<div id="eksempel-på-at-parentes-ændrer-regnerækkefølgen" class="Eksempel" title="Eksempel på at parentes ændrer regnerækkefølgen">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.10: </strong>Eksempel på at parentes ændrer regnerækkefølgen</summary><div><span class="math display">\[
+\begin{aligned}
+3 \cdot 4 + 5 &amp;= 12 + 5 = 17\\
+3 \cdot (4 + 5) &amp;= 3 \cdot 9 = 27\\
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<section id="hæve-en-parentes" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="hæve-en-parentes"><span class="header-section-number">1.7.1</span> Hæve en parentes</h3>
+<div id="hævning-af-parentes" class="Definition" title="Hævning af parentes">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 1.11: </strong>Hævning af parentes</summary><div>Plusparentes hæves uden videre: <br> <span class="math inline">\(a+(b+c) = a+ b +c\)</span><p></p>
+<p>I minusparentes ændres fortegnet: <br> <span class="math inline">\(a -(b+c) = a - b - c\)</span></p>
+</div></details>
+</div>
+<div id="argument-for-hævning-af-minusparentes" class="Eksempel" title="Argument for hævning af minusparentes">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.12: </strong>Argument for hævning af minusparentes</summary><div>Du har 500 kr. og køber en trøje til 200 kr. i den første butik og bukser til 300 kr. i en anden butik. Regnestykket er så: <span class="math inline">\(500 - 200 - 300\)</span>.<p></p>
+<p>Køber du både trøje og bukser i samme butik, bliver beløbet, du skal af med, regnet sammen ved kassen, så regnestykket lyder: <br> <span class="math inline">\(500-(200+300)\)</span>.</p>
+<p>I begge tilfælde skal resultatet være det samme, nemlig <span class="math inline">\(0\)</span>kr.</p>
+<p>Vi har altså følgende: <br> <span class="math inline">\(500 - 200 - 300 = 500-(200+300)\)</span></p>
+</div></details>
+</div>
+<div id="et-andet-argument-for-hævning-af-minusparentes" class="Eksempel" title="Et andet argument for hævning af minusparentes">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.13: </strong>Et andet argument for hævning af minusparentes</summary><div>Ser vi på <span class="math inline">\(11-(2+4)\)</span> har vi nu to muligheder for at nå frem til et facit. Vi kan udregne parentesen først eller vi kan hæve parentesen. Vi gør her begge dele og tjekker, at vi får samme svar uanset fremgangsmåde.<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+11-(2+4) &amp;= 11-6 = 5 \\
+11-(2+4) &amp;= 11-2-4 = 9-4=5
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="gange-ind-i-en-parentes" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="gange-ind-i-en-parentes"><span class="header-section-number">1.7.2</span> Gange ind i en parentes</h3>
+<p>Gange ind i en parentes gøres ledvist:<br> <span class="math inline">\(\textcolor{red}{2}(3+4) = \textcolor{red}{2} \cdot 3 + \textcolor{red}{2} \cdot 4 =6 + 8 = 14 \qquad \textcolor{red}{a}(b+c) = \textcolor{red}{a}b + \textcolor{red}{a}c\)</span><br> <span class="math inline">\(\textcolor{red}{2}(3-4) = \textcolor{red}{2} \cdot 3 - \textcolor{red}{2} \cdot 4 =6 - 8 = -2 \qquad \textcolor{red}{a}(b-c) = \textcolor{red}{a}b - \textcolor{red}{a}c\)</span><br> <span class="math inline">\(\textcolor{red}{(-2)}(3+4) = \textcolor{red}{(-2)} \cdot 3 + \textcolor{red}{(-2)} \cdot 4 =-6 - 8 = -14 \qquad \textcolor{red}{(-a)}(b+c) = -ab - ac\)</span></p>
+<p>Kan parentesen som ovenfor i eksemplerne til venstre udregnes uden at gange ind, er dette klart at foretrække:<br> <span class="math inline">\(2(3+4) = 2 \cdot 7 = 14\)</span>, <span class="math inline">\(\quad 2(3 - 4) = 2 \cdot (-1) = -2\)</span> og <span class="math inline">\((-2)(3+4) = (-2)\cdot 7 = -14\)</span></p>
+<p>Bemærk, at man kan regne begge veje, når vi har med parenteser at gøre, sådan at man kan sætte en fælles faktor uden for parentesen. <br> <span class="math inline">\(2a+2b=\textcolor{red}{2} \cdot a + \textcolor{red}{2} \cdot b  = \textcolor{red}{2} \cdot (a+b) = 2(a+b)\)</span> <br> <span class="math inline">\(10a - 5b = \textcolor{red}{5} \cdot 2 \cdot a - \textcolor{red}{5} \cdot b  = \textcolor{red}{5} \cdot (2 \cdot a-b) = 5(2a-b)\)</span></p>
+</section>
+</section>
+<section id="reducere" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="reducere"><span class="header-section-number">1.8</span> Reducere</h2>
+<p>Hvis man samler ensbenævnte størrelser ved at sætte fælles faktor efter en parentes <em>reducerer</em> man.</p>
+<p><span class="math inline">\(3a+4a= 3 \cdot \textcolor{red}{a}  + 4 \cdot \textcolor{red}{a}  =  (3+4) \cdot \textcolor{red}{a}  = 7 \cdot a  = 7a\)</span></p>
+<p>Idét <span class="math inline">\(x+x=2x\)</span>, <span class="math inline">\(x+x+x=3x\)</span> og så videre skriver vi altså</p>
+<p><span class="math display">\[
+\begin{aligned}
+2x+3x &amp;= \underbrace{x+x}_{\text{2 x'er}}+\underbrace{x+x+x}_{\text{3 x'er}}=5x \\
+4x+6x &amp;= \underbrace{x+x+x+x}_{\text{4 x'er}}+\underbrace{x+x+x+x+x+x}_{\text{6 x'er}}=10x \\
+4w+6w &amp;= \underbrace{w+w+w+w}_{\text{4 w'er}}+\underbrace{w+w+w+w+w+w}_{\text{6 w'er}}=10w \\
+3a+5a - 2a &amp;=  \underbrace{a+a+a}_{\text{3 a'er}} + \underbrace{a+a+a+a+a}_{\text{5 a'er}} - \underbrace{a-a}_{\text{2 a'er}} = 6a
+\end{aligned}
+\]</span></p>
+<div id="eksempel-på-reduktion-med-både-tal-og-symboler-involveret" class="Eksempel" title="Eksempel på reduktion med både tal og symboler involveret">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 1.14: </strong>Eksempel på reduktion med både tal og symboler involveret</summary><div>Er der både symboler og tal indblandet samler man led med samme symbol for sig og tal for sig. Det samme gælder for regning med parenteser.<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+3a+5a-2a +11-6 &amp;= 6a+5 \\
+3a-2a+6b-4b+11-7 &amp;= a+2b+4 \\
+3(a+2)&amp;=3 \cdot a+3 \cdot 2 = 3a+6 \\
+3(a+b)&amp;=3 \cdot a+3 \cdot b = 3a+3b \\
+3(a+b)-a-2b&amp;=3 \cdot a+3 \cdot b -a-2b= 3a+3b-a-2b = 2a+b \\
+3(a+b) - 2(a-b) &amp;= 3a+3b - (2a-2b) = 3a+3b - 2a+2b = a + 5b
+\end{aligned}
+\]</span> Bemærk, at man i sidste linje beholder parentesen, efter der er ganget ind med 2-tallet. D.v.s gang ind og hæv derefter parentesen.</p>
+<p>Gør man begge dele “på en gang” risikerer man nemt en fortegnsfejl.</p>
+</div></details>
+</div>
+<div id="antal-led-og-faktorer" class="Opgave" title="Antal led og faktorer">
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 1.1: </strong>Antal led og faktorer</summary><div>Hvor mange led og faktorer er der i følgende udtryk?<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+3 \cdot 1  &amp;+ 7 \cdot 3 \\
+3 \cdot 3  &amp;- 5 \cdot 2 + 4 - 9 \\
+3 \cdot 3  &amp;- 5 \cdot 4 + 4 \cdot 11 - 9
+\end{aligned}
+\]</span></p>
+<p>Hvilket led har den største værdi?</p>
+</div></details>
+</div>
+<div id="beregn-v.h.a-regnearternes-hierarki" class="Opgave" title="Beregn v.h.a regnearternes hierarki">
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 1.2: </strong>Beregn v.h.a regnearternes hierarki</summary><div>Beregn v.h.a regnearternes hierarki følgende udtryk<p></p>
+<ol type="a">
+<li><span class="math inline">\(\; 2 \cdot 6-4\)</span></li>
+<li><span class="math inline">\(\; 15-3 \cdot 4\)</span></li>
+<li><span class="math inline">\(\; 2^2 \cdot 5 - 4 \cdot 3\)</span></li>
+<li><span class="math inline">\(\; 7-3 \cdot 3^2 + 25\)</span></li>
+</ol>
+<p>Hvad sker der, hvis du regner fra venstre mod højre i b)?</p>
+</div></details>
+</div>
+<div id="beregn-på-to-måder" class="Opgave" title="Beregn på to måder">
+<details class="Opgave fbx-default closebutton"><summary><strong>Opgave 1.3: </strong>Beregn på to måder</summary><div>
+<p>Beregn følgende udtryk på to måder og tjek, at du får samme resultat begge gange.</p>
+<p>Husk regnearternes hierarki.</p>
+<ol type="a">
+<li><span class="math inline">\(\; 2+(6-4)\)</span></li>
+<li><span class="math inline">\(\; 15-(3 -4)\)</span></li>
+<li><span class="math inline">\(\; 2^2 + 3-(5 - 4)\)</span></li>
+<li><span class="math inline">\(\; 7-3+(3^2 - 5 \cdot 2)\)</span></li>
+</ol>
+</div></details>
+</div>
+<div id="sæt-uden-for-parentes" class="Opgave" title="Sæt uden for parentes">
+<details class="Opgave fbx-default closebutton"><summary><strong>Opgave 1.4: </strong>Sæt uden for parentes</summary><div>
+<p>Sæt størst mulige faktor uden for en parentes</p>
+<ol type="a">
+<li><span class="math inline">\(\; 8a+4b\)</span></li>
+<li>$; 15w+25z $</li>
+<li><span class="math inline">\(\; 51s-17st\)</span></li>
+<li><span class="math inline">\(\; 26vw+65w^2\)</span></li>
+</ol>
+</div></details>
+</div>
+<div id="beregn" class="Opgave" title="Beregn">
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 1.5: </strong>Beregn</summary><div>Beregn følgende<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;3(3-2) &amp;\qquad &amp;(2-3)2 &amp;\qquad &amp;4(5+1) \\
+&amp;15+3(3-2) &amp;\qquad &amp;15-2(2-3) &amp;\qquad &amp;22-(5+1)4+6 \\
+&amp;10(3-2+4) &amp;\qquad &amp;(2^2-3)6 &amp;\qquad &amp;4(15-2\cdot 3^2) \\
+&amp;8^2-(3+2\cdot (-4)^2) &amp;\qquad &amp;16-(2^2-3) &amp;\qquad &amp;250-4(9+2\cdot (-5)^2)
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+<div id="reducér" class="Opgave" title="Reducér">
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 1.6: </strong>Reducér</summary><div>Reducer følgende udtryk mest muligt<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;2s-4s+8s &amp;\qquad &amp; 11w+14w-10w-3w &amp;\qquad &amp; 4s-11w+4s+14w \\
+&amp;3(3-b) &amp;\qquad &amp;2(a-b) &amp;\qquad &amp;4(5+a) \\
+&amp;5a+3(3-a) &amp;\qquad &amp;5a-2(a-b) &amp;\qquad &amp;22a-(5a+2)4+6 \\
+&amp;10(a-b+c) &amp;\qquad &amp;6(2s-3t)+ 10t &amp;\qquad &amp;12t-4(s-2t-7)+4s
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="Introduktion">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduktion</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ligninger.html" class="pagination-link" aria-label="Ligninger">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ligninger</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

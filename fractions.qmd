@@ -1,0 +1,189 @@
+# Brøker
+
+
+$$
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+$$
+
+## Matematisk sprog m.h.t til brøker
+
+I en brøk $\dfrac{\textcolor{red}{a}}{\textcolor{blue}{b}}$ kaldes $\textcolor{red}{a}$ for *tælleren* og $\textcolor{blue}{b}$ kaldes for *nævneren*.
+
+## Gange brøker med hinanden 
+
+Man ganger foroven og forneden (tæller med tæller og nævner med nævner):
+$$
+\begin{aligned}
+\frac{1}{3} \cdot \frac{2}{5} = \frac{1 \cdot 2}{3 \cdot 5} = \frac{2}{15} \qquad \frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d} = \frac{ac}{bd}
+\end{aligned}
+$$
+
+**Bemærk**: Alle hele tal kan skrives som 1'te-dele; $2 = \dfrac{2}{1}$.
+
+Du har derfor sikkert ikke tænkt over det, men du har altid (måske uden at vide det) ganget brøker sammen på den måde: <br>
+
+Idet $3=\dfrac{3}{1}$ og $5=\dfrac{5}{1}$ fås
+$$3 \cdot 5 = \frac{3}{1} \cdot \frac{5}{1} = \frac{3 \cdot 5}{1 \cdot 1} = \frac{15}{1} = 15$$ 
+
+## Gange et helt tal med en brøk
+
+Man ganger foroven (det hele tal multipliceres med tælleren):
+$$
+\begin{aligned}
+2 \cdot \frac{1}{3} = \frac{2 \cdot 1}{3} = \frac{2}{3}
+\end{aligned}
+$$
+
+Husk igen det med at alle tal kan skrives som tallet divideret med 1.
+
+$$
+\begin{aligned}
+2 \cdot \frac{1}{3} = \frac{2}{1} \cdot \frac{1}{3} = \frac{2 \cdot 1}{1 \cdot 3} = \frac{2}{3} 
+\end{aligned}
+$$
+
+## Dividere en brøk med en brøk 
+
+Bemærk først at: 
+$$\frac{4}{4} = 4 \cdot \frac{1}{4}$$
+
+Med ord er det at dividere med 4 det samme som at gange med 1/4. Når vi husker, at $4=\dfrac{4}{1}$, får vi, at det at dividere med en brøk er det samme som at gange med den omvendte brøk, altså én, hvor tæller og nævner har byttet plads.
+
+$$
+\begin{aligned}
+\frac{\frac{1}{3}}{\frac{1}{2}} = \frac{1}{3} \cdot \frac{2}{1} =  \frac{1 \cdot 2}{3 \cdot 1} = \frac{2}{3} \qquad \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \cdot \frac{d}{c} =  \frac{a \cdot d}{b \cdot c} = \frac{ad}{bc}
+\end{aligned}
+$$
+
+## Dividere en brøk med et helt tal
+Man ganger forneden (tallet multipliceres med tælleren):
+$$
+\begin{aligned}
+\frac{\frac{1}{3}}{2} = \frac{1}{3 \cdot 2} = \frac{1}{6}
+\end{aligned}
+$$
+
+## Forlænge en brøk
+Man ganger foroven og forneden med det samme tal (både tæller og nævner multipliceres med det samme tal:
+
+$$
+\begin{aligned}
+\frac{1 \cdot 5}{3 \cdot 5} = \frac{5}{15} \qquad \frac{1 \cdot a}{3 \cdot a} = \frac{a}{3a} \qquad \frac{1 \cdot 2x}{3 \cdot 2x} = \frac{2x}{6x}
+\end{aligned}
+$$
+
+
+**Tolkning:** Man ganger med et forklædt 1-tal:
+
+$$
+\begin{aligned}
+\frac{1}{3} \cdot 1 = \frac{1}{3} \cdot \frac{5}{5} = \frac{1 \cdot 5}{3 \cdot 5} = \frac{5}{15} \qquad \frac{1}{3} \cdot 1 = \frac{1}{3} \cdot \frac{2x}{2x} = \frac{1 \cdot 2x}{3 \cdot 2x} = \frac{2x}{6x}
+\end{aligned}
+$$
+
+
+
+## Forkorte en brøk
+Man dividerer foroven og forneden med det samme tal:
+
+$$
+\begin{aligned}
+\frac{5 / 5}{15 / 5} = \frac{1}{3} \qquad \frac{a / a}{3a / a} = \frac{1}{3} \qquad \frac{2x / 2x}{6x / 2x} = \frac{1}{3}
+\end{aligned}
+$$
+
+**Tolkning**: Man fjerner forklædte 1-taller:
+
+$$
+\begin{aligned}
+\frac{5}{15} &= \frac{1 \cdot 5}{3 \cdot 5} = \frac{1}{3} \cdot \frac{5}{5} = \frac{1}{3} \cdot 1 = \frac{1}{3}\\
+\frac{a}{3a} &= \frac{1 \cdot a}{3 \cdot a} = \frac{1}{3} \cdot \frac{a}{a} = \frac{1}{3} \cdot 1 = \frac{1}{3} \\
+\frac{2x}{6x} &= \frac{1 \cdot 2x}{3 \cdot 2x} = \frac{1}{3} \cdot \frac{2x}{2x} = \frac{1}{3} \cdot 1 = \frac{1}{3}
+\end{aligned}
+$$
+
+
+## Lægge brøker sammen og trække dem fra hinanden
+
+Man kan kun lægge brøker sammen og trække dem fra hinanden, hvis de har samme nævner. 
+$$ \dfrac{3}{4} + \dfrac{1}{4} = \dfrac{3+1}{4} = \dfrac{4}{4} = 1 \qquad \dfrac{a}{b} + \dfrac{c}{b} = \dfrac{a+c}{b} $$
+$$ \dfrac{3}{4} - \dfrac{1}{4} = \dfrac{3-1}{4} = \dfrac{2}{4} = \dfrac{1}{2} \qquad \dfrac{a}{b} - \dfrac{c}{b} = \dfrac{a-c}{b} $$
+
+Har de to brøker ikke samme nævner (fællesnævner), må man forlænge eller forkorte en af brøkerne eller dem begge, så de får samme nævner (fællesnævner). Dette kan **altid** opnås ved at forlænge "på kryds":
+
+::: {.Eksempel}
+## Eksempel med at forlænge på kryds
+
+$$
+\begin{aligned}
+\frac{1}{\textcolor{red}{3}} + \frac{2}{\textcolor{blue}{5}} = \frac{1 \cdot \textcolor{blue}{5}}{ \textcolor{red}{3} \cdot \textcolor{blue}{5}} + \frac{2 \cdot \textcolor{red}{3}}{\textcolor{blue}{5} \cdot \textcolor{red}{3}} = \frac{5}{15} + \frac{6}{15} = \frac{5+6}{15} = \frac{11}{15}
+\end{aligned}
+$$
+:::
+
+
+Nogle gange kan det betale sig at se på de to nævnere og finde en nemmere løsning. Dette er eksempelvis besværligt:
+
+$$
+\begin{aligned}
+\frac{1}{\textcolor{red}{12}} + \frac{2}{\textcolor{blue}{6}} = \frac{1 \cdot \textcolor{blue}{6}}{ \textcolor{red}{12} \cdot \textcolor{blue}{6}} + \frac{2 \cdot \textcolor{red}{12}}{\textcolor{blue}{6} \cdot \textcolor{red}{12}} = \frac{6}{72} + \frac{24}{72} = \frac{6+24}{72} = \frac{30}{72}
+\end{aligned}
+$$
+
+
+Hvis vi i stedet bruger, at $2 \cdot \textcolor{blue}{6} = \textcolor{red}{12}$ og derfor nøjes med at forlænge brøken til højre med 2 fås:
+
+$$
+\begin{aligned}
+\frac{1}{\textcolor{red}{12}} + \frac{2}{\textcolor{blue}{6}} = \frac{1}{ \textcolor{red}{12} } + \frac{2 \cdot 2}{\textcolor{blue}{6} \cdot 2} = \frac{1}{12} + \frac{4}{12} = \frac{1+4}{12} = \frac{5}{12}
+\end{aligned}
+$$
+
+
+
+## Den skjulte parentes
+I en brøk er der altid en skjult parentes omkring tæller og nævner:
+
+$$
+\begin{aligned}
+\frac{x+3}{x-4} &\neq x-\frac{3}{x}-4\\
+4 \cdot \frac{x+3}{x-4} &= \frac{4(x+3)}{x-4} \\
+\frac{x+3}{x-4} / 4 &= \frac{x+3}{4(x-4)}
+\end{aligned}
+$$
+
+::: {.callout-caution icon="false" collapse="true"}
+## Opgave Beregn/reducér
+
+Beregn/reducer følgende udtryk med brøker
+
+$$
+\begin{aligned}
+\text{a)} & \quad 2\cdot \frac{3}{4} \\
+\text{b)} & \quad \frac{3}{7} \cdot 4 \\ 
+\text{c)} & \quad \frac{2}{5} \cdot \frac{3}{4} \\
+\text{d)} & \quad \frac{\frac{7}{3}}{21} \\
+\text{e)} & \quad \frac{24}{\frac{3}{4}} \\ 
+\text{f)} & \quad \frac{\frac{1}{3}}{\frac{2}{5}} \cdot \frac{2}{3} 
+\end{aligned}
+$$
+
+:::
+
+
+::: {.callout-caution icon="false" collapse="true"}
+## Opgave Læg brøker til og træk dem fra hinanden
+
+$$
+\begin{aligned}
+\text{a)} \quad & \frac{1}{3} + \frac{1}{4} \\
+\text{b)} \quad & \frac{2}{3} - \frac{1}{4}\\
+\text{c)} \quad & \frac{5}{8} + \frac{2}{5} \\
+\text{d)} \quad & \dfrac{7}{8} - \dfrac{3}{5}  
+\end{aligned}
+$$
+
+:::
+
+

@@ -1,0 +1,323 @@
+## Kvadratsætningerne
+
+Lad $a$ og $b$ være to (forskellige)$^*$ tal. Da gælder følgende sætning
+
+::: {.column-margin}
+$^*$ Der er ikke noget matematisk i vejen for, at de to tal, $a$ og $b$ er ens. To af kvadratsætningerne bliver i så tilfælde reduceret til $0=0$, hvorfor der ingen grund er til at bruge kvadratsætningerne.
+:::
+
+::: {.Sætning}
+
+## Kvadratsætningerne
+
+$$
+\begin{aligned}
+(a+b)^2 &= a^2 + b^2 +2ab \\
+(a-b)^2 &= a^2 + b^2 -2ab \\
+(a+b)(a-b) &= a^2 - b^2
+\end{aligned}
+$$
+:::
+
+*Bevis*
+
+**Første hovedsætning $(a+b)^2 = a^2 + b^2 +2ab$**
+
+Først kan vi *regne det ud* og skrive
+
+$$
+\begin{aligned}
+(a+b)^2 &= (a+b)(a+b) \\
+& = a\cdot (a+b) + b \cdot (a+b) \\
+& = a^2 + ab + ba + b^2 \\
+& = a^2 + 2ab + b^2 && \text{fordi } ab = ba\\
+& = a^2 + b^2  + 2ab
+\end{aligned}
+$$
+
+Vi kan også vise det geometrisk ved at tegne nedenstående kvadrat.
+
+``` {python}
+
+#| echo: false
+
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Opret en figur og en akse
+fig, ax = plt.subplots()
+
+# Tegn det ydre kvadrat (fx blåt)
+outer_square = patches.Rectangle((0, 0), 10, 10, facecolor='deepskyblue', edgecolor='black', alpha=0.7)
+ax.add_patch(outer_square)
+
+# Tegn det indre kvadrat (fx rødt), forskudt for at være centreret
+inner_square = patches.Rectangle((6, 6), 4, 4, facecolor='red', edgecolor='black', alpha=0.7)
+ax.add_patch(inner_square)
+
+# Tegn det første rektangel
+rect1 = patches.Rectangle((6, 0), 4, 6, facecolor='yellow', edgecolor='black', alpha=0.9)
+ax.add_patch(rect1)
+
+# Tegn det andet rektangel
+rect2 = patches.Rectangle((0, 6), 6, 4, facecolor='yellow', edgecolor='black', alpha=0.9)
+ax.add_patch(rect2)
+
+# Navngiv linjestykkerne a
+ax.text(3, 10.5, '$a$', fontsize=12, color='k', ha='center', va='center')
+ax.text(3, 6.5, '$a$', fontsize=12, color='k', ha='center', va='center')
+ax.text(3, -0.5, '$a$', fontsize=12, color='k', ha='center', va='center')
+ax.text(-0.5, 3, '$a$', fontsize=12, color='k', ha='center', va='center')
+ax.text(5.5, 3, '$a$', fontsize=12, color='k', ha='center', va='center')
+ax.text(10.5, 3, '$a$', fontsize=12, color='k', ha='center', va='center')
+
+
+# Navngiv linjestykkerne b
+ax.text(8, 10.5, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(8, 6.5, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(-0.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(5.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(8, -0.5, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(10.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+
+
+# Juster akserne, så kvadraterne vises korrekt
+ax.set_xlim(-1, 10.5)
+ax.set_ylim(-1, 10.5)
+ax.set_aspect('equal')  # Sørger for, at kvadraterne ikke bliver forvrænget
+
+# Fjern akserne
+plt.axis('off')
+
+# Vis plottet
+plt.show()
+
+```
+
+Størrelsen af arealet af kvadratet ovenfor kan udtrykkes på to måder.
+
+Den første er ved (den klassiske) højde gange bredde. Både højden og bredden er $a+b$, så arealet er
+
+$$
+\text{Areal} = (a+b)^2
+$$
+
+Den anden måde er ved at lægge arealet af de to kvadrater tegnet med blå og rød sammen med de to rektangler, tegnet med rul, d.v.s 
+
+$$
+\begin{aligned}
+\text{Areal} &= \text{blå kvadrat} + \text{rød kvadrat} + 2 \cdot \text{gul rektangel} \\
+& = a \cdot a + b \cdot b + 2 \cdot a \cdot b \\
+& = a^2+b^2 + 2ab
+\end{aligned}
+$$
+
+Da figurens areal må være det samme, uanset hvordan vi finder frem til det, må der gælde, at 
+$$
+(a + b)^2 = a^2+b^2 + 2ab
+$$
+
+**Anden hovedsætning $(a-b)^2 = a^2 + b^2 -2ab$**
+
+Som før kan vi begynde med at *regne det ud* og skrive
+
+$$
+\begin{aligned}
+(a-b)^2 &= (a-b)(a-b) && \text{husk at } a-b = a+(-b)\\
+& = a\cdot (a+(-b)) +(-b) \cdot (a+(-b)) \\
+& = a^2 + a \cdot (-b) + (-b) \cdot a + (-b)^2 \\
+& = a^2 -ab - ba + b^2 && \text{fordi } (-b)^2=b^2 \\
+& = a^2 - 2ab + b^2 && \text{husk (igen) at } -ab = -ba \\
+& = a^2 + b^2  - 2ab
+\end{aligned}
+$$
+Det gemetriske Bevis er stort set det samme som for første hovedsætning. Vi laver samme figur, men bytter $a$ ud med $a-b$.
+
+
+``` {python}
+
+#| echo: false
+
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Opret en figur og en akse
+fig, ax = plt.subplots()
+
+# Tegn det ydre kvadrat (fx blåt)
+outer_square = patches.Rectangle((0, 0), 10, 10, facecolor='deepskyblue', edgecolor='black', alpha=0.7)
+ax.add_patch(outer_square)
+
+# Tegn det indre kvadrat (fx rødt), forskudt for at være centreret
+inner_square = patches.Rectangle((6, 6), 4, 4, facecolor='red', edgecolor='black', alpha=0.7)
+ax.add_patch(inner_square)
+
+# Tegn det første rektangel
+rect1 = patches.Rectangle((6, 0), 4, 6, facecolor='yellow', edgecolor='black', alpha=0.9)
+ax.add_patch(rect1)
+
+# Tegn det andet rektangel
+rect2 = patches.Rectangle((0, 6), 6, 4, facecolor='yellow', edgecolor='black', alpha=0.9)
+ax.add_patch(rect2)
+
+# Navngiv linjestykkerne a
+ax.text(3, 10.5, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(3, 6.5, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(3, -0.5, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(-0.8, 3, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(5.2, 3, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(10.8, 3, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+
+
+# Navngiv linjestykkerne b
+ax.text(8, 10.5, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(8, 6.5, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(-0.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(5.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(8, -0.5, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(10.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+
+
+# Juster akserne, så kvadraterne vises korrekt
+ax.set_xlim(-1, 10.5)
+ax.set_ylim(-1, 10.5)
+ax.set_aspect('equal')  # Sørger for, at kvadraterne ikke bliver forvrænget
+
+# Fjern akserne
+plt.axis('off')
+
+# Vis plottet
+plt.show()
+
+```
+
+I dette tilfælde er hele kvadratets højde- og sidelængde lig $(a-b) + b = a-b+b = a$, d.v.s 
+
+$$
+\text{Areal} = a^2
+$$
+
+Den anden måde er ved at lægge arealet af de to kvadrater tegnet med blå og rød sammen med de to rektangler, tegnet med rul, d.v.s 
+
+$$
+\begin{aligned}
+\text{Areal} &= \text{blå kvadrat} + \text{rød kvadrat} + 2 \cdot \text{gul rektangel} \\
+& = (a-b) \cdot (a-b) + b \cdot b + 2 \cdot (a-b) \cdot b \\
+& = (a-b)^2+b^2 + 2ab - 2b^2 \\
+& = (a-b)^2 - b^2 + 2ab
+\end{aligned}
+$$
+
+Ligesom før må de to måder at udtrykke arealet på være ens. Se derfor kan vi skrive
+
+$$
+\begin{aligned}
+(a-b)^2 &- b^2 + 2ab = a^2 \\
+(a-b)^2 &= a^2 + b^2 - 2ab 
+\end{aligned}
+$$
+
+**Tjedje hovedsætning $(a+b)(a-b) = a^2 - b^2$**
+
+Vi begynder igen først med en direkte udregning
+
+$$
+\begin{aligned}
+(a+b)(a-b) &= a \cdot (a + (-b)) + b \cdot (a+ (-b)) \\
+&= a^2 - ab + ba +b \cdot (-b) \\
+& = a^2 - b^2
+\end{aligned}
+$$
+For at vise det geometrisk, tegner vi denne gang et rektangel med højdelængde $(a-b)+b=a$ og breddelængde $(a+b)$.
+
+
+``` {python}
+
+#| echo: false
+
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Opret en figur og en akse
+fig, ax = plt.subplots()
+
+# Tegn det ydre kvadrat (fx blåt)
+outer_square = patches.Rectangle((0, 0), 14, 10, facecolor='deepskyblue', edgecolor='black', alpha=0.7)
+ax.add_patch(outer_square)
+
+# Tegn det indre kvadrat (fx rødt), forskudt for at være centreret
+inner_square = patches.Rectangle((10, 6), 4, 4, facecolor='red', edgecolor='black', alpha=0.7)
+ax.add_patch(inner_square)
+
+# Tegn det første rektangel
+rect1 = patches.Rectangle((0, 6), 10, 4, facecolor='yellow', edgecolor='black', alpha=0.9)
+ax.add_patch(rect1)
+
+
+# Navngiv linjestykkerne a
+ax.text(5, 10.5, '$a$', fontsize=12, color='k', ha='center', va='center')
+
+# Navngiv linjestykkerne b
+ax.text(12, 10.5, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(-0.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(9.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(13.5, 8, '$b$', fontsize=12, color='k', ha='center', va='center')
+
+# Navngiv linjestykkerne a-b
+ax.text(-0.8, 3, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+ax.text(13.2, 3, '$a-b$', fontsize=12, color='k', ha='center', va='center')
+
+# Navngiv linjestykket a+b
+ax.text(7, -0.5, '$a+b$', fontsize=12, color='k', ha='center', va='center')
+
+
+# Juster akserne, så kvadraterne vises korrekt
+ax.set_xlim(-1, 14.5)
+ax.set_ylim(-1, 10.5)
+ax.set_aspect('equal')  # Sørger for, at kvadraterne ikke bliver forvrænget
+
+# Fjern akserne
+plt.axis('off')
+
+# Vis plottet
+plt.show()
+
+```
+
+Som før er arealet af figuren først lig højde gange bredde, d.v.s
+
+$$
+\text{Areal} = a \cdot (a+b) = a^2  +ab
+$$
+Arealet er også lig summen det blå og det gule rektangel samt arealet af det røde kvadrat, d.v.s
+
+$$
+\begin{aligned}
+\text{Areal} &= \text{Blå rektangel} + \text{gul rektangel} + \text{rød kvadrat} \\
+& = (a+b)(a-b) + ab + b^2  
+\end{aligned}
+$$
+Da de to måder at udtrykke arealet på, må der gælde, at
+
+$$
+\begin{aligned}
+(a+b)(a-b) + ab + b^2 &= a^2 + ab && ab\text{ på begge sider} \\
+(a+b)(a-b) + b^2 &= a^2 \\
+(a+b)(a-b)  &= a^2 - b^2
+\end{aligned}
+$$
+$\square$
+
+::: {.Opgave}
+
+## Reducér v.h.a kvadratsætningerne
+
+1. $(a+b)^2 -2ab$
+2. $(a+b)(a-b) + b^2$
+3. $(x+3)^2-(x-2)^2$
+4. $(p-q)^2 - q(q-2p)$.
+5. $(a+2b)^2 -4b(a+b)$
+6. $a^2+2ab-(a+b)^2$
+7. $\dfrac{4a^2-b^2}{2(a+b)-b}$
+
+:::

@@ -1,0 +1,7 @@
+# Introduktion
+
+En introduktion til sproget, der bruges i matematik.
+
+Ligeså er det en introduktion til det matematiske værktøj, der skal bruges for at gennemgøre matematik på gymnasialt niveau. 
+
+Det kan gennemgås i begyndelsen af den gymnasiale uddannelse eller "*når man har brug for det*".

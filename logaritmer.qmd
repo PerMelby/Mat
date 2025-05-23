@@ -1,0 +1,336 @@
+# Logaritmer
+
+## Definition på logaritme
+
+::: {.Definition}
+
+## Definition på logaritme
+
+Hvis $a>0$, $a \neq 1$ og $y>0$ definerer vi $a$-talslogaritmen som værende løsningen til ligningen
+$$
+\begin{aligned}
+a^x&=y \Leftrightarrow \\ x&=\log_{a}(y)
+\end{aligned}
+$$
+$a$ er logaritmens grundtal
+
+:::
+
+::: {.Eksempel}
+
+## Eksempel på logaritme
+
+Vi ser på følgende ligninger, hvor den ubekendte står som eksponent, og løser dem v.h.a definitionen.
+$$
+\begin{aligned}
+2^x&=8 \Leftrightarrow x=\log_2(8) \\
+10^x&=1000 \Leftrightarrow x=\log_{10}(1000)
+\end{aligned}
+$$
+:::
+
+Det skulle gerne være klart, at $x=3$ i begge tilfælde. 
+
+Vi bemærker ved indsættelse af løsningen til ligningen, at:
+
+$$
+\begin{aligned}
+& 2^{\log_2(8)}=8 \\
+& 10^{\log_{10}(1000)}=1000
+\end{aligned}
+$$
+
+og ifølge definitionen må der helt generelt gælde, at
+
+$$
+\begin{aligned}
+a^{\log_{a}(y)}=y, \quad y>0
+\end{aligned}
+$$
+
+$a^x$ og $\log_a(x)$ er altså hinandens inverse funktioner. Eller kort sagt; "de går ud med hinanden".  **Log**-knappen på en lommeregner (og i Ti-nSpire) er logaritmen med grundtallet 10. I dette specialtilfælde skrives *kun* $\log$, men det er underforstået, at man mener $\log_{10}$. Så vi vil i dette tilfælde skrive $y=10^{\log_{10}(y)} = 10^{\log(y))}$. 
+
+## Regneregler for logaritmer
+
+::: {.Sætning #logregneregel}
+
+## Regneregler for logaritmer
+
+Hvis $a,b >0$ og $a,b \neq 1$ gælder følgende regneregler:
+
+$$
+\begin{aligned}
+\log(a \cdot b) &= \log(a) + \log(b) \\
+\log\left(\frac{a}{b}\right) &= \log(a)-\log(b) \\
+\log(a^x) &= x \cdot \log(a)
+\end{aligned}
+$$ 
+:::
+
+
+Regnereglerne gælder for alle grundtal (ikke alle tal, men alle grundtal!), men her er de bevist med 10 som grundtal.
+
+*Bevis* <br>
+Vi skriver nu to positive tal, $a$ og $b$, som $a=10^{\log(a)}$ og $b=10^{\log(b)}$ og ser på
+
+$$
+\begin{align}
+\log(a\cdot b) = \log(10^{\log(a)} \cdot 10^{\log(b)}) = \log(10^{\log(a)+\log(b)})= \log(a)+\log(b)
+\end{align}
+$$
+$$
+\begin{aligned}
+\log\left(\frac{a}{b}\right) =  \log\left(\frac{10^{\log(a)}}{10^{\log(b)}} \right)= \log(10^{\log(a)-\log(b)})= \log(a)-\log(b)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\log(a^x)=\log((10^{\log(a)})^x) = \log(10^{\log(a) \cdot x}) = x \cdot \log(a)
+\end{aligned}
+$$
+$\square$
+
+::: {.Eksempel}
+
+## Logaritmeligning
+
+Med regnereglerne i Sætning \ref{logregneregel} kan vi løse ligninger som f.eks
+$$
+\log_2(x+3) + \log_2(2)=3
+$$
+Først samler vi på ledende med $\log_2()$ v.h.a regnereglerne. I dette tilfælde dn første regneregel.
+
+$$
+\begin{aligned}
+\log_2(x+3) + \log_2(2)&=3 \Leftrightarrow \\
+\log_2((x+3) \cdot 2)) &= 3 \Leftrightarrow \\
+\log_2(2x+6) &= 3 
+\end{aligned}
+$$
+
+Nu skal vi bruge "det omvendte til logaritme", hvilket er en potens med i dette tilfælde 2 som grundtal
+$$
+\begin{aligned}
+\log_2(2x+6) &= 3 \Leftrightarrow \\
+2x+6 &= 2^3  \Leftrightarrow \\ 
+2x+6 & = 8 \Leftrightarrow \\
+2x &= 2 \Leftrightarrow \\
+x&= 2/2=1
+\end{aligned}
+$$
+Bemærk, at vi også kunne løse ligningen ved *lidt indsigt om logaritmer* og i stedet skrive
+
+$$
+\begin{aligned}
+\log_2(x+3) + \log_2(2)&=3 \Leftrightarrow \\
+\log_2(x+3) + 1&=3 \Leftrightarrow \\
+\log_2(x+3) &=2 \Leftrightarrow \\
+x+ 3 &= 2^2 \Leftrightarrow \\
+x&= 4-3=1
+\end{aligned}
+$$
+
+:::
+
+
+::: {.Sætning}
+
+## Logaritmer er proportionale med hinanden
+
+For to vilkårlige logaritmer med grundtal $\alpha$ og $\beta$ og en vilkårlig værdi $y>0$ gælder:
+
+$$
+\log_\alpha(y) \log_\beta(\alpha) = \log_\beta(y)
+$$
+:::
+
+*Bevis* <br>
+Vender vi tilbage til definitionen, løser vi ligningen v.h.a af den sidste regneregel med en vilkårlig logaritme
+
+$$
+\begin{aligned}
+a^x&=y \Leftrightarrow \log(a^x)=\log(y) \Leftrightarrow x \cdot \log(a) = \log(y) \Leftrightarrow \\ 
+x&=\frac{\log(y)}{\log(a)}
+\end{aligned}
+$$
+
+Sammenligner vi med løsningen i definitionen, ser vi at
+
+$$
+\begin{aligned}
+x=\log_{a}(y)=\frac{\log(y)}{\log(a)} 
+\end{aligned}
+$$
+
+Sætter vi $a=\alpha$ og $\log() = \log_\beta()$ er sætningen bevist. $\square$
+
+Denne sætning giver os friheden til at vælge den/de logaritme(r), der er nemmest for os og kun bruge den/dem fremover.
+
+Vi definerer derfor nu to specifikke logaritmer med to specifikke grundtal, jf. den generelle definition fra før.
+
+::: {.Definition}
+
+## 10-tals-logaritme og Naturlig logaritme
+
+Hvis $a>0$, $a \neq 1$ og $b>0$ definerer vi $10$-talslogaritmen, $\log()$ som værende løsningen til ligningen
+
+$$
+\begin{aligned}
+10^x=y \Leftrightarrow x=\log(y)
+\end{aligned}
+$$
+
+Ligeså definerer vi den naturlige logaritme, $\ln()$, som værende løsningen til ligningen
+
+$$
+\begin{aligned}
+\textrm{e}^x=y \Leftrightarrow x=\log_\textrm{e}(y)=\ln(y)
+\end{aligned}
+$$
+
+hvor $\textrm{e}=2,718281828459...$ er `Eulers tal`.
+
+:::
+
+Det kan virke underligt at definere en naturlig logaritme med et irrationelt grundtal. Hvad er der "naturligt" ved det, kunne man med rette spørge. Umiddelbart er det også svært at se, men i forbindelse med B-niveau viser der sig nogle pæne egenskaber for netop det grundtal, ligesom det har stor anvendelse i naturvidenskab, når man kigger på alt fra cellevækst, absorption af lys i stof, til radioaktive atomer og absorption af stråling i mennesker.
+
+
+
+## Løsning af eksponentielle ligninger 
+
+::: {.Eksempel}
+
+## Eksempel med kapitalfremskrivning
+
+Med logaritmer kan vi nu algebratisk løse ligningen m.h.t antal terminer, $n$.
+
+Vi har $K_0=1000$, $r=0,02$ og $K_n=1250$.
+
+Sagt med ord ønsker vi at bestemme det antal terminer, som 1000 kr. skal stå på en opsparingskonto med 4% p.a., før vi kan hæve 1250 kr.
+
+$$
+\begin{aligned}
+1000 \cdot 1,02^n &= 1250 \Leftrightarrow \\
+1,02^n &= \frac{1250}{1000} \Leftrightarrow \\
+n \cdot \log(1,02) &=  \log\left(\frac{1250}{1000} \right) \Leftrightarrow \\
+n &= \frac{\log\left(\frac{1250}{1000} \right)}{\log(1,02)} = 11,27.
+\end{aligned}
+$$
+
+Der skal altså gå mere end 11 terminer, d.v.s 12 terminer, før beløbet er over 1250 kr. på kontoen. (Her er det forkert at runde ned!)
+
+:::
+
+Vi kan nu forsætte eksemplet ovenfor og opstille en formel, der beregner antallet af terminer, $n$, når renten, $r$, begyndelseskapital, $K_0$ og slutkapital, $K_n$, kendes.
+
+$$
+\begin{aligned}
+K_0 \cdot (1+r)^n &= K_n \Leftrightarrow \\
+(1+r)^n &= \frac{K_n}{K_0} \Leftrightarrow \\
+\log((1+r)^n) &= \log\left(\frac{K_n}{K_0} \right) \\
+n \cdot \log(1+r) &= \log\left(\frac{K_n}{K_0} \right) \\
+n &= \frac{\log\left(\frac{K_n}{K_0} \right)}{\log(1+r)}
+\end{aligned}
+$$
+
+::: {.Eksempel}
+
+## Løsning af eksponentiel ligning
+
+Ligeså kan vi se på den eksponentielle udvikling $f(x)=5 \cdot 1,2^x$ og undersøge, hvornår funktionsværdien er lig $12$, d.v.s vi løser den såkaldte *eksponentielle ligning*
+
+$$
+\begin{aligned}
+5 \cdot 1,2^x&=12 \Leftrightarrow \\
+1,2^x &= \frac{12}{5} \Leftrightarrow \\
+x \cdot \log(1,2) &= \log(2,4) \Leftrightarrow \\
+x&=\frac{\log(2,4)}{\log(1,2)} = 4,8
+\end{aligned}
+$$
+Det vil sige, at vi ved indsættelse af denne $x$-værdi får:
+
+$$
+5 \cdot 1,2^{4,8} = 11,9961 \approx 12
+$$
+:::
+
+Mere generelt kan vi se på løsninger af ligninger på formen $b \cdot a^x=y$ og følge samme fremgangsmåde
+$$
+\begin{aligned}
+b \cdot a^x&=y \Leftrightarrow \\
+a^x &= \frac{y}{b} \Leftrightarrow \\
+x \cdot \log(a) &= \log(\frac{y}{b}) \Leftrightarrow \\
+x&=\frac{\log(\frac{y}{b})}{\log(a)} 
+\end{aligned}
+$$
+
+::: {.Opgave}
+
+### Bestemmelse af logaritmeværdier
+
+Beregn $\log(10)$, $\log(100)$, $\log(1000)$, $\log(1000000)$ og $\log(1000000000)$. <br>
+Beregn $10^9$, $10^6$, $10^3$, $10^2$ og $10^1$. <br>
+Hvordan vil du med ord formulere resultaterne?
+:::
+
+
+::: {.Opgave}
+
+## Opgaver med logaritmeligninger
+
+Løs følgende ligninger v.h.a regneregler for logaritmer
+
+**a)** $\log_2(x)=5$ <BR>
+**b)** $\log(2x)=2$ <BR>
+**c)** $\log_8(5x)=\log_8(40)$ <BR>
+**d)** $\log_3(x-2)=3$ <BR>
+**e)** $\log(3x+1)=2$ <BR>
+**f)** $\log_7(x+3)-\log_7(2)=2$ <BR>
+**g)** $\log_4(3x-1)+\log_4(2)=3$ <BR>
+**h)** $\log_9(x+1)+\log_9(3)=2$ 
+
+:::
+
+::: {.Opgave}
+
+## Bestemmelse af antal terminer
+
+Bestem hvor mange år 1500 kr. skal stå på en konto <br>
+til en årlig rente på 3\% for at vokse til 1800 kr.
+
+:::
+
+::: {.Opgave}
+
+## Løsning af eksponentielle ligninger
+
+Løs ligningerne:
+
+$$
+\begin{align}
+3^x &= 8 \label{1}\\
+1,15^x &= 2,9 \\
+0,89^x &=0,5 \\
+5 \cdot 3^x &=40 \\
+50 \cdot 0,72^x&=32 \\
+4,28 \cdot 1,03^x&=9,71
+\end{align}
+$$
+:::
+
+
+::: {.Opgave}
+
+## Bestemmelse af x-værdi i eksponentielle ligninger
+
+Bestem $x$ når:<BR>
+**a)** $f(x)=30 \cdot 1,25^x$ og $y=100$ <BR>
+**b)** $f(x)=30 \cdot 1,15^x$ og $y=60$ <BR>
+**c)** $f(x)=15 \cdot 1,32^x$ og $y=71$ <BR>
+**d)** $f(x)=30 \cdot 0,75^x$ og $y=10$ <BR>
+**e)** $f(x)=10 \cdot 0,85^x$ og $y=5$ <BR>
+**f)** $f(x)=0,85^x$ og $y=0,5$ <BR>
+**g)** $f(x)=1,62^x$ og $y=4$ 
+:::
+

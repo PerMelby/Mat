@@ -1,0 +1,209 @@
+# Potensfunktioner
+
+## Definition på potensfunktion og potensudvikling
+
+::: {.Definition}
+
+## Potensfunktion og potensudvikling
+En **potensfunktion** er en funktion på formen
+
+$$
+f(x)=x^a
+$$
+
+En **potensudvikling** er en funktion på formen
+
+$$
+f(x)=b \cdot x^a
+$$
+
+hvor  $a \in \mathbb{R}, a \neq 1$, og  $b \in \mathbb{R}_+$ 
+
+$a$ kaldes **eksponenten** og $b$ er **konstantfaktoren**
+
+For både potensfunktioner og potensudviklinger gælder, at: <br>
+Dm($f$)=$\mathbb{R}_+$ og Vm($f$)=$\mathbb{R}_+$ 
+
+:::
+
+Hvis $a=1$, har vi en funktionsskrift på formen $f(x)=b \cdot x^1 = b \cdot x$ og det er en lineær funktion med $b$ som hældningskoefficient, så $a=1$ er derfor ikke med i definitionen af potensfunktioner og potensudviklinger.
+
+Bemærk, at en potensudvikling med $b=1$ kaldes en potensfunktion. Bemærk også, at eftersom både definitionsmængden og værdimængden ikke antager negative værdier, findes grafen for $f$ i begge tilfælde kun i første kvadrant.
+
+::: {.Sætning}
+For en potensudvikling $f(x)=b \cdot x^a$ gælder, at $f(1)=b$.
+:::
+
+**Bevis** <br>
+$$f(1)= b \cdot 1^a = b \cdot 1 = b$$
+$\square$
+
+
+## Vækstegenskab
+
+Vi kan ikke som i tilfældet med lineære funktioner og eksponentieludviklinger se på $f(x+1) = b \cdot (x+1)^a$. 
+
+Hvis eksempelvis $a=2$ har vi, at 
+
+$$f(x+1) = b \cdot (x+1)^a = b \cdot (x^2+2x+ 1) = b \cdot x^2 + b \cdot (2x+1) = f(x) + b \cdot (2x+1) $$
+Det er svært at sige, hvad man kan konkludere om væksten ud fra det resultat. 
+
+Hvis $a=-2$ bliver det næsten kun endnu værre
+
+$$f(x+1) = b \cdot (x+1)^{-2} = \frac{b}{(x+1)^2} = \frac{b}{x^2+2x+ 1} $$
+og hvordan kommer man så videre herfra?
+
+I stedet for at se på $f(x+1)$ vil vi for potensudviklinger i stedet se på $f(x \cdot k)$ og formulere følgende sætning:
+
+::: {.Sætning}
+
+## Vækstegenskab
+
+Hvis $x$ fremskrives med $k=(1+r_x)$ fremskrives funktionsværdien med $k^a=(1+r_y)$. 
+:::
+
+**Bevis** <br>
+ $f(x \cdot k)= b \cdot (x \cdot k)^a = b \cdot x^a \cdot k^a = f(x) \cdot k^a$  <br>
+ Sæt $k=1+r_x$ og $k^a = (1+r_y)$ og dermed  får vi at:<br>
+ $(1+r_x)^a=(1+r_y)$
+
+$$
+\begin{aligned}
+ (1+r_y) &= (1+r_x)^a \nonumber \Leftrightarrow \\
+ r_y &= (1+r_x)^a -1 \quad \text{og} \quad  r_x =\sqrt[a]{1+r_y} - 1
+ \end{aligned}
+$$
+$\square$
+
+Beviset kan også fremføres ved at huske, at den relative tilvækst skrives 
+
+$$
+\begin{aligned}
+r_y&=\frac{\text{slutfunktionsværdi} - \text{begyndelsesfunktionsværdi}}{\text{begyndelsesfunktionsværdi}} \\
+&=\frac{\text{slutfunktionsværdi}}{\text{begyndelsesfunktionsværdi}} - 1 \Leftrightarrow \\
+1+r_y &= \frac{\text{slutfunktionsværdi}}{\text{begyndelsesfunktionsværdi}}
+\end{aligned} 
+$$
+
+Vi fremskriver $x$-værdien og skriver slutværdi=$x \cdot (1+r_x)$ og dermed $\text{slutfunktionsværdi}= f(x \cdot (1+r_x))$. Begyndelsesværdien er uændret, så begyndelsesfunktionsværdi=$f(x)$. Dette indsættes og vi får:
+
+$$
+\begin{aligned}
+1+ r_y &= \frac{f(x \cdot (1+r_x))}{f(x)} = \frac{f(x) \cdot (1+r_x)^a}{f(x)}  = (1+r_x)^a 
+\end{aligned}
+$$
+Hvis vi bruger, at $p_x=r_x \cdot 100$ og $p_y=r_y \cdot 100$ får vi
+$$ 
+ \begin{aligned}
+ p_y&= \left((1+r_x)^a -1\right) \cdot 100  \quad \text{og} \quad p_x=\left(\sqrt[a]{1+r_x} - 1 \right) \cdot 100 
+ \end{aligned}
+ $$
+ 
+::: {.Eksempel}
+
+## Luftmodstand
+
+Luftmodstanden på en bil afhænger af bilens fart. For en bestemt bil kan sammenhængen mellem bilens fart $x$ (målt i km/time) og luftmodstanden $f(x)$ (målt i newton) beskrives ved funktionsforskriften
+$$ f(x) = 0,035 \cdot x^2 $$
+Hvor mange procent vokser luftmodstanden, hvis bilens fart øges med 30\%? 
+
+**Svar:** Vi har en potensudvikling, hvor $a=2$. Bilens fart er vores $x$-værdi i opgaven, og dens ændring er $r_x=p\%=30\%=\frac{30}{100}$. 
+Vi skal beregne ændringen i procent af luftmodstanden, altså $p_y$. Dette gøres ved:
+$$
+\begin{aligned}
+p_y &= \left((1+r_x)^a -1\right) \cdot 100 = \left( \left(1+\frac{30}{100}\right)^2 - 1 \right) \cdot 100 \\
+&= (1,30^2-1) \cdot 100\%=(1,69-1)\cdot 100=0,69 \cdot 100 = 69
+\end{aligned}
+$$
+Luftmodstanden vokser med 69\%, hvis bilens fart øges med 30\%.
+:::
+
+## Skæringspunktet mellem graferne for to potensudviklinger
+
+Hvis man har to potensudviklinger $f(x) = b \cdot x^a$ og $g(x)=d \cdot x^c$ og ønsker at bestemme skæringspunktet mellem graferne for de to funktioner skal man løse ligningen
+
+$$
+b \cdot x^a = d \cdot x^c
+$$
+
+Hvis både $a$ og $c$ er positive og ikke ens, er den første og åbenlyse løsning $x=0$. Men vi har jo defineret definitionsmængden til at være de positive tal, så det kan ikke bruges som $x$-koordinat for et evt. skæringspunkt. Hvis enten $a$ eller $c$ er mindre end 0 er funktionsværdien $f(0)$ eller $g(0)$ slet ikke defineret.
+
+Vi ønsker at definere en generel formel, uanset om $a$ og $c$ er positive eller ej. Vi vil dog antage at $a>c$. Løsningen af ligningen bliver så:
+
+$$
+\begin{aligned}
+b \cdot x^a &= d \cdot x^c \Leftrightarrow \\
+\frac{x^a}{x^c} &= \frac{d}{b} \Leftrightarrow \\
+x^{a-c} &= \frac{d}{b} \Leftrightarrow \\
+x &= \sqrt[a-c]\frac{d}{b}
+\end{aligned}
+$$
+
+::: {.Eksempel}
+
+## Ekspempel på skæringspunkt mellem to potensudviklinger
+
+Vi har følgende to potensudviklinger
+
+$$
+\begin{aligned}
+f(x) &= 2 \cdot x^2 \\
+g(x) &= 5 \cdot x^{0.8} 
+\end{aligned}
+$$
+Vi beregner skæringspunktet til 
+
+$$
+x = \sqrt[2-0,8]{\frac{5}{2}} = \sqrt[1,2]{2,5} \approx 2.14594
+$$
+$y$-værdien findes ved at indsætte denne $x$-værdi i enten $f$ eller $g$
+
+$$
+\begin{aligned}
+f(2.14594) &= 2 \cdot 2.14594^2 = 9,21 \\ 
+g(2.14594) &= 5 \cdot 2.14594^0.8 = 9,21
+\end{aligned}
+$$
+Vi kan tegne graferne for de to funktioner og se skæringspunktet grafisk.
+
+```{python}
+#| echo: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definer potensfunktioner
+def f(x):
+    return 2*x**2
+
+def g(x):
+    return 5*x**0.8
+
+x_intersect = (5/2)**(5/6)  
+y_intersect = f(x_intersect)
+
+# Generér x-værdier til plot
+x = np.linspace(0, 3, 200)
+
+# Plot funktionerne
+plt.plot(x, f(x), label=r"$f(x) = 2x^2$", color="blue")
+plt.plot(x, g(x), label=r"$g(x) = 5x^{0.8}$", color="red")
+
+# Markér skæringspunkt
+plt.scatter(x_intersect, y_intersect, color="black", zorder=3, label="Skæringspunkt")
+
+# Diagramindstillinger
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Skæringspunkt mellem to potensudviklinger")
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+
+
+:::
+

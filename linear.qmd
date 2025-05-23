@@ -1,0 +1,472 @@
+---
+title: Lineære funktioner
+execute: 
+  enabled: true
+---
+
+
+
+::: {.Definition}
+
+## Definition på en lineær funktion
+
+En **lineær funktion** er en funktion på formen:
+
+$$
+\begin{aligned}
+f(x)=ax+b
+\end{aligned}
+$$
+
+hvor $a,b \in \mathbb{R}$.
+
+$a$ kaldes **hældningskoefficienten**
+
+$b$ kaldes **konstantledet**
+
+For lineære funktioner gælder, at:
+
+Dm($f$)=$\mathbb{R}$ og Vm($f$)=$\mathbb{R}$
+:::
+
+$f(x)=ax+b$ kaldes `funktionsforskriften`. Det kaldes dog ikke en lineær funktionsforskrift. Faktisk kalder vi det en funktionsforskrift, hvis vi skriver $f(x)=\dots$, hvor prikkerne på højresiden kan repræsentere "alt muligt", og en stor del af matematik på stx handler om at se eksempler- og regne på funktioner, der indeholder "alt muligt".
+
+Indtil videre holder vi os til de lineære funktioner.
+
+::: {.Eksempel}
+
+## Eksempel
+
+En lineær funktion er givet ved: $f(x)=2x-2$. Her er $a=2$ og $b=-2$
+
+En lineær funktion er givet ved: $g(x)=x-1$. Her er $a=1$ og $b=-1$
+:::
+
+::: {.callout-caution icon="false" collapse="true"}
+## Opgave Lineær 4.1
+
+Hvad er $a$, og hvad er $b$ i følgende lineære funktioner?
+
+$$
+\begin{aligned}
+f_1(x)&=3x + 1  &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_2(x)&=-2x  - 1 &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_3(x)&=x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_4(x)&=3 &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_5(x)&=4-2x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} 
+\end{aligned}
+$$
+:::
+
+## Tabel hørende til lineær funktion
+
+En tabel for hørende til en lineær funktion kunne se ud som nedenstående:
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for funktionen f(x)=2x+1</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">x</th>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">f(x)</th>
+    <td>1</td>
+    <td>3</td>
+    <td>5</td>
+    <td>7</td>
+    <td>9</td>
+  </tr>
+</table>
+```
+For at udfylde nederste række, har vi udført følgende beregninger: 
+$$
+\begin{align*}
+f(\textcolor{red}{0})&=2 \cdot \textcolor{red}{0} +1 = 0+1=1 &\qquad  f(\textcolor{red}{1})&=2 \cdot \textcolor{red}{1} +1 = 2+1=3 \\
+f(\textcolor{red}{2})&=2 \cdot \textcolor{red}{2} +1 = 4+1=5 &\qquad  f(\textcolor{red}{3})&=2 \cdot \textcolor{red}{3} +1 = 6+1=7 \\
+f(\textcolor{red}{4})&=2 \cdot \textcolor{red}{4} +1 = 8+1=9
+\end{align*}
+$$
+
+## Vækstegenskab
+
+Vi ser, at hver gang, vi går en celle til højre i øverste række, vokser $x$-værdien med én. Det samme er ikke tilfældet med nederste række. Her vokser funktionsværdien, $f(x)$, med to, hver gang vi går en celle til højre. (Hold musen over cellerne i nederste række.)
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+
+.value:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for funktionen f(x)=2x+1</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">x</th>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">f(x)</th>
+    <td>1</td>
+    <td><div class="value">3</div><div class="hide">1+2</div></td>
+    <td><div class="value">5</div><div class="hide">3+2</div></td>
+    <td><div class="value">7</div><div class="hide">5+2</div></td>
+    <td><div class="value">9</div><div class="hide">7+2</div></td>
+  </tr>
+</table>
+```
+Vi kan prøve lykken igen med funktionen $f(x) = 3x+1$.
+
+På samme måde som før beregner vi værdierne i nederste række ved følgende udregninger:
+
+$$
+\begin{align*}
+f(\textcolor{red}{0})&=3 \cdot \textcolor{red}{0} +1 = 0+1=1 &\qquad  f(\textcolor{red}{1})&=3 \cdot \textcolor{red}{1} +1 = 3+1=4 \\
+f(\textcolor{red}{2})&=3 \cdot \textcolor{red}{2} +1 = 6+1=7 &\qquad  f(\textcolor{red}{3})&=3 \cdot \textcolor{red}{3} +1 = 9+1=10 \\
+f(\textcolor{red}{4})&=3 \cdot \textcolor{red}{4} +1 = 12+1=13
+\end{align*}
+$$
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+
+.value:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for funktionen f(x)=3x+1</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">x</th>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">f(x)</th>
+    <td>1</td>
+    <td><div class="value">4</div><div class="hide">1+3</div></td>
+    <td><div class="value">7</div><div class="hide">4+3</div></td>
+    <td><div class="value">10</div><div class="hide">7+3</div></td>
+    <td><div class="value">13</div><div class="hide">10+3</div></td>
+  </tr>
+</table>
+```
+Nu vokser funktionsværdien, $f(x)$, med tre, hver gang vi går en celle til højre. (Hold musen over cellerne i nederste række.)
+
+Hvad med negative værdier for $a$ og $b$? Vi prøver nu med funktionen $f(x) = -x-2$. Bemærk, at her er $a=-1$.
+
+På samme måde som før beregner vi værdierne i nederste række ved følgende udregninger:
+
+$$
+\begin{align*}
+f(\textcolor{red}{0})&=(-1) \cdot \textcolor{red}{0} -2 = 0-2=-2 &\qquad  f(\textcolor{red}{1})&=(-1) \cdot \textcolor{red}{1} - 2 = -1-2=-3 \\
+f(\textcolor{red}{2})&=-1 \cdot \textcolor{red}{2} -2  = -2-3=-4 &\qquad  f(\textcolor{red}{3})&=(-1) \cdot \textcolor{red}{3} -2 = -3-2=-5 \\
+f(\textcolor{red}{4})&=(-1) \cdot \textcolor{red}{4} -2 = -4-2=-6
+\end{align*}
+$$
+
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+
+.value:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for funktionen f(x)=-x-2</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">x</th>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">f(x)</th>
+    <td>-2</td>
+    <td><div class="value">-3</div><div class="hide">-2+(-1)</div></td>
+    <td><div class="value">-4</div><div class="hide">-3+(-1)</div></td>
+    <td><div class="value">-5</div><div class="hide">-4+(-1)</div></td>
+    <td><div class="value">-6</div><div class="hide">-5+(-1)</div></td>
+  </tr>
+</table>
+```
+Nu vokser funktionsværdien, $f(x)$, med minus 1, hver gang vi går en celle til højre. (Hold musen over cellerne i nederste række.). Vi kan også sige, at $f(x)$ aftager med 1, hver gang vi går en celle til højre.
+
+Generelt kan vi formulere ovenstående eksempler som en `generel vækstegenskab`.
+
+::: {.Sætning}
+
+## Vækstegenskab for lineær funktion
+
+Når $x$ vokser med 1, vokser $f(x)$ med $a$.
+:::
+
+*Bevis*: 
+$$
+f(x + 1) = a \cdot (x+1)+b = ax + a + b = ax+b + a = f(x) + a
+$$ 
+
+Man kan udvide vækstegenskaben.
+
+Hvis vi indfører en *generel tilvækst* og betegner den $\Delta x$, kan vi omskrive ovenstående sætning til
+
+::: {.Sætning}
+
+## Udvidet vækstegenskab for lineær funktion
+
+Når $x$ vokser med $\Delta x$, vokser $f(x)$ med $a \Delta x$.
+:::
+
+*Bevis*: 
+$$
+f(x + \Delta x) = a \cdot (x+ \Delta x)+b = ax + a \Delta x + b = ax+b + a \Delta x = f(x) + a \Delta x
+$$
+
+::: {.Eksempel}
+
+## Eksempel på udvidet vækstegenskab
+
+Hvis $f(x) = 3x - 1$ kan vi eksempelvis beregne $f(1) = 3 \cdot 1 - 1 = 3-1 = 2$.
+
+Hvis x vokser med 3 ($\Delta x = 3$) kan vi v.h.a den udvidede vækstegenskab beregne $f(4) = f(1) + 3 \cdot 3 = 2+9=11$
+
+Vi kan også beregne $f(4)$ direkte og tjekke, at vi får samme resultat:
+
+$$
+f(4) = 3 \cdot 4 - 1 = 12-1 = 11
+$$
+:::
+
+## Grafen for en lineær funktion
+
+Vi betragter funktionen $f(x)=x+2$ og en tilhørende tabel for nogle udvalgte værdier i definitionsmængden:
+
+```{=html}
+<style>
+table, th, td {
+  border:1px solid black;
+}
+td {
+  text-align: center;
+}
+</style>
+<table style="width:80%">
+<caption>Tabel for funktionen f(x)=x+2</caption>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">x</th>
+    <td>-1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th style="font-weight: bold; background-color: #D6EEEE;">f(x)</th>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+</table>
+```
+og grafisk består denne tabel af de seks sammenhørende punkter:
+
+```{python}
+#| echo: false
+
+import math
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+
+# Move left y-axis and bottom x-axis to centre, passing through (0,0)
+ax.spines['left'].set_position('zero')
+ax.spines['bottom'].set_position('zero')
+
+# Eliminate upper and right axes
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+
+# Show ticks in the left and lower axes only
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+plt.plot([-1, 0, 1, 2, 3, 4],[1, 2, 3, 4, 5, 6],'ro', label="Tabellens punkter") 
+
+plt.axis('scaled')
+
+plt.xlim(-3, 5)
+plt.ylim(-1, 7)
+
+plt.legend(loc=2)
+plt.grid()
+
+plt.show()
+```
+
+Udvider vi tabellen til uendligt mange punkter får vi *grafen for lineær funktion*, som vi kalder **en ret linje**.
+
+```{python}
+#| echo: false
+
+
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.arange(-3., 5., 0.02)
+lin = x+2
+
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+
+# Move left y-axis and bottom x-axis to centre, passing through (0,0)
+ax.spines['left'].set_position('zero')
+ax.spines['bottom'].set_position('zero')
+
+# Eliminate upper and right axes
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+
+# Show ticks in the left and lower axes only
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+plt.plot(x,lin, 'r', label="f(x)=2x+2")
+
+plt.axis('scaled')
+
+plt.xlim(-3, 5)
+plt.ylim(-1, 7)
+
+
+plt.legend()
+plt.grid()
+
+plt.show()
+```
+
+## Aflæs $a$ og $b$ ud fra grafen for funktionen
+
+## Skæringspunkt
+
+```{python}
+#| echo: false
+
+
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.arange(-4., 4., 0.02)
+lin = 2*x+2
+lin2 = -x + 5
+
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+
+# Move left y-axis and bottom x-axis to centre, passing through (0,0)
+ax.spines['left'].set_position('zero')
+ax.spines['bottom'].set_position('zero')
+
+# Eliminate upper and right axes
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+
+# Show ticks in the left and lower axes only
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+plt.plot(x,lin, 'r', label="f(x)=2x+2")
+plt.plot(x,lin2, 'g', label="g(x)=-x+5")
+plt.plot(1,4,'bo', label="Skæringspunkt") 
+# plt.axis('scaled')
+
+plt.xlim(-4, 4)
+plt.ylim(-2, 6)
+
+plt.legend()
+plt.grid()
+
+plt.show()
+```
+
+I et skæringspunkt er de to linjer samme $x$ og $y$-værdi. Så vi skal løse ligningen 
+$$
+\begin{aligned}
+f(x) &= g(x) \Rightarrow \\
+2x+2 &= -x+5 \Leftrightarrow \\
+3x &= 3 \Leftrightarrow \\
+x &= \frac{3}{3} = 1
+\end{aligned}
+$$
+
+$y$-værdien finder vi ved at beregne $f(1)$ eller $g(1)$. Her gør vi begge dele og tjekker, at vi rent faktisk får samme funktionsværdi. Var dette ikke tifældet, havde vi løst ligningen til at finde $x$-værdien forkert.
+
+$$
+\begin{aligned}
+f(1) &= 2 \cdot 1 + 2 = 2+2 = 4 \\
+g(1) &= -1 + 5 = 4
+\end{aligned}
+$$
+
+Så skæringspunktet er, som grafvinduet også viser, lig $(1,4)$.
+

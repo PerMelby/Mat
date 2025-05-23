@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; Trigonometri – Matematik stx</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./potensfkt.html" rel="next">
+<link href="./logaritmer.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/foldbox/foldbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+.Sætning {
+  --color1: #19ccf5;
+  --color2: #12c0e8;
+}
+.Definition {
+  --color1: #ff8800;
+  --color2: #ee8810;
+}
+.Eksempel {
+  --color1: #00dc9c;
+  --color2: #189200;
+}
+.Opgave {
+  --color1: #e9ef8f;
+  --color2: #dee481;
+}
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./trigonometri.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Matematik stx</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forord</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduktion</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./regnearter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Matematisk sprog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ligninger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Ligninger</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Brøker</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kvadrat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kvadratsætningerne</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./første_g.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1.g / C-niveau.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./procent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Procentregning</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./eksponentiel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logaritmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometri.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./potensfkt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Potensfunktioner</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./anden_g.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.g / B-niveau.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andengrads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Andengradsligningen</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Indholdsfortegnelse</h2>
+   
+  <ul>
+  <li><a href="#ensvinklede-trekanter" id="toc-ensvinklede-trekanter" class="nav-link active" data-scroll-target="#ensvinklede-trekanter"><span class="header-section-number">9.1</span> Ensvinklede trekanter</a></li>
+  <li><a href="#enhedscirkel" id="toc-enhedscirkel" class="nav-link" data-scroll-target="#enhedscirkel"><span class="header-section-number">9.2</span> Enhedscirkel</a></li>
+  <li><a href="#retvinklede-trekanter" id="toc-retvinklede-trekanter" class="nav-link" data-scroll-target="#retvinklede-trekanter"><span class="header-section-number">9.3</span> Retvinklede trekanter</a>
+  <ul class="collapse">
+  <li><a href="#pythagoras-sætning" id="toc-pythagoras-sætning" class="nav-link" data-scroll-target="#pythagoras-sætning"><span class="header-section-number">9.3.1</span> Pythagoras Sætning</a></li>
+  <li><a href="#bestemmelse-af-spids-vinkel-i-retvinklet-trekant" id="toc-bestemmelse-af-spids-vinkel-i-retvinklet-trekant" class="nav-link" data-scroll-target="#bestemmelse-af-spids-vinkel-i-retvinklet-trekant"><span class="header-section-number">9.3.2</span> Bestemmelse af spids vinkel i retvinklet trekant</a></li>
+  </ul></li>
+  <li><a href="#vilkårlige-trekanter" id="toc-vilkårlige-trekanter" class="nav-link" data-scroll-target="#vilkårlige-trekanter"><span class="header-section-number">9.4</span> Vilkårlige trekanter</a>
+  <ul class="collapse">
+  <li><a href="#arealformlen" id="toc-arealformlen" class="nav-link" data-scroll-target="#arealformlen"><span class="header-section-number">9.4.1</span> Arealformlen</a></li>
+  <li><a href="#sinusrelationen" id="toc-sinusrelationen" class="nav-link" data-scroll-target="#sinusrelationen"><span class="header-section-number">9.4.2</span> Sinusrelationen</a></li>
+  <li><a href="#cosinusrelationen" id="toc-cosinusrelationen" class="nav-link" data-scroll-target="#cosinusrelationen"><span class="header-section-number">9.4.3</span> Cosinusrelationen</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./trigonometri.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="ensvinklede-trekanter" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="ensvinklede-trekanter"><span class="header-section-number">9.1</span> Ensvinklede trekanter</h2>
+<div id="ensvinklede-trekanter-1" class="Definition" title="Ensvinklede trekanter">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 9.1: </strong>Ensvinklede trekanter</summary><div>At to trekanter, <span class="math inline">\(\triangle ABC\)</span> og <span class="math inline">\(\triangle A_1B_1C_1\)</span>, er <strong>ensvinklede</strong> betyder, at vinklerne <em>parvist</em> er ens, d.v.s <span class="math display">\[
+\angle A = \angle A_1, \: \angle B = \angle B_1, \: \text{og} \: \angle C = \angle C_1
+\]</span><p></p>
+</div></details>
+</div>
+<div id="d017c39f" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Polygon, Arc</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Definer trekantens hjørner</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> (<span class="dv">2</span>, <span class="dv">0</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> (<span class="fl">1.35</span>, <span class="fl">1.5</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Definer trekantens hjørner</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>A1 <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">0</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>B1 <span class="op">=</span> (<span class="dv">7</span>, <span class="dv">0</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>C1 <span class="op">=</span> (<span class="fl">5.7</span>, <span class="dv">3</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Define vertices of the first triangle</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>triangle1 <span class="op">=</span> [A, B, C]  <span class="co"># A right triangle</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Define vertices of the second triangle </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>triangle2 <span class="op">=</span> [A1, B1, C1]  </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the figure and axis</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Navngiv hjørnerne</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.text(A[<span class="dv">0</span>], A[<span class="dv">1</span>], <span class="st">'$A$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'k'</span>, ha<span class="op">=</span><span class="st">'right'</span>, va<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>ax.text(B[<span class="dv">0</span>], B[<span class="dv">1</span>], <span class="st">'$B$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'k'</span>, ha<span class="op">=</span><span class="st">'left'</span>, va<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>ax.text(C[<span class="dv">0</span>], C[<span class="dv">1</span>], <span class="st">'$C$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'k'</span>, ha<span class="op">=</span><span class="st">'left'</span>, va<span class="op">=</span><span class="st">'bottom'</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Navngiv hjørnerne</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ax.text(A1[<span class="dv">0</span>], A1[<span class="dv">1</span>], <span class="st">'$A_1$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'k'</span>, ha<span class="op">=</span><span class="st">'right'</span>, va<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>ax.text(B1[<span class="dv">0</span>], B1[<span class="dv">1</span>], <span class="st">'$B_1$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'k'</span>, ha<span class="op">=</span><span class="st">'left'</span>, va<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>ax.text(C1[<span class="dv">0</span>], C1[<span class="dv">1</span>], <span class="st">'$C_1$'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, color<span class="op">=</span><span class="st">'k'</span>, ha<span class="op">=</span><span class="st">'left'</span>, va<span class="op">=</span><span class="st">'bottom'</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Tilføj den første trekant</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>poly1 <span class="op">=</span> Polygon(triangle1, closed<span class="op">=</span><span class="va">True</span>, fill<span class="op">=</span><span class="va">False</span>, edgecolor<span class="op">=</span><span class="st">'k'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>ax.add_patch(poly1)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Tilføj den anden trekant</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>poly2 <span class="op">=</span> Polygon(triangle2, closed<span class="op">=</span><span class="va">True</span>, fill<span class="op">=</span><span class="va">False</span>, edgecolor<span class="op">=</span><span class="st">'k'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>ax.add_patch(poly2)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion til at tilføje en vinkel med Arc</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_angle(ax, center, p1, p2, radius<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'red'</span>):</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Beregn vinkelorientering</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    angle1 <span class="op">=</span> np.degrees(np.arctan2(p1[<span class="dv">1</span>] <span class="op">-</span> center[<span class="dv">1</span>], p1[<span class="dv">0</span>] <span class="op">-</span> center[<span class="dv">0</span>]))</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    angle2 <span class="op">=</span> np.degrees(np.arctan2(p2[<span class="dv">1</span>] <span class="op">-</span> center[<span class="dv">1</span>], p2[<span class="dv">0</span>] <span class="op">-</span> center[<span class="dv">0</span>]))</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Juster vinkler til Arc</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    start_angle <span class="op">=</span> <span class="bu">min</span>(angle1, angle2)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    end_angle <span class="op">=</span> <span class="bu">max</span>(angle1, angle2)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tegn cirkelstykke</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    arc <span class="op">=</span> Arc(center, width<span class="op">=</span><span class="dv">2</span><span class="op">*</span>radius, height<span class="op">=</span><span class="dv">2</span><span class="op">*</span>radius, theta1<span class="op">=</span>start_angle, theta2<span class="op">=</span>end_angle, color<span class="op">=</span>color)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    ax.add_patch(arc)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Tilføj vinklerne i den lille trekant</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>draw_angle(ax, A, B, C, radius<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'blue'</span>)  <span class="co"># Vinklen ved A</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>draw_angle(ax, B, A, C, radius<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'green'</span>)  <span class="co"># Vinklen ved B</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>draw_angle(ax, C, A, B, radius<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'red'</span>)  <span class="co"># Vinklen ved C</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Tilføj vinklerne i den lille trekant</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>draw_angle(ax, A1, B1, C1, radius<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'blue'</span>)  <span class="co"># Vinklen ved A</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>draw_angle(ax, B1, A1, C1, radius<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'green'</span>)  <span class="co"># Vinklen ved B</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>draw_angle(ax, C1, A1, B1, radius<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'red'</span>)  <span class="co"># Vinklen ved C</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the axis limits</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>)</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>)</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Fjern akserne</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">'off'</span>)</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Set aspect ratio to equal</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Add grid for better visualization</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-2-output-1.png" width="540" height="309" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="skalafaktor" class="Sætning" title="Skalafaktor">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.2: </strong>Skalafaktor</summary><div>Hvis to trekanter er ensvinklede, er forholdet mellem sidelængderne ens.<p></p>
+<p>Dette forhold kaldes <strong>skalafaktoren</strong> og betegnes som regel med <em>k</em>, d.v.s</p>
+<p><span class="math display">\[
+k=\frac{|A_1B_1|}{|AB|} = \frac{|A_1C_1|}{|AC|} = \frac{|B_1C_1|}{|BC|}
+\]</span> Vi har derfor, at</p>
+<p><span class="math display">\[
+\begin{aligned}
+|A_1B_1| = k \cdot |AB|, \quad |A_1C_1| = k \cdot |AC| \quad \text{og} \quad |B_1C_1| = k \cdot |BC|
+\end{aligned}
+\]</span> Ensvinklede trekanter kaldes derfor også <strong>proportinale</strong> eller <strong>ligedannede</strong>.</p>
+</div></details>
+</div>
+</section>
+<section id="enhedscirkel" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="enhedscirkel"><span class="header-section-number">9.2</span> Enhedscirkel</h2>
+<div id="cosinus-og-sinus" class="Definition" title="Cosinus og Sinus">
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 9.3: </strong>Cosinus og Sinus</summary><div>En <strong>enhedscirkel</strong> er en cirkel med radius 1 og centrum i origo <span class="math inline">\((0,0)\)</span>.<p></p>
+<p>En vinkel <span class="math inline">\(v\)</span> i enhedscirklen har retningspunkt <span class="math inline">\(P_v\)</span>. Se figuren herunder.</p>
+<p>I retningspunktet er koordinatsættet defineret som <span class="math inline">\((cos(v), sin(v))\)</span>.</p>
+</div></details>
+</div>
+<p>En retvinklet trekant i enhedscirklen med radius tegnet i 1. kvadrant som hypotenuse har altså katetelængder <span class="math inline">\(cos(v)\)</span> og <span class="math inline">\(sin(v)\)</span></p>
+<div id="69bfddc1" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-3-output-1.png" width="564" height="432" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Hvordan funktionerne <span class="math inline">\(\sin(v)\)</span> og <span class="math inline">\(\cos(v)\)</span> præcist “<em>virker</em>” vil vi ikke komme ind på. I stedet vil vi begynde med et argument for, hvordan vi kan beregne <span class="math inline">\(\sin(v)\)</span> og <span class="math inline">\(\cos(v)\)</span> for specielle vinkler. Herved kan vi opskrive den første sætning og give et geometrisk bevis for dets rigtighed.</p>
+<div id="sinus30-og-cosinus30" class="Sætning" title="Sinus(30) og Cosinus(30)">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.4: </strong>Sinus(30) og Cosinus(30)</summary><div><span class="math display">\[
+\begin{aligned}
+\sin(30) &amp;= \frac{1}{2} \\
+\cos(30) &amp;= \frac{\sqrt{3}}{2}
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<p><em>Bevis</em></p>
+<p>Beviset for <span class="math inline">\(\sin(30) = \frac{1}{2}\)</span> klares geometrisk med figuren herunder.</p>
+<div id="54e5d39e" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-4-output-1.png" width="430" height="431" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Hvis man tegner en retvinklet trekant med en vinkel på <span class="math inline">\(30^\circ\)</span> i enhedscirklen og spejler denne trekant i <span class="math inline">\(x\)</span>-aksen får man en trekant, <span class="math inline">\(AB_1B_2\)</span>, hvor alle vinklerne er <span class="math inline">\(60^\circ\)</span></p>
+<p>I en sådan trekant er alle siderne lige lange.</p>
+<p>Da <span class="math inline">\(|AB_1|=|AB_2| = 1\)</span> (disse sider er radii i enhedscirklen) må der gælde, at <span class="math inline">\(|B_1B_2|=1\)</span>.</p>
+<p>Da den vinkelrette afstand fra <span class="math inline">\(B_1\)</span> til <span class="math inline">\(x\)</span>-aksen pr. definition er <span class="math inline">\(\sin(30)\)</span>, må der gælde at <span class="math inline">\(\sin(30) = |B_1C| = \frac{|B_1B_2|}{2}=\frac{1}{2}\)</span></p>
+<p>Vi kan vise, at <span class="math inline">\(\cos(30) = \frac{\sqrt{3}}{2}\)</span> ved at bruge Pythagoras Sætning, som vi vil bevise nedenunder.</p>
+<p>Pythagoras Sætning i enhedscirklen siger, at</p>
+<p><span class="math display">\[
+\sin(v)^2 + \cos(v)^2 = 1^2
+\]</span> Notationsmæssigt skrives dette ofte som</p>
+<p><span class="math display">\[
+\sin^2(v) + \cos^2(v) = 1
+\]</span> Hvis <span class="math inline">\(\sin(30) = 1/2\)</span> må der gælde, at</p>
+<p><span class="math display">\[
+\begin{aligned}
+\left(\frac{1}{2}\right)^2  + \cos^2(30) &amp;= 1 \\
+\frac{1}{4}  + \cos^2(30) &amp;= 1 \\
+\cos^2(30) &amp;= 1 - \frac{1}{4}  \\
+\cos^2(30) &amp;= \frac{3}{4} \\
+\cos(30) &amp;= \sqrt{\frac{3}{4}}
+\end{aligned}
+\]</span> Da vi er i første kvadrant, er der tale om den positive kvadratrod. Endvidere kan vi bruge en potensregneregel (eksponenten er lig 1/2), når vi taler om kvadratrødder, så vi kan skrive</p>
+<p><span class="math display">\[
+\cos(30) = \frac{\sqrt{3}}{\sqrt{4}} = \frac{\sqrt{3}}{2}
+\]</span></p>
+</section>
+<section id="retvinklede-trekanter" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="retvinklede-trekanter"><span class="header-section-number">9.3</span> Retvinklede trekanter</h2>
+<div id="3ac5d0f8" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-5-output-1.png" width="474" height="392" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>En retvinklet trekanten som vist på figuren ovenfor har én ret vinkel (90 grader). Typisk er den placeret i <span class="math inline">\(C\)</span>-hjørnet i en <span class="math inline">\(ABC\)</span>-trekant.</p>
+<section id="pythagoras-sætning" class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="pythagoras-sætning"><span class="header-section-number">9.3.1</span> Pythagoras Sætning</h3>
+<div id="Sætning-9.5" class="Sætning">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.5</strong></summary><div>I en retvinklet trekant, hvor <span class="math inline">\(C\)</span> er den rette vinkel gælder følgende lighed:<p></p>
+<p><span class="math display">\[
+a^2+b^2 = c^2
+\]</span></p>
+</div></details>
+</div>
+<div id="berening-af-hypotenusen" class="Eksempel" title="Berening af hypotenusen">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 9.6: </strong>Berening af hypotenusen</summary><div>I en trekant med katetelængderne <span class="math inline">\(a = 3\)</span> og <span class="math inline">\(b = 4\)</span> kan vi beregne hypotenusen:<p></p>
+<p><span class="math display">\[
+c = \sqrt{a^2 + b^2} = \sqrt{3^2 + 4^2} = 5
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="bestemmelse-af-spids-vinkel-i-retvinklet-trekant" class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="bestemmelse-af-spids-vinkel-i-retvinklet-trekant"><span class="header-section-number">9.3.2</span> Bestemmelse af spids vinkel i retvinklet trekant</h3>
+<p>I retvinklede trekanter er en af vinklerne altid ret og de to andre vinkler er spidse. For det meste betegnes den rette vinkel <span class="math inline">\(C\)</span> og de spidse vinkler betegnes <span class="math inline">\(A\)</span> og <span class="math inline">\(B\)</span>.</p>
+<div id="615f3aa6" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-6-output-1.png" width="474" height="401" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Hvis vi lægger en vilkårlig retvinklet trekant ind i enhedscirklen som vist på figuren herunder kan vi redegøre for, at der må gælde, at</p>
+<p><span class="math display">\[
+\begin{aligned}
+a = c \cdot \sin(A) \\
+b = c \cdot \cos(A)
+\end{aligned}
+\]</span> Den lille røde retvinklede trekant ligger i enhedscirklen og hypotenuselængden er 1 og katetelængderne er som tidligere vist lig <span class="math inline">\(\cos(v)\)</span> og <span class="math inline">\(\sin(v)\)</span>. I den større grønne trekant er hypotenuselængden <span class="math inline">\(c\)</span>.</p>
+<p>De to trekanter, den røde og den grønne, er ensvinklede, så der må gælde, at skalafaktoren er forholdet mellem ensligegnde sider <span class="math display">\[
+k = \frac{c}{1} = \frac{a}{\sin(A)} = \frac{b}{\cos(A)}
+\]</span> Heraf fås de to ligninger</p>
+<p><span class="math display">\[
+\begin{aligned}
+c =  \frac{a}{\sin(A)} \Leftrightarrow a = c \cdot \sin(A) \\
+c =  \frac{b}{\cos(A)} \Leftrightarrow b = c \cdot \cos(A)
+\end{aligned}
+\]</span> Resultatet kan vi samle i følgende sætning, som vi netop har redegjort for.</p>
+<div id="bestemmelse-af-sidelængder-i-retvinklet-trekant" class="Sætning" title="Bestemmelse af sidelængder i retvinklet trekant">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.7: </strong>Bestemmelse af sidelængder i retvinklet trekant</summary><div>Hvis man i en retvinklet trekant kender hypotenuselængden <span class="math inline">\(c\)</span> og en spids vinkel, <span class="math inline">\(A\)</span>, kan de to katetelængder beregnes ved<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;= c \cdot \sin(A) \\
+b &amp;= c \cdot \cos(A)
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+<p>Hvis vi isolerer kateterne <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span> i ovenstående sætning, kan vi finde udtryk til bestemmelse af en spids vinkel i en retvinklet trekant</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;= c \cdot \sin(A) \Leftrightarrow \sin(A) = \frac{a}{c} \Leftrightarrow A = \sin^{-1}\left(\frac{a}{c}\right)\\
+b &amp;= c \cdot \cos(A) \Leftrightarrow \cos(A) = \frac{b}{c} \Leftrightarrow A = \cos^{-1}\left(\frac{b}{c}\right)
+\end{aligned}
+\]</span></p>
+<p>Med <span class="math inline">\(\sin^{-1}(A)\)</span> forståes den omvendte funktion til <span class="math inline">\(\sin(A)\)</span>, sådan at <span class="math inline">\(\sin^{-1}(\sin(A)) = A\)</span> og <span class="math inline">\(\sin(\sin^{-1}(A)) = A\)</span>. Det samme gør sig gældende for <span class="math inline">\(\cos(v)\)</span></p>
+<p>Hvis man kender en af koordinaterne til retningspunktet <span class="math inline">\(P_v(x,y)\)</span>, kan man altså finde den tilsvarende vinkel ved <span class="math inline">\(v=\cos^{-1}(x)\)</span> eller <span class="math inline">\(v = \sin^{-1}(y)\)</span>.</p>
+<p>De trigonometriske funktioner defineres i en retvinklet trekant som:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sin(\theta) = \frac{\text{modstående katete}}{\text{hypotenusen}} \\
+\cos(\theta) = \frac{\text{hosliggende katete}}{\text{hypotenusen}} \\
+\tan(\theta) = \frac{\text{modstående katete}}{\text{hosliggende katete}}
+\end{aligned}
+\]</span></p>
+<div id="bestemmelse-af-en-spids-vinkel-i-en-retvinklet-trekant" class="Sætning" title="Bestemmelse af en spids vinkel i en retvinklet trekant">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.8: </strong>Bestemmelse af en spids vinkel i en retvinklet trekant</summary><div>Hvis man i en retvinklet trekant kender hypotenuselængden og mindst en af katetelængderne, kan man bestemme en spids vinkel ved<p></p>
+<p><span class="math display">\[
+\begin{aligned}
+A = \sin^{-1}\left(\frac{a}{c}\right)\\
+A = \cos^{-1}\left(\frac{b}{c}\right)
+\end{aligned}
+\]</span></p>
+</div></details>
+</div>
+<p>Endvidere gælder der pr. definition, at <span class="math inline">\(\tan(v) = \frac{\sin(v)}{\cos(v)}\)</span></p>
+<p>Indsætter vi udtrykkene for <span class="math inline">\(\sin(A)\)</span> og <span class="math inline">\(\cos(A)\)</span> får vi</p>
+<p><span class="math display">\[
+\tan(A) = \frac{\sin(A)}{\cos(A)} = \frac{\frac{a}{c}}{\frac{b}{c}} = \frac{a}{b}
+\]</span> og dermed kan vi bestemme en spids vinkel i en retvinklet trekant, når vi kender de to kateter:</p>
+<p><span class="math display">\[
+A = \tan^{-1}\left(\frac{a}{b}\right)
+\]</span></p>
+</section>
+</section>
+<section id="vilkårlige-trekanter" class="level2 page-columns page-full" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="vilkårlige-trekanter"><span class="header-section-number">9.4</span> Vilkårlige trekanter</h2>
+<p>For vilkårlige trekanter snakker vi om <em>retvinklede</em>, <em>spidsvinklede</em> og <em>stumpvinklede</em> trekanter.</p>
+<p>Ofte behandler vi de retvinklede trekanter for sig, som vi har gjort ovenfor.</p>
+<p>I dette afsnit vil se på trekanter med kun spidse vinkler (alle vinkler er under 9 grader) eller stumpvinklede trekanter (en<span class="math inline">\(^*\)</span> af vinklerne er over 90 grader).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(^*\)</span> Eftersom summen af vinklerne i en trekant er 180 grader, kan man ikke have en trekant med mere end én stump vinkel.</p>
+</div></div><p>Hvis vi begynder med en spidsvinklet trekant som skitseret i figuren nedenfor, kan vi altid opdele den i to retvinklede trekanter ved at tegne en højde fra den ene vinkel vinkelret på den modsatte side.</p>
+<section id="arealformlen" class="level3 page-columns page-full" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="arealformlen"><span class="header-section-number">9.4.1</span> Arealformlen</h3>
+<div id="305e2abc" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-7-output-1.png" width="619" height="427" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Vi har derfor den retvinklede trekant <span class="math inline">\(ABH\)</span> og <span class="math inline">\(BCH\)</span></p>
+<p>Kender vi vinkel <span class="math inline">\(A\)</span>, markeret med grønt, i <span class="math inline">\(\triangle ABH\)</span> og siden <span class="math inline">\(c\)</span>, kan vi beregne højden ved</p>
+<p><span class="math display">\[
+h_b = c \cdot \sin(A)
+\]</span> Herved kan vi beregne arealet i hele trekanten, såfremt vi også kender siden <span class="math inline">\(b\)</span>. Vi betegner arealet med symbolet <span class="math inline">\(T\)</span>.</p>
+<p><span class="math display">\[
+T = \frac{1}{2} \cdot h \cdot g = \frac{1}{2} \cdot h_b \cdot b = \frac{1}{2} \cdot c \cdot \sin(A) \cdot b = \frac{1}{2} \cdot b \cdot c \cdot \sin(A)
+\]</span> Kender vi i stedet vinkel <span class="math inline">\(C\)</span> markeret med orange og siden <span class="math inline">\(a\)</span> kan vi også beregne højden, <span class="math inline">\(h_b\)</span> ved</p>
+<p><span class="math display">\[
+h_b = a \cdot \sin(C)
+\]</span> Hvis vi igen betragter siden <span class="math inline">\(b\)</span> som grundlinjen i trekant <span class="math inline">\(ABC\)</span> kan vi igen opskrive et udtryk til beregning af arealet.</p>
+<p><span class="math display">\[
+T = \frac{1}{2} \cdot h_b \cdot b = \frac{1}{2} \cdot a \cdot \sin(C) \cdot b = \frac{1}{2} \cdot a \cdot b \cdot \sin(C)  
+\]</span></p>
+<p>Ligeså kan vi ved at tegne en anden højde i trekanten vise<span class="math inline">\(^*\)</span>, at arealet også kan beregnes ved</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(^*\)</span> En god øvelse for læseren af dette til at forstå de enkelte skridt i udledningen af arealformlen.</p>
+</div></div><p><span class="math display">\[
+T = \frac{1}{2} \cdot a \cdot c \cdot \sin(B)  
+\]</span></p>
+<p>Vi kan samle ovenstående udledning i følgende sætning</p>
+<div id="arealformlen-1" class="Sætning" title="Arealformlen">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.9: </strong>Arealformlen</summary><div>Arealet af en vilkårlig trekant <span class="math inline">\(ABC\)</span> kan beregnes ved<p></p>
+<p><span class="math display">\[
+T = \frac{1}{2} \cdot a \cdot b \cdot \sin(C) = \frac{1}{2} \cdot a \cdot c \cdot \sin(B) = \frac{1}{2} \cdot b \cdot c \cdot \sin(A)
+\]</span></p>
+</div></details>
+</div>
+<p>Men hør nu, kan man fristes til at sige. Gælder det også for stumpvinklede trekanter. Vi kan jo begynde ved at skitsere en og tegne højden i den.</p>
+<div id="decb11e3" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_triangle_with_height_and_angles():</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Definer trekantens hjørnepunkter</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    A <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># Punkt A</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    B <span class="op">=</span> (<span class="dv">11</span>, <span class="dv">5</span>)  <span class="co"># Punkt B</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    C <span class="op">=</span> (<span class="dv">8</span>, <span class="dv">0</span>)  <span class="co"># Punkt C</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Beregn koordinaterne for højden fra B til siden AC</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Retning af vektoren AC</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    AC_vector <span class="op">=</span> np.array([C[<span class="dv">0</span>] <span class="op">-</span> A[<span class="dv">0</span>], C[<span class="dv">1</span>] <span class="op">-</span> A[<span class="dv">1</span>]])</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    AC_unit_vector <span class="op">=</span> AC_vector <span class="op">/</span> np.linalg.norm(AC_vector)  <span class="co"># Enhedsvektor langs AC</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Projektion af B på linjen AC</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    AB_vector <span class="op">=</span> np.array([B[<span class="dv">0</span>] <span class="op">-</span> A[<span class="dv">0</span>], B[<span class="dv">1</span>] <span class="op">-</span> A[<span class="dv">1</span>]])</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    proj_length <span class="op">=</span> np.dot(AB_vector, AC_unit_vector)  <span class="co"># Længden af projektionen</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    proj_point <span class="op">=</span> np.array(A) <span class="op">+</span> proj_length <span class="op">*</span> AC_unit_vector  <span class="co"># Projektionen på AC</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    H <span class="op">=</span> <span class="bu">tuple</span>(proj_point)  <span class="co"># Højdefodpunktet H</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tegn trekanten</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    plt.plot([A[<span class="dv">0</span>], B[<span class="dv">0</span>], C[<span class="dv">0</span>], A[<span class="dv">0</span>]], [A[<span class="dv">1</span>], B[<span class="dv">1</span>], C[<span class="dv">1</span>], A[<span class="dv">1</span>]], <span class="st">'b-'</span>, label<span class="op">=</span><span class="st">"Trekant ABC"</span>)  <span class="co"># Trekantens sider</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tegn højden fra B til AC</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    plt.plot([B[<span class="dv">0</span>], H[<span class="dv">0</span>]], [B[<span class="dv">1</span>], H[<span class="dv">1</span>]], <span class="st">'r--'</span>, label<span class="op">=</span><span class="st">"Højde fra B"</span>)  <span class="co"># Højden</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    plt.scatter([A[<span class="dv">0</span>], B[<span class="dv">0</span>], C[<span class="dv">0</span>], H[<span class="dv">0</span>]], [A[<span class="dv">1</span>], B[<span class="dv">1</span>], C[<span class="dv">1</span>], H[<span class="dv">1</span>]], color<span class="op">=</span><span class="st">'black'</span>)  <span class="co"># Hjørner og højdepunkt</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Markér vinkler med cirkelstykker</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw_angle_marker(center, radius, theta1, theta2, color):</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        angles <span class="op">=</span> np.linspace(np.radians(theta1), np.radians(theta2), <span class="dv">100</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> center[<span class="dv">0</span>] <span class="op">+</span> radius <span class="op">*</span> np.cos(angles)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> center[<span class="dv">1</span>] <span class="op">+</span> radius <span class="op">*</span> np.sin(angles)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        plt.plot(x, y, color)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Vinkel i A</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    angle_A <span class="op">=</span> np.degrees(np.arctan2(B[<span class="dv">1</span>] <span class="op">-</span> A[<span class="dv">1</span>], B[<span class="dv">0</span>] <span class="op">-</span> A[<span class="dv">0</span>]))</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    angle_C <span class="op">=</span> np.degrees(np.arctan2(C[<span class="dv">1</span>] <span class="op">-</span> A[<span class="dv">1</span>], C[<span class="dv">0</span>] <span class="op">-</span> A[<span class="dv">0</span>]))</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    draw_angle_marker(A, <span class="dv">1</span>, <span class="dv">0</span>, angle_A, <span class="st">'g'</span>)  <span class="co"># Grøn cirkelstykke i A</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Vinkel i C</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    angle_C_top <span class="op">=</span> np.degrees(np.arctan2(A[<span class="dv">1</span>] <span class="op">-</span> C[<span class="dv">1</span>], A[<span class="dv">0</span>] <span class="op">-</span> C[<span class="dv">0</span>]))</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    angle_C_bottom <span class="op">=</span> np.degrees(np.arctan2(B[<span class="dv">1</span>] <span class="op">-</span> C[<span class="dv">1</span>], B[<span class="dv">0</span>] <span class="op">-</span> C[<span class="dv">0</span>]))</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    draw_angle_marker(C, <span class="dv">1</span>, angle_C_top, angle_C_bottom, <span class="st">'orange'</span>)  <span class="co"># Orange cirkelstykke i C</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    draw_angle_marker(C, <span class="dv">1</span>, <span class="dv">0</span>, angle_C_bottom, <span class="st">'g'</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Orange stiplede cirkelstykke i 180-C</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Annoter punkterne</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    plt.text(A[<span class="dv">0</span>]<span class="op">-</span><span class="fl">0.3</span>, A[<span class="dv">1</span>] <span class="op">-</span> <span class="fl">0.3</span>, <span class="st">"A"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    plt.text(B[<span class="dv">0</span>], B[<span class="dv">1</span>] <span class="op">+</span> <span class="fl">0.3</span>, <span class="st">"B"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    plt.text(C[<span class="dv">0</span>], C[<span class="dv">1</span>] <span class="op">-</span> <span class="fl">0.5</span>, <span class="st">"C"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    plt.text(H[<span class="dv">0</span>]<span class="op">-</span> <span class="fl">0.2</span>, H[<span class="dv">1</span>] <span class="op">-</span> <span class="fl">0.5</span>, <span class="st">"H"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Annoter siderne</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    plt.text((C[<span class="dv">0</span>]<span class="op">+</span>B[<span class="dv">0</span>])<span class="op">/</span><span class="dv">2</span><span class="op">+</span><span class="fl">0.3</span>, (B[<span class="dv">1</span>]<span class="op">-</span>C[<span class="dv">1</span>])<span class="op">/</span><span class="dv">2</span>, <span class="st">"a"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    plt.text((A[<span class="dv">0</span>] <span class="op">+</span> C[<span class="dv">0</span>])<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="fl">0.3</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="st">"b"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    plt.text(B[<span class="dv">0</span>]<span class="op">/</span><span class="dv">2</span> <span class="op">-</span> <span class="fl">0.3</span>, B[<span class="dv">1</span>]<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="fl">0.3</span>, <span class="st">"c"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    plt.text(B[<span class="dv">0</span>]<span class="op">+</span><span class="fl">0.3</span>, B[<span class="dv">1</span>]<span class="op">/</span><span class="dv">2</span>, <span class="st">"h"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Annoter resten af den stumpe vinkel</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    plt.text(C[<span class="dv">0</span>] <span class="op">+</span> <span class="dv">1</span>, C[<span class="dv">1</span>] <span class="op">+</span> <span class="fl">0.4</span>, <span class="st">"180 - C"</span>, color <span class="op">=</span> <span class="st">'g'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># plot linjen mellem C og H</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    xval <span class="op">=</span> [C[<span class="dv">0</span>], H[<span class="dv">0</span>]]</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    yval <span class="op">=</span> [C[<span class="dv">1</span>], H[<span class="dv">1</span>]]</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    plt.plot(xval, yval, <span class="st">'go'</span>, linestyle<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Opsætning af plot</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    plt.gca().set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    plt.axis(<span class="st">'off'</span>)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>)</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Kald funktionen for at plotte trekanten</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>plot_triangle_with_height_and_angles()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-8-output-1.png" width="614" height="320" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Tegner vi højden fra <span class="math inline">\(B\)</span> i en stumpvinklet trekant, ligger den uden for trekanten som vist på figuren ovenfor. Hvis vi stadig kender siden <span class="math inline">\(a\)</span> og vinklen <span class="math inline">\(C\)</span>, kan vi (stadig) beregne højden ved <span class="math display">\[
+h = a \cdot \sin(180 - C) = a \cdot \sin(C)
+\]</span> fordi <span class="math inline">\(\sin(180-v) = \sin(v)\)</span> som vi tidligere har vist i enhedscirklen.</p>
+<p>Så for stumpvinklede trekanter gælder de samme arealformler som for spidsvinklede trekanter.</p>
+<p><strong>Bemærk</strong></p>
+<p>Hvis en trekant er retvinklet bliver den generelle arealformel til</p>
+<p><span class="math display">\[
+T = \frac{1}{2} \cdot a \cdot b \cdot \sin(C) = \frac{1}{2} \cdot a \cdot b \cdot 1 = \frac{1}{2} \cdot a \cdot b
+\]</span> da <span class="math inline">\(\sin(90)=1\)</span>.</p>
+<p>Arealet er altså det halve af længden af den ene katete gange længden af den anden katete som forventet.</p>
+</section>
+<section id="sinusrelationen" class="level3" data-number="9.4.2">
+<h3 data-number="9.4.2" class="anchored" data-anchor-id="sinusrelationen"><span class="header-section-number">9.4.2</span> Sinusrelationen</h3>
+<p>Hvis man tager de tre udgaver af arealformlen og dividerer dem alle med <span class="math inline">\(\frac{1}{2}\cdot a \cdot b  \cdot c\)</span> får man</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\frac{1}{2} \cdot a \cdot b \cdot \sin(C)}{\frac{1}{2}\cdot a \cdot b  \cdot c} &amp;= \frac{\frac{1}{2} \cdot a \cdot c \cdot \sin(B)}{\frac{1}{2}\cdot a \cdot b  \cdot c} = \frac{\frac{1}{2} \cdot b \cdot c \cdot \sin(A)}{\frac{1}{2}\cdot a \cdot b  \cdot c} \\
+\frac{\sin(C)}{c} &amp;= \frac{\sin(B)}{b } = \frac{\sin(A)}{a}
+\end{aligned}
+\]</span></p>
+<p>Dette kaldes <strong>Sinusrelationen</strong>. Den reciprokke udgave af Sinusrelationen, gælder også, hvilket er sammenfattet i følgende sætnign</p>
+<div id="sinusrelationen-1" class="Sætning" title="Sinusrelationen">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.10: </strong>Sinusrelationen</summary><div>For en vilkårlig trekant gælder:<p></p>
+<p><span class="math display">\[
+\frac{\sin(A)}{a} = \frac{\sin(B)}{b } = \frac{\sin(C)}{c}
+\]</span></p>
+<p>og</p>
+<p><span class="math display">\[
+\frac{a}{\sin(A)} = \frac{b}{\sin(B)} = \frac{c}{\sin(C)}
+\]</span></p>
+</div></details>
+</div>
+</section>
+<section id="cosinusrelationen" class="level3" data-number="9.4.3">
+<h3 data-number="9.4.3" class="anchored" data-anchor-id="cosinusrelationen"><span class="header-section-number">9.4.3</span> Cosinusrelationen</h3>
+<p>Vi gennemfører først beviset for en spidsvinklet trekant. Vi genbruger en figur fra før med den modifikation, at linjen <span class="math inline">\(b\)</span> deles op i to delstykker med længderne <span class="math inline">\(|AH|=x\)</span> og <span class="math inline">\(|CH|=b-x\)</span>.</p>
+<div id="dc742030" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-9-output-1.png" width="619" height="427" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I den retvinklede trekant <span class="math inline">\(ABH\)</span> kan vi opskrive Pythagoras Læresætning og isolere <span class="math inline">\(h^2\)</span>, d.v.s</p>
+<p><span class="math display">\[
+h^2+x^2 = c^2 \Leftrightarrow h^2=c^2-x^2
+\]</span></p>
+<p>I den retvinklede trekant <span class="math inline">\(BCH\)</span> gør vi det samme, d.v.s vi skriver</p>
+<p><span class="math display">\[
+h^2+(b-x)^2 = a^2 \Leftrightarrow h^2 = a^2 - (b-x)^2
+\]</span></p>
+<p>Da vi har to lignininger, hvor højresiderne begge er lig <span class="math inline">\(h^2\)</span>, kan vi skrive</p>
+<p><span class="math display">\[
+a^2 - (b-x)^2 = c^2 - x^2 \Leftrightarrow a^2 = c^2 - x^2 + (b-x)^2
+\]</span> Vi bruger nu kvadratsætningen <span class="math inline">\((a-b)^2 = a^2 + b^2 - 2ab\)</span> på højre side og reducerer</p>
+<p><span class="math display">\[
+a^2 = c^2 - x^2 + (b-x)^2 = c^2 - x^2 + b^2+x^2 -2bx = b^2 + c^2 - 2bx
+\]</span> Betragter vi igen trekanten kan ve se, at <span class="math inline">\(x\)</span> er den hosliggende katete i den retvinklede trekant <span class="math inline">\(ABC\)</span> og derfor kan vi jf. regneregler for retvinklede trekanter skrive <span class="math inline">\(x=c \cdot \cos(A)\)</span>. Indsættes dette i ovenstående får vi</p>
+<p><span class="math display">\[
+a^2 = b^2 + c^2 - 2bc\cos(A)
+\]</span> Dette kaldes <strong>Cosinusrelationen</strong>. På samme måde kan argumentere for, at vi kan skrive et udtryk op for <span class="math inline">\(b^2\)</span> og <span class="math inline">\(c^2\)</span>, og resultatet samler vi følgende sætning</p>
+<div id="cosinusrelationen-1" class="Sætning" title="Cosinusrelationen">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.11: </strong>Cosinusrelationen</summary><div><span class="math display">\[
+\begin{aligned}
+a^2 &amp;= b^2 + c^2 - 2bc\cos(A) \\
+b^2 &amp;= a^2 + c^2 - 2ac\cos(B) \\
+c^2 &amp;= a^2 + b^2 - 2ab\cos(C)
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<p>I alle tre ligninger kan vi isolere cosinus til vinklen, hvilket gør, at hvis vi kender alle tre sider i en trekant, kan vi beregne alle tre vinkler. Eksempelvis kan vi i den første ligning isolere <span class="math inline">\(\cos(A)\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+a^2 &amp;= b^2 + c^2 - 2bc\cos(A) \Leftrightarrow \\
+2bc\cos(A) &amp;= b^2 + c^2 - a^2 \Leftrightarrow \\
+\cos(A) &amp;= \frac{b^2 + c^2 - a^2}{2bc}
+\end{aligned}
+\]</span> Udfører vi lignende omrokeringer i de to andre ligninger får vi følgende sætning</p>
+<div id="cosinusrelationen-ii" class="Sætning" title="Cosinusrelationen II">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.12: </strong>Cosinusrelationen II</summary><div><span class="math display">\[
+\begin{aligned}
+\cos(A) &amp;= \frac{b^2 + c^2 - a^2}{2bc} \\
+\cos(B) &amp;= \frac{a^2 + c^2 - b^2}{2ac} \\
+\cos(C) &amp;= \frac{a^2 + b^2 - c^2}{2ab}
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+<p>Vi kan bruge ovenstående udgaver af Cosinusrelationen til at lave et bevis for, hvordan man finder længden af en median. Vi modificerer figuren fra før en smule og bytter højden ud med en median.</p>
+<div id="1b180dea" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="trigonometri_files/figure-html/cell-10-output-1.png" width="619" height="427" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Bruger vi cosinusrelationen til at beregne vinkel <span class="math inline">\(A\)</span> både v.h.a trekant <span class="math inline">\(ABC\)</span> og trekant <span class="math inline">\(ABM\)</span> får vi følgende ligninger</p>
+<p><span class="math display">\[
+\begin{aligned}
+\cos(A) &amp;= \frac{b^2+c^2-a^2}{2bc} \\
+\cos(A) &amp;= \frac{(b/2)^2+c^2-m_b^2}{2 \cdot (b/2) \cdot c}
+\end{aligned}
+\]</span> Da begge venstresider naturligvis er ens, må de to højresider også være ens</p>
+<p><span class="math display">\[
+\frac{(b/2)^2+c^2-m_b^2}{2 \cdot (b/2) \cdot c} = \frac{b^2+c^2-a^2}{2bc} \\
+\]</span> Hvis vi først forlænger højre brøk med 2 og dernæst ganger igennem med <span class="math inline">\(2bc\)</span>, når vi frem til følgende ligning</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{b^2+c^2-a^2}{2bc} &amp;= \frac{(b/2)^2+c^2-m_b^2}{2 \cdot (b/2) \cdot c}  \Leftrightarrow \\
+\frac{b^2+c^2-a^2}{2bc}  &amp;= \frac{2 \cdot(b/2)^2+2c^2-2m_b^2}{2bc} \Leftrightarrow \\
+b^2+c^2-a^2 &amp;= 2 \cdot(b/2)^2+2c^2-2m_b^2
+\end{aligned}
+\]</span> Herfra handler det om at isolere <span class="math inline">\(m_b\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+b^2+c^2-a^2 &amp;= 2 \cdot(b/2)^2+2c^2-2m_b^2 \Leftrightarrow \\
+b^2+c^2-a^2 &amp;= 2 \frac{b^2}{4}+2c^2-2m_b^2 \Leftrightarrow \\
+b^2+c^2-a^2 &amp;= \frac{b^2}{2}+2c^2-2m_b^2 \Leftrightarrow \\
+2m_b^2 &amp;= \frac{b^2}{2}+2c^2 - b^2 -c^2 + a^2 \Leftrightarrow \\
+4m_b^2 &amp;= 2a^2 + 2c^2 -b^2 \Leftrightarrow \\
+2m_b &amp;= \sqrt{2a^2 + 2c^2 -b^2} \Leftrightarrow \\
+m_b &amp;= \frac{1}{2} \cdot \sqrt{2a^2 + 2c^2 -b^2}
+\end{aligned}
+\]</span> På samme måde kan vi argumentere for formlerne for <span class="math inline">\(m_a\)</span> og <span class="math inline">\(m_c\)</span> og sammefatte resultatet i følgende sætning</p>
+<div id="medianlængde-i-vilkårlig-trekant" class="Sætning" title="Medianlængde i vilkårlig trekant">
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 9.13: </strong>Medianlængde i vilkårlig trekant</summary><div><span class="math display">\[
+\begin{aligned}
+m_a &amp;= \frac{1}{2} \cdot \sqrt{2b^2 + 2c^2 -a^2} \\
+m_b &amp;= \frac{1}{2} \cdot \sqrt{2a^2 + 2c^2 -b^2} \\
+m_c &amp;= \frac{1}{2} \cdot \sqrt{2a^2 + 2b^2 -c^2} \\
+\end{aligned}
+\]</span><p></p>
+</div></details>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./logaritmer.html" class="pagination-link" aria-label="Logaritmer">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./potensfkt.html" class="pagination-link" aria-label="Potensfunktioner">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Potensfunktioner</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
