@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Matematik stx - 6&nbsp; Eksponentialfunktion og eksponentiel udvikling</title>
+<title>7&nbsp; Eksponentialfunktion og eksponentiel udvikling – Matematik stx</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,12 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d5d78c9e45e9a5253a6059031ce5ea1b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-54cf82828da1e18307ec92af43057bcb.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/quarto-contrib/foldbox/foldbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -80,17 +80,17 @@ ul.task-list li input[type="checkbox"] {
   --color1: #ff8800;
   --color2: #ee8810;
 }
-.Eksempel {
-  --color1: #00dc9c;
-  --color2: #189200;
-}
 .Opgave {
   --color1: #e9ef8f;
   --color2: #dee481;
 }
+.Eksempel {
+  --color1: #00dc9c;
+  --color2: #189200;
+}
 </style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -129,13 +129,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./eksponentiel.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./eksponentiel.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -170,7 +170,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduktion</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -193,13 +193,19 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Brøker</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./kvadrat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Kvadratsætningerne</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./første_g.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1.g / C-niveau.</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -207,31 +213,54 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./linear.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lineære funktioner</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./procent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Procentregning</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Procentregning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./eksponentiel.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./logaritmer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Logaritmer</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./trigonometri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./potensfkt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Potensfunktioner</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Potensfunktioner</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./anden_g.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.g / B-niveau.</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./andengrads.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Andengradsligningen</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,12 +275,12 @@ window.Quarto = {
     <h2 id="toc-title">Indholdsfortegnelse</h2>
    
   <ul>
-  <li><a href="#tabel-og-graf-for-eksponentiel-udvikling" id="toc-tabel-og-graf-for-eksponentiel-udvikling" class="nav-link active" data-scroll-target="#tabel-og-graf-for-eksponentiel-udvikling"><span class="header-section-number">6.1</span> Tabel og graf for eksponentiel udvikling</a></li>
-  <li><a href="#fordobling--og-halveringskonstant" id="toc-fordobling--og-halveringskonstant" class="nav-link" data-scroll-target="#fordobling--og-halveringskonstant"><span class="header-section-number">6.2</span> Fordobling- og halveringskonstant</a></li>
-  <li><a href="#eksponentiel-model" id="toc-eksponentiel-model" class="nav-link" data-scroll-target="#eksponentiel-model"><span class="header-section-number">6.3</span> Eksponentiel model</a>
+  <li><a href="#tabel-og-graf-for-eksponentiel-udvikling" id="toc-tabel-og-graf-for-eksponentiel-udvikling" class="nav-link active" data-scroll-target="#tabel-og-graf-for-eksponentiel-udvikling"><span class="header-section-number">7.1</span> Tabel og graf for eksponentiel udvikling</a></li>
+  <li><a href="#fordobling--og-halveringskonstant" id="toc-fordobling--og-halveringskonstant" class="nav-link" data-scroll-target="#fordobling--og-halveringskonstant"><span class="header-section-number">7.2</span> Fordobling- og halveringskonstant</a></li>
+  <li><a href="#eksponentiel-model" id="toc-eksponentiel-model" class="nav-link" data-scroll-target="#eksponentiel-model"><span class="header-section-number">7.3</span> Eksponentiel model</a>
   <ul class="collapse">
-  <li><a href="#fortolkning-af-model" id="toc-fortolkning-af-model" class="nav-link" data-scroll-target="#fortolkning-af-model"><span class="header-section-number">6.3.1</span> Fortolkning af model</a></li>
-  <li><a href="#opstilling-af-model" id="toc-opstilling-af-model" class="nav-link" data-scroll-target="#opstilling-af-model"><span class="header-section-number">6.3.2</span> Opstilling af model</a></li>
+  <li><a href="#fortolkning-af-model" id="toc-fortolkning-af-model" class="nav-link" data-scroll-target="#fortolkning-af-model"><span class="header-section-number">7.3.1</span> Fortolkning af model</a></li>
+  <li><a href="#opstilling-af-model" id="toc-opstilling-af-model" class="nav-link" data-scroll-target="#opstilling-af-model"><span class="header-section-number">7.3.2</span> Opstilling af model</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -259,9 +288,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./eksponentiel.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./eksponentiel.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></h1>
 </div>
 
 
@@ -279,7 +308,7 @@ window.Quarto = {
 
 
 <div id="eksponentialfuntion-og-eksponentiel-udvikling" class="Definition" title="Eksponentialfuntion og eksponentiel udvikling">
-<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 6.1: </strong>Eksponentialfuntion og eksponentiel udvikling</summary><div>En <strong>eksponentialfunktion</strong> er en funktion på formen: <span class="math display">\[
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 7.1: </strong>Eksponentialfuntion og eksponentiel udvikling</summary><div>En <strong>eksponentialfunktion</strong> er en funktion på formen: <span class="math display">\[
 \begin{aligned}
 f(x)=a^x
 \end{aligned}
@@ -298,22 +327,22 @@ f(x)=b \cdot a^x
 <p><strong>Bemærk:</strong> En eksponentiel udvikling med <span class="math inline">\(b=1\)</span> kaldes en <code>eksponentialfunktion</code>.</p>
 <p>Da værdimængden kun kan antage positive reelle værdier findes grafen for en eksponentiel udvikling kun i 1. og 2. kvadrant.</p>
 <div id="eksempel-på-eksponentialfunktion-og-eksponentiel-udvikling" class="Eksempel" title="Eksempel på eksponentialfunktion og eksponentiel udvikling">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 6.2: </strong>Eksempel på eksponentialfunktion og eksponentiel udvikling</summary><div>En eksponentialfunktion er givet ved: <span class="math inline">\(f(x)=2^x\)</span>. Her er <span class="math inline">\(a=2\)</span>.<p></p>
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 7.2: </strong>Eksempel på eksponentialfunktion og eksponentiel udvikling</summary><div>En eksponentialfunktion er givet ved: <span class="math inline">\(f(x)=2^x\)</span>. Her er <span class="math inline">\(a=2\)</span>.<p></p>
 <p>En eksponentiel udvikling er givet ved: <span class="math inline">\(g(x)=3 \cdot 1,5^x\)</span>. Her er <span class="math inline">\(a=1,5\)</span> og <span class="math inline">\(b=3\)</span></p>
 </div></details>
 </div>
 <div id="skæring-med-y-aksen" class="Sætning" title="Skæring med y-aksen">
-<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 6.3: </strong>Skæring med y-aksen</summary><div>For en eksponentiel udvikling <span class="math inline">\(f(x)=b \cdot a^x\)</span> gælder, at <span class="math inline">\(f(0)=b\)</span>.<p></p>
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 7.3: </strong>Skæring med y-aksen</summary><div>For en eksponentiel udvikling <span class="math inline">\(f(x)=b \cdot a^x\)</span> gælder, at <span class="math inline">\(f(0)=b\)</span>.<p></p>
 </div></details>
 </div>
 <p><em>Bevis</em> <br> <span class="math inline">\(f(0)= b \cdot a^0 = b \cdot 1 = b\)</span> <span class="math inline">\(\square\)</span></p>
 <div id="vækstegenskab" class="Sætning" title="Vækstegenskab">
-<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 6.4: </strong>Vækstegenskab</summary><div>Hvis <span class="math inline">\(x\)</span> vokser med <span class="math inline">\(1\)</span> ganges funktionsværdien med <span class="math inline">\(a\)</span>. D.v.s <span class="math inline">\(f(x+1)=f(x) \cdot a\)</span>.<p></p>
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 7.4: </strong>Vækstegenskab</summary><div>Hvis <span class="math inline">\(x\)</span> vokser med <span class="math inline">\(1\)</span> ganges funktionsværdien med <span class="math inline">\(a\)</span>. D.v.s <span class="math inline">\(f(x+1)=f(x) \cdot a\)</span>.<p></p>
 </div></details>
 </div>
 <p><em>Bevis</em> <br> <span class="math inline">\(f(x+1)= b \cdot a^{x+1} = b \cdot a^x \cdot a^1 = b \cdot a^x \cdot a = f(x) \cdot a\)</span> <span class="math inline">\(\square\)</span></p>
-<section id="tabel-og-graf-for-eksponentiel-udvikling" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="tabel-og-graf-for-eksponentiel-udvikling"><span class="header-section-number">6.1</span> Tabel og graf for eksponentiel udvikling</h2>
+<section id="tabel-og-graf-for-eksponentiel-udvikling" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="tabel-og-graf-for-eksponentiel-udvikling"><span class="header-section-number">7.1</span> Tabel og graf for eksponentiel udvikling</h2>
 <p>Vi sætter og <span class="math inline">\(f(x)=2 \cdot 2^x\)</span> og indsætter nogle værdier fra definitionsmængden sammen med tilhørende funktionsværdier i en tabel.</p>
 <style>
 table, th, td {
@@ -360,7 +389,7 @@ f(\textcolor{red}{4})&amp;=2 \cdot 2^{\textcolor{red}{4}} = 2 \cdot 16=32
 \]</span> Vi kan ligesom hos de lineære funktioner aflæse <span class="math inline">\(b\)</span>-værdien i feltet under <span class="math inline">\(x=0\)</span>. Forskellen på de lineære funktioner ses i rækken med funktionsværdier.</p>
 <p>Hvor vi før under lineære funktioner havde <span class="math inline">\(+a\)</span>, når <span class="math inline">\(x\)</span> voksede med 1, har vi nu <span class="math inline">\(\cdot a\)</span>, når <span class="math inline">\(x\)</span> vokser med 1.</p>
 <p>Grafen for en eksponentiel udvikling kan derfor heller ikke være en ret linje, hvilket også kan ses på figuren herunder</p>
-<div id="83920bdd" class="cell" data-execution_count="1">
+<div id="37996bf7" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -372,7 +401,7 @@ f(\textcolor{red}{4})&amp;=2 \cdot 2^{\textcolor{red}{4}} = 2 \cdot 16=32
 <p><strong>Bemærk</strong> at vi før viste, at <span class="math inline">\(f(0) = b\)</span>. Her er <span class="math inline">\(b=2\)</span>, så grafisk ses det som, at skæringspunktet mellem grafen for <span class="math inline">\(f\)</span> og <em>y</em>-aksen er <span class="math inline">\((0,2)\)</span>, som er vist med den grønne (forstørrede) prik.</p>
 <p>Ligesom i tilfældet med grafen for lineære funktioner kan vi v.h.a to punkter på grafen for en eksponentiel udvikling bestemme <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span> som formuleret i følgende sætning.</p>
 <div id="topunksformlen-for-eksponentielle-udviklinger" class="Sætning" title="Topunksformlen for eksponentielle udviklinger">
-<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 6.5: </strong>Topunksformlen for eksponentielle udviklinger</summary><div>Lad to punkter <span class="math inline">\((x_1,y_1)\)</span> og <span class="math inline">\((x_2,y_2)\)</span> være givet på grafen for <span class="math inline">\(f(x)=b \cdot a^x\)</span>, hvor <span class="math inline">\(x_1 \neq x_2\)</span>. Da er:<p></p>
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 7.5: </strong>Topunksformlen for eksponentielle udviklinger</summary><div>Lad to punkter <span class="math inline">\((x_1,y_1)\)</span> og <span class="math inline">\((x_2,y_2)\)</span> være givet på grafen for <span class="math inline">\(f(x)=b \cdot a^x\)</span>, hvor <span class="math inline">\(x_1 \neq x_2\)</span>. Da er:<p></p>
 <p><span class="math display">\[
 \begin{aligned}
 a&amp;=\sqrt[x_2-x_1]{\frac{y_2}{y_1}} \qquad \text{og} \qquad b=\frac{y_i}{a^{x_i}}, \quad i=1,2
@@ -397,7 +426,7 @@ b&amp;= \frac{y_i}{a^{x_i}}
 \end{aligned}
 \]</span></p>
 <div id="eksempel-på-brug-af-to-punktsformel" class="Eksempel" title="Eksempel på brug af to-punktsformel">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 6.6: </strong>Eksempel på brug af to-punktsformel</summary><div>På figuren ovenfor er der bl.a indtegnet punkterne (1,4) og (3,16) og vi sætter <span class="math inline">\((x_1,y_1)=(1,4)\)</span> og <span class="math inline">\((x_2,y_2)=(3,16)\)</span>.<p></p>
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 7.6: </strong>Eksempel på brug af to-punktsformel</summary><div>På figuren ovenfor er der bl.a indtegnet punkterne (1,4) og (3,16) og vi sætter <span class="math inline">\((x_1,y_1)=(1,4)\)</span> og <span class="math inline">\((x_2,y_2)=(3,16)\)</span>.<p></p>
 <p>Hvis vi bruger de to punkter i topunktsformlen skulle vi gerne få <span class="math inline">\(a=2\)</span> og <span class="math inline">\(b=2\)</span>.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -411,7 +440,7 @@ b&amp;= \frac{y_1}{a^{x_1}} =  \frac{4}{2^{1}}=2 \\
 <p>En generel egenskab ved eksponentielle voksende udviklinger er, at der findes en fast størrelse, <span class="math inline">\(T_2\)</span>, der, når den lægges til <span class="math inline">\(x\)</span>-værdien, fordobler <span class="math inline">\(y\)</span>-værdien. Ligeså findes der en fast størrelse, <span class="math inline">\(T_{\frac{1}{2}}\)</span>, hørende til aftagende eksponentielle udviklinger, der, når den lægges til <span class="math inline">\(x\)</span>-værdien, halverer <span class="math inline">\(y\)</span>-værdien.</p>
 <p>Inden vi går videre, skal vi derfor definere, hvad vi mener med en voksende og en aftagende eksponentiel udvikling.</p>
 <div id="voksende-og-aftagende-eksponentiel-udvikling" class="Definition" title="Voksende og aftagende eksponentiel udvikling">
-<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 6.7: </strong>Voksende og aftagende eksponentiel udvikling</summary><div>Lad en eksponentiel udvikling, <span class="math inline">\(f(x)=b \cdot a^x\)</span>, være givet.<p></p>
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 7.7: </strong>Voksende og aftagende eksponentiel udvikling</summary><div>Lad en eksponentiel udvikling, <span class="math inline">\(f(x)=b \cdot a^x\)</span>, være givet.<p></p>
 <p>Hvis <span class="math inline">\(a&gt;1\)</span>, d.v.s <span class="math inline">\(r\)</span> er positiv (husk <span class="math inline">\(a=1+r\)</span>), <span class="math inline">\(r&gt;0\)</span>, er funktionen <strong>voksende</strong></p>
 <p>Hvis <span class="math inline">\(0&lt;a&lt;1\)</span>, d.v.s <span class="math inline">\(r\)</span> er negativ men større end -1, <span class="math inline">\(-1&lt;r&lt;0\)</span>, er funktionen <strong>aftagende</strong></p>
 <p>For <span class="math inline">\(a=1\)</span> er den eksponentielle udvikling ikke defineret, og her er <span class="math inline">\(f(x)=b \cdot 1^x=b\)</span> og er dermed en <strong>konstant funktion</strong></p>
@@ -422,7 +451,7 @@ b&amp;= \frac{y_1}{a^{x_1}} =  \frac{4}{2^{1}}=2 \\
 <p>Er vækstraten negativ er den eksponentielle udvikling/funktion aftagende.</p>
 <p>På figuren herunder kan vi se graferne for to eksponentielle udviklinger. Den røde graf er grafen for en voksende funktion og den blå graf grafen for en aftagende funktion.</p>
 <p><strong>Bemærk</strong> at grafer ikke kan være voksende eller aftagende. Grafer er punktmængder.</p>
-<div id="95cc6593" class="cell" data-execution_count="2">
+<div id="f3bac6d6" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -432,11 +461,11 @@ b&amp;= \frac{y_1}{a^{x_1}} =  \frac{4}{2^{1}}=2 \\
 </div>
 </div>
 </section>
-<section id="fordobling--og-halveringskonstant" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="fordobling--og-halveringskonstant"><span class="header-section-number">6.2</span> Fordobling- og halveringskonstant</h2>
+<section id="fordobling--og-halveringskonstant" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="fordobling--og-halveringskonstant"><span class="header-section-number">7.2</span> Fordobling- og halveringskonstant</h2>
 <p>Fordobling- og halveringskonstanten kan nu defineres</p>
 <div id="definitionen-på-fordoblings--og-halveringskonstanten." class="Definition" title="Definitionen på fordoblings- og halveringskonstanten.">
-<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 6.8: </strong>Definitionen på fordoblings- og halveringskonstanten.</summary><div><strong>Fordoblingskonstanten</strong>, betegnet <span class="math inline">\(T_2\)</span>, for en voksende eksponentiel udvikling opfylder<p></p>
+<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 7.8: </strong>Definitionen på fordoblings- og halveringskonstanten.</summary><div><strong>Fordoblingskonstanten</strong>, betegnet <span class="math inline">\(T_2\)</span>, for en voksende eksponentiel udvikling opfylder<p></p>
 <p><span class="math display">\[
 f(x+T_2) = 2 \cdot f(x)
 \]</span></p>
@@ -476,7 +505,7 @@ y=\frac{1}{2}b \Rightarrow x=\dfrac{\log(\frac{\frac{1}{2}b}{b})}{\log(a)} = \df
 \end{aligned}
 \]</span> og kan nu formulere følgende sætning:</p>
 <div id="fordobling-og-halveringskonstanterne" class="Sætning" title="Fordobling og halveringskonstanterne">
-<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 6.9: </strong>Fordobling og halveringskonstanterne</summary><div>Fordoblings- og halveringskonstanerne <span class="math inline">\(T_2\)</span> og <span class="math inline">\(T_{\frac{1}{2}}\)</span> er givet ved:<p></p>
+<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 7.9: </strong>Fordobling og halveringskonstanterne</summary><div>Fordoblings- og halveringskonstanerne <span class="math inline">\(T_2\)</span> og <span class="math inline">\(T_{\frac{1}{2}}\)</span> er givet ved:<p></p>
 <p><span class="math display">\[
 \begin{aligned}
 T_2=\frac{\log(2)}{\log(a)} = \frac{\ln(2)}{\ln(a)} &amp;\qquad  T_{\frac{1}{2}}=\frac{\log(\frac{1}{2})}{\log(a)} = \frac{\ln(\frac{1}{2})}{\ln(a)}
@@ -499,7 +528,7 @@ b &amp;=\frac{y_0}{a^{x_0}}
 \]</span></p>
 <p>hvor <span class="math inline">\((x_0,y_0)\)</span> er det oplyste punkt.</p>
 <div id="en-eksponentiel-udvikling-med-bestemt-vækst-og-kendt-punkt" class="Eksempel" title="En eksponentiel udvikling med bestemt vækst og kendt punkt">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 6.10: </strong>En eksponentiel udvikling med bestemt vækst og kendt punkt</summary><div>En eksponentiel udvikling vokser med 11% og grafen går gennem punktet <span class="math inline">\((3,11)\)</span>. Funktionsforskriften bestemmes nu ved<p></p>
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 7.10: </strong>En eksponentiel udvikling med bestemt vækst og kendt punkt</summary><div>En eksponentiel udvikling vokser med 11% og grafen går gennem punktet <span class="math inline">\((3,11)\)</span>. Funktionsforskriften bestemmes nu ved<p></p>
 <p><span class="math display">\[
 \begin{aligned}
 a&amp;=1+\frac{p}{100} = 1+\frac{11}{100} = 1,11 \\
@@ -510,12 +539,12 @@ b&amp;=\frac{y_0}{a^{x_0}} = \frac{11}{1,11^3} = 8,04 \approx 8
 </div></details>
 </div>
 </section>
-<section id="eksponentiel-model" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="eksponentiel-model"><span class="header-section-number">6.3</span> Eksponentiel model</h2>
-<section id="fortolkning-af-model" class="level3" data-number="6.3.1">
-<h3 data-number="6.3.1" class="anchored" data-anchor-id="fortolkning-af-model"><span class="header-section-number">6.3.1</span> Fortolkning af model</h3>
+<section id="eksponentiel-model" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="eksponentiel-model"><span class="header-section-number">7.3</span> Eksponentiel model</h2>
+<section id="fortolkning-af-model" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="fortolkning-af-model"><span class="header-section-number">7.3.1</span> Fortolkning af model</h3>
 <div id="eksempel-med-lægemiddel" class="Eksempel" title="Eksempel med lægemiddel">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 6.11: </strong>Eksempel med lægemiddel</summary><div>Et husdyr får en indsprøjtning med et lægemiddel mod lungebetændelse.<p></p>
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 7.11: </strong>Eksempel med lægemiddel</summary><div>Et husdyr får en indsprøjtning med et lægemiddel mod lungebetændelse.<p></p>
 <p>Sammenhængen mellem koncentrationen af lægemidlet i dyrets blod målt i <span class="math inline">\(\mu\)</span>g/ml og antal timer efter indsprøjtningen kan beskrives ved funktionsforskriften:</p>
 <p><span class="math display">\[
 \begin{align*}
@@ -535,10 +564,10 @@ T_{\frac{1}{2}} = \frac{\log(\frac{1}{2})}{\log(a)} = \frac{\log(\frac{1}{2})}{\
 </div></details>
 </div>
 </section>
-<section id="opstilling-af-model" class="level3" data-number="6.3.2">
-<h3 data-number="6.3.2" class="anchored" data-anchor-id="opstilling-af-model"><span class="header-section-number">6.3.2</span> Opstilling af model</h3>
-<div id="Eksempel-6.12" class="Eksempel">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 6.12</strong></summary><div>Eksempel på model med kilometerpris og antal år<p></p>
+<section id="opstilling-af-model" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="opstilling-af-model"><span class="header-section-number">7.3.2</span> Opstilling af model</h3>
+<div id="Eksempel-7.12" class="Eksempel">
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 7.12</strong></summary><div>Eksempel på model med kilometerpris og antal år<p></p>
 <p>Kilometerprisen for turistkørsel er i perioden fra 1990 til 2000 i gennemsnit steget med 3% om året.</p>
 <p>I 1990 var kilometerprisen 12 kr.</p>
 <p>Opstil en model der angiver sammenhængen mellem kilometerprisen og antal år efter 1990.</p>
@@ -550,7 +579,7 @@ T_{\frac{1}{2}} = \frac{\log(\frac{1}{2})}{\log(a)} = \frac{\log(\frac{1}{2})}{\
 </div></details>
 </div>
 <div id="eksempel-med-fosforkoncentration-i-sø" class="Eksempel" title="Eksempel med fosforkoncentration i Sø">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 6.13: </strong>Eksempel med fosforkoncentration i Sø</summary><div>Fosforkoncentrationen (målt i <span class="math inline">\(\mu g\)</span> fosfor pr. liter) i Kruså Sø faldt fra 230 i 1998 til 64 i 2005.<p></p>
+<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 7.13: </strong>Eksempel med fosforkoncentration i Sø</summary><div>Fosforkoncentrationen (målt i <span class="math inline">\(\mu g\)</span> fosfor pr. liter) i Kruså Sø faldt fra 230 i 1998 til 64 i 2005.<p></p>
 <p>I en model går man ud fra, at fosforkoncentrationen som funktion af år er eksponentielt aftagende.</p>
 <p>Vi sætter fosforkoncentrationen for <span class="math inline">\(y\)</span> og vi sætter <span class="math inline">\(x\)</span> til antal år efter 1998. Vi skal bestemme <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span></p>
 <p>Vi gør, som vi gjorde med de lineære modeller, d.v.s identificerer de to punkter <span class="math inline">\((x_1,y_1)=(0,230)\)</span> og <span class="math inline">\((x_1,y_1)=(7,68)\)</span> og bruger topunktsformlen</p>
@@ -581,7 +610,7 @@ p=(a-1) \cdot 100 = (0,840-1) \cdot 100 = -16
 </div></details>
 </div>
 <div id="bestemmelse-af-a-og-b" class="Opgave" title="Bestemmelse af a og b">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.1: </strong>Bestemmelse af a og b</summary><div>Hvad er <span class="math inline">\(a\)</span>, og hvad er <span class="math inline">\(b\)</span> i følgende eksponentielle udviklinger? <span class="math display">\[
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.1: </strong>Bestemmelse af a og b</summary><div>Hvad er <span class="math inline">\(a\)</span>, og hvad er <span class="math inline">\(b\)</span> i følgende eksponentielle udviklinger? <span class="math display">\[
 \begin{aligned}
 f_1(x)&amp;=3^x  &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\underline{\hspace{1cm}} \\
 f_2(x)&amp;=2,2 \cdot 1,2^x &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\underline{\hspace{1cm}} \\
@@ -592,21 +621,21 @@ f_4(x)&amp;=0.5 \cdot 1,88^x &amp;a=\underline{\hspace{1cm}} \quad &amp;b=\under
 </div></details>
 </div>
 <div id="opgave-om-brug-af-topunktsformel" class="Opgave" title="Opgave om brug af topunktsformel">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.2: </strong>Opgave om brug af topunktsformel</summary><div>Brug punkterne (2,8) og (4,32) til at eftervise at <span class="math inline">\(a=2\)</span> og <span class="math inline">\(b=2\)</span>.<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.2: </strong>Opgave om brug af topunktsformel</summary><div>Brug punkterne (2,8) og (4,32) til at eftervise at <span class="math inline">\(a=2\)</span> og <span class="math inline">\(b=2\)</span>.<p></p>
 <p>Brug begge punkter til beregning af <span class="math inline">\(b\)</span>.</p>
 </div></details>
 </div>
 <div id="bestemmelse-af-funktionsforskrift-for-eksponentielle-udviklinger" class="Opgave" title="Bestemmelse af funktionsforskrift for eksponentielle udviklinger">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.3: </strong>Bestemmelse af funktionsforskrift for eksponentielle udviklinger</summary><div>Bestem funktionsforskriften når: <br> <strong>a)</strong> Grafen går gennem punktet (2,5) og vækstraten er 12%. <br> <strong>b)</strong> <span class="math inline">\((x_0,y_0)= (1,11)\)</span> og vækstraten er 0,04. <br> <strong>c)</strong> <span class="math inline">\((x_0,y_0)= (0,31)\)</span> og vækstraten er 0,91%. <br> <strong>d)</strong> <span class="math inline">\((x_0,y_0)= (2,500)\)</span> og fordoblingskonstanten er 15. <br> <strong>e)</strong> <span class="math inline">\((x_0,y_0)= (10,320)\)</span> og halveringskonstanten er 28,6.<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.3: </strong>Bestemmelse af funktionsforskrift for eksponentielle udviklinger</summary><div>Bestem funktionsforskriften når: <br> <strong>a)</strong> Grafen går gennem punktet (2,5) og vækstraten er 12%. <br> <strong>b)</strong> <span class="math inline">\((x_0,y_0)= (1,11)\)</span> og vækstraten er 0,04. <br> <strong>c)</strong> <span class="math inline">\((x_0,y_0)= (0,31)\)</span> og vækstraten er 0,91%. <br> <strong>d)</strong> <span class="math inline">\((x_0,y_0)= (2,500)\)</span> og fordoblingskonstanten er 15. <br> <strong>e)</strong> <span class="math inline">\((x_0,y_0)= (10,320)\)</span> og halveringskonstanten er 28,6.<p></p>
 </div></details>
 </div>
 <div id="spørgsmål" class="Opgave" title="Spørgsmål">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.4: </strong>Spørgsmål</summary><div>Hvorfor kan <span class="math inline">\(r\)</span> ikke være mindre end <span class="math inline">\(-1\)</span>?<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.4: </strong>Spørgsmål</summary><div>Hvorfor kan <span class="math inline">\(r\)</span> ikke være mindre end <span class="math inline">\(-1\)</span>?<p></p>
 <p>Hvordan ser grafen ud, hvis <span class="math inline">\(a=1\)</span>?</p>
 </div></details>
 </div>
 <div id="udvikling-i-antal-af-elever-der-har-valgt-9.-klasse-på-efterskole" class="Opgave" title="Udvikling i antal af elever, der har valgt 9. klasse på efterskole">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.5: </strong>Udvikling i antal af elever, der har valgt 9. klasse på efterskole</summary><div>Udviklingen i antallet af elever, der har valgt 9. klasse på efterskole i perioden 2000-2003, beskrives ved modellen<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.5: </strong>Udvikling i antal af elever, der har valgt 9. klasse på efterskole</summary><div>Udviklingen i antallet af elever, der har valgt 9. klasse på efterskole i perioden 2000-2003, beskrives ved modellen<p></p>
 <p><span class="math display">\[
 \begin{align*}
 f(x) = 6410 \cdot 1.06^x
@@ -618,28 +647,28 @@ f(x) = 6410 \cdot 1.06^x
 </div></details>
 </div>
 <div id="løn" class="Opgave" title="Løn">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.6: </strong>Løn</summary><div>Lønnen for en sygeplejerske er i perioden fra 1950 til 1970 i gennemsnit steget med 2.8% om året.<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.6: </strong>Løn</summary><div>Lønnen for en sygeplejerske er i perioden fra 1950 til 1970 i gennemsnit steget med 2.8% om året.<p></p>
 <p>I 1950 var lønnen 52000 kr.</p>
 <p>Opstil en model der angiver sammenhængen mellem lønnen og antal år efter 1950.</p>
 </div></details>
 </div>
 <div id="befolkningstal" class="Opgave" title="Befolkningstal">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.7: </strong>Befolkningstal</summary><div>I 1995 var Nepals befolkningstal 20.1 millioner. Det antages at befolkningstallet vokser med 2.1% om året.<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.7: </strong>Befolkningstal</summary><div>I 1995 var Nepals befolkningstal 20.1 millioner. Det antages at befolkningstallet vokser med 2.1% om året.<p></p>
 <p>Opstil en regneforskrift der angiver sammenhængen mellem befolkningstallet i Nepal og antal år efter 1995</p>
 </div></details>
 </div>
 <div id="procentvækst-når-fordoblingstiden-kendes" class="Opgave" title="Procentvækst, når fordoblingstiden kendes">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.8: </strong>Procentvækst, når fordoblingstiden kendes</summary><div>Bestem den procentvise vækst, når fordoblingstiden for en bestemt celleart i et givet vækstmiljø er 4 timer. Hvor mange celler er der efter et døgn, når man begynder med 100 celler.<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.8: </strong>Procentvækst, når fordoblingstiden kendes</summary><div>Bestem den procentvise vækst, når fordoblingstiden for en bestemt celleart i et givet vækstmiljø er 4 timer. Hvor mange celler er der efter et døgn, når man begynder med 100 celler.<p></p>
 </div></details>
 </div>
 <div id="radioaktivt-iod" class="Opgave" title="Radioaktivt Iod">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.9: </strong>Radioaktivt Iod</summary><div>Ved en atomulykke kan der eksempelvis slippe radioaktiv Iod ud i atmosfæren. Dette er farligt, fordi al iod, vi får ind i organismen, opsamles i skjoldbrudskirtlerne foran på halsen og dermed bestråler disse og halsregionen.<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.9: </strong>Radioaktivt Iod</summary><div>Ved en atomulykke kan der eksempelvis slippe radioaktiv Iod ud i atmosfæren. Dette er farligt, fordi al iod, vi får ind i organismen, opsamles i skjoldbrudskirtlerne foran på halsen og dermed bestråler disse og halsregionen.<p></p>
 <p><strong>a)</strong> Bestem først fremskrivningsfaktoren og dernæst den procentvise ændring (den er negativ), når halveringstiden for radioaktivt Iod er 8,02 døgn.</p>
 <p><strong>b)</strong> Hvis der var 100 gram radioaktivt Iod til at begynde med, hvor meget er der så tilbage efter 10 dage?</p>
 </div></details>
 </div>
 <div id="antallet-af-danskere-over-100-år" class="Opgave" title="Antallet af danskere over 100 år">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 6.10: </strong>Antallet af danskere over 100 år</summary><div>Antallet af danskere over 100 år er vokset fra 158 personer i 1980 til 628 personer i 2005.<p></p>
+<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 7.10: </strong>Antallet af danskere over 100 år</summary><div>Antallet af danskere over 100 år er vokset fra 158 personer i 1980 til 628 personer i 2005.<p></p>
 <p>Det antages, at antallet af personer over 100 år kan beskrives ved en eksponentiel model</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -835,18 +864,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -878,7 +896,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -886,7 +924,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -983,7 +1021,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -1212,12 +1249,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./procent.html" class="pagination-link" aria-label="Procentregning">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Procentregning</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Procentregning</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./logaritmer.html" class="pagination-link" aria-label="Logaritmer">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Logaritmer</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

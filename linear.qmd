@@ -42,21 +42,6 @@ En lineær funktion er givet ved: $f(x)=2x-2$. Her er $a=2$ og $b=-2$
 En lineær funktion er givet ved: $g(x)=x-1$. Her er $a=1$ og $b=-1$
 :::
 
-::: {.callout-caution icon="false" collapse="true"}
-## Opgave Lineær 4.1
-
-Hvad er $a$, og hvad er $b$ i følgende lineære funktioner?
-
-$$
-\begin{aligned}
-f_1(x)&=3x + 1  &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
-f_2(x)&=-2x  - 1 &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
-f_3(x)&=x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
-f_4(x)&=3 &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
-f_5(x)&=4-2x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} 
-\end{aligned}
-$$
-:::
 
 ## Tabel hørende til lineær funktion
 
@@ -470,3 +455,19 @@ $$
 
 Så skæringspunktet er, som grafvinduet også viser, lig $(1,4)$.
 
+::: {.Opgave}
+
+## Bestem a og b fra forskrift
+
+Hvad er $a$, og hvad er $b$ i følgende lineære funktioner?
+
+$$
+\begin{aligned}
+f_1(x)&=3x + 1  &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_2(x)&=-2x  - 1 &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_3(x)&=x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_4(x)&=3 &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} \\
+f_5(x)&=4-2x &a=\underline{\hspace{1cm}} \quad &b=\underline{\hspace{1cm}} 
+\end{aligned}
+$$
+:::

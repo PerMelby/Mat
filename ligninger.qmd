@@ -173,7 +173,7 @@ Er løsningen ikke et helt tal, er det nærmest umuligt at gætte
 alligevel.
 :::
 
-::: {.callout-caution icon="false" collapse="true"}
+::: {.Opgave}
 ## Løs følgende ligninger:
 
 $$
@@ -189,7 +189,7 @@ $$
 :::
 
 
-::: {.callout-caution icon="false" collapse="true"}
+::: {.Opgave}
 ## Løs følgende ligninger og "gør prøve":
 
 
@@ -206,7 +206,7 @@ x+24&=2x+12 & 11x-100 &= 4x-30 \\
 $$
 :::
 
-::: {.callout-caution icon="false" collapse="true"}
+::: {.Opgave}
 ## Opstil ligninger fra tekst
 
 Opstil ligninger og løs disse ud fra følgende beskrivelser: <br> 

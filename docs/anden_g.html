@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Logaritmer – Matematik stx</title>
+<title>2.g / B-niveau. – Matematik stx</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./trigonometri.html" rel="next">
-<link href="./eksponentiel.html" rel="prev">
+<link href="./andengrads.html" rel="next">
+<link href="./potensfkt.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,53 +72,24 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-.Opgave {
-  --color1: #e9ef8f;
-  --color2: #dee481;
+.Eksempel {
+  --color1: #00dc9c;
+  --color2: #189200;
 }
 .Definition {
   --color1: #ff8800;
   --color2: #ee8810;
 }
+.Opgave {
+  --color1: #e9ef8f;
+  --color2: #dee481;
+}
 .Sætning {
   --color1: #19ccf5;
   --color2: #12c0e8;
 }
-.Eksempel {
-  --color1: #00dc9c;
-  --color2: #189200;
-}
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -132,7 +103,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./logaritmer.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./anden_g.html">2.g / B-niveau.</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -230,7 +201,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./logaritmer.html" class="sidebar-item-text sidebar-link active">
+  <a href="./logaritmer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></span></a>
   </div>
 </li>
@@ -250,7 +221,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./anden_g.html" class="sidebar-item-text sidebar-link">
+            <a href="./anden_g.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">2.g / B-niveau.</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -270,23 +241,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Indholdsfortegnelse</h2>
-   
-  <ul>
-  <li><a href="#definition-på-logaritme" id="toc-definition-på-logaritme" class="nav-link active" data-scroll-target="#definition-på-logaritme"><span class="header-section-number">8.1</span> Definition på logaritme</a></li>
-  <li><a href="#regneregler-for-logaritmer" id="toc-regneregler-for-logaritmer" class="nav-link" data-scroll-target="#regneregler-for-logaritmer"><span class="header-section-number">8.2</span> Regneregler for logaritmer</a></li>
-  <li><a href="#løsning-af-eksponentielle-ligninger" id="toc-løsning-af-eksponentielle-ligninger" class="nav-link" data-scroll-target="#løsning-af-eksponentielle-ligninger"><span class="header-section-number">8.3</span> Løsning af eksponentielle ligninger</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./første_g.html">1.g / C-niveau.</a></li><li class="breadcrumb-item"><a href="./logaritmer.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Logaritmer</span></h1>
+<h1 class="title">2.g / B-niveau.</h1>
 </div>
 
 
@@ -303,226 +266,9 @@ window.Quarto = {
 </header>
 
 
-<section id="definition-på-logaritme" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="definition-på-logaritme"><span class="header-section-number">8.1</span> Definition på logaritme</h2>
-<div id="definition-på-logaritme-1" class="Definition" title="Definition på logaritme">
-<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 8.1: </strong>Definition på logaritme</summary><div>Hvis <span class="math inline">\(a&gt;0\)</span>, <span class="math inline">\(a \neq 1\)</span> og <span class="math inline">\(y&gt;0\)</span> definerer vi <span class="math inline">\(a\)</span>-talslogaritmen som værende løsningen til ligningen <span class="math display">\[
-\begin{aligned}
-a^x&amp;=y \Leftrightarrow \\ x&amp;=\log_{a}(y)
-\end{aligned}
-\]</span> <span class="math inline">\(a\)</span> er logaritmens grundtal<p></p>
-</div></details>
-</div>
-<div id="eksempel-på-logaritme" class="Eksempel" title="Eksempel på logaritme">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 8.2: </strong>Eksempel på logaritme</summary><div>Vi ser på følgende ligninger, hvor den ubekendte står som eksponent, og løser dem v.h.a definitionen. <span class="math display">\[
-\begin{aligned}
-2^x&amp;=8 \Leftrightarrow x=\log_2(8) \\
-10^x&amp;=1000 \Leftrightarrow x=\log_{10}(1000)
-\end{aligned}
-\]</span><p></p>
-</div></details>
-</div>
-<p>Det skulle gerne være klart, at <span class="math inline">\(x=3\)</span> i begge tilfælde.</p>
-<p>Vi bemærker ved indsættelse af løsningen til ligningen, at:</p>
-<p><span class="math display">\[
-\begin{aligned}
-&amp; 2^{\log_2(8)}=8 \\
-&amp; 10^{\log_{10}(1000)}=1000
-\end{aligned}
-\]</span></p>
-<p>og ifølge definitionen må der helt generelt gælde, at</p>
-<p><span class="math display">\[
-\begin{aligned}
-a^{\log_{a}(y)}=y, \quad y&gt;0
-\end{aligned}
-\]</span></p>
-<p><span class="math inline">\(a^x\)</span> og <span class="math inline">\(\log_a(x)\)</span> er altså hinandens inverse funktioner. Eller kort sagt; “de går ud med hinanden”. <strong>Log</strong>-knappen på en lommeregner (og i Ti-nSpire) er logaritmen med grundtallet 10. I dette specialtilfælde skrives <em>kun</em> <span class="math inline">\(\log\)</span>, men det er underforstået, at man mener <span class="math inline">\(\log_{10}\)</span>. Så vi vil i dette tilfælde skrive <span class="math inline">\(y=10^{\log_{10}(y)} = 10^{\log(y))}\)</span>.</p>
-</section>
-<section id="regneregler-for-logaritmer" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="regneregler-for-logaritmer"><span class="header-section-number">8.2</span> Regneregler for logaritmer</h2>
-<div id="logregneregel" class="Sætning" title="Regneregler for logaritmer">
-<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 8.3: </strong>Regneregler for logaritmer</summary><div>Hvis <span class="math inline">\(a,b &gt;0\)</span> og <span class="math inline">\(a,b \neq 1\)</span> gælder følgende regneregler:<p></p>
-<p><span class="math display">\[
-\begin{aligned}
-\log(a \cdot b) &amp;= \log(a) + \log(b) \\
-\log\left(\frac{a}{b}\right) &amp;= \log(a)-\log(b) \\
-\log(a^x) &amp;= x \cdot \log(a)
-\end{aligned}
-\]</span></p>
-</div></details>
-</div>
-<p>Regnereglerne gælder for alle grundtal (ikke alle tal, men alle grundtal!), men her er de bevist med 10 som grundtal.</p>
-<p><em>Bevis</em> <br> Vi skriver nu to positive tal, <span class="math inline">\(a\)</span> og <span class="math inline">\(b\)</span>, som <span class="math inline">\(a=10^{\log(a)}\)</span> og <span class="math inline">\(b=10^{\log(b)}\)</span> og ser på</p>
-<p><span class="math display">\[
-\begin{align}
-\log(a\cdot b) = \log(10^{\log(a)} \cdot 10^{\log(b)}) = \log(10^{\log(a)+\log(b)})= \log(a)+\log(b)
-\end{align}
-\]</span> <span class="math display">\[
-\begin{aligned}
-\log\left(\frac{a}{b}\right) =  \log\left(\frac{10^{\log(a)}}{10^{\log(b)}} \right)= \log(10^{\log(a)-\log(b)})= \log(a)-\log(b)
-\end{aligned}
-\]</span></p>
-<p><span class="math display">\[
-\begin{aligned}
-\log(a^x)=\log((10^{\log(a)})^x) = \log(10^{\log(a) \cdot x}) = x \cdot \log(a)
-\end{aligned}
-\]</span> <span class="math inline">\(\square\)</span></p>
-<div id="logaritmeligning" class="Eksempel" title="Logaritmeligning">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 8.4: </strong>Logaritmeligning</summary><div>Med regnereglerne i Sætning <a href="logaritmer.html#logregneregel">8.3</a> kan vi løse ligninger som f.eks <span class="math display">\[
-\log_2(x+3) + \log_2(2)=3
-\]</span> Først samler vi på ledende med <span class="math inline">\(\log_2()\)</span> v.h.a regnereglerne. I dette tilfælde dn første regneregel.<p></p>
-<p><span class="math display">\[
-\begin{aligned}
-\log_2(x+3) + \log_2(2)&amp;=3 \Leftrightarrow \\
-\log_2((x+3) \cdot 2)) &amp;= 3 \Leftrightarrow \\
-\log_2(2x+6) &amp;= 3
-\end{aligned}
-\]</span></p>
-<p>Nu skal vi bruge “det omvendte til logaritme”, hvilket er en potens med i dette tilfælde 2 som grundtal <span class="math display">\[
-\begin{aligned}
-\log_2(2x+6) &amp;= 3 \Leftrightarrow \\
-2x+6 &amp;= 2^3  \Leftrightarrow \\
-2x+6 &amp; = 8 \Leftrightarrow \\
-2x &amp;= 2 \Leftrightarrow \\
-x&amp;= 2/2=1
-\end{aligned}
-\]</span> Bemærk, at vi også kunne løse ligningen ved <em>lidt indsigt om logaritmer</em> og i stedet skrive</p>
-<p><span class="math display">\[
-\begin{aligned}
-\log_2(x+3) + \log_2(2)&amp;=3 \Leftrightarrow \\
-\log_2(x+3) + 1&amp;=3 \Leftrightarrow \\
-\log_2(x+3) &amp;=2 \Leftrightarrow \\
-x+ 3 &amp;= 2^2 \Leftrightarrow \\
-x&amp;= 4-3=1
-\end{aligned}
-\]</span></p>
-</div></details>
-</div>
-<div id="logaritmer-er-proportionale-med-hinanden" class="Sætning" title="Logaritmer er proportionale med hinanden">
-<p></p><details class="Sætning fbx-default closebutton" open=""><summary><strong>Sætning 8.5: </strong>Logaritmer er proportionale med hinanden</summary><div>For to vilkårlige logaritmer med grundtal <span class="math inline">\(\alpha\)</span> og <span class="math inline">\(\beta\)</span> og en vilkårlig værdi <span class="math inline">\(y&gt;0\)</span> gælder:<p></p>
-<p><span class="math display">\[
-\log_\alpha(y) \log_\beta(\alpha) = \log_\beta(y)
-\]</span></p>
-</div></details>
-</div>
-<p><em>Bevis</em> <br> Vender vi tilbage til definitionen, løser vi ligningen v.h.a af den sidste regneregel med en vilkårlig logaritme</p>
-<p><span class="math display">\[
-\begin{aligned}
-a^x&amp;=y \Leftrightarrow \log(a^x)=\log(y) \Leftrightarrow x \cdot \log(a) = \log(y) \Leftrightarrow \\
-x&amp;=\frac{\log(y)}{\log(a)}
-\end{aligned}
-\]</span></p>
-<p>Sammenligner vi med løsningen i definitionen, ser vi at</p>
-<p><span class="math display">\[
-\begin{aligned}
-x=\log_{a}(y)=\frac{\log(y)}{\log(a)}
-\end{aligned}
-\]</span></p>
-<p>Sætter vi <span class="math inline">\(a=\alpha\)</span> og <span class="math inline">\(\log() = \log_\beta()\)</span> er sætningen bevist. <span class="math inline">\(\square\)</span></p>
-<p>Denne sætning giver os friheden til at vælge den/de logaritme(r), der er nemmest for os og kun bruge den/dem fremover.</p>
-<p>Vi definerer derfor nu to specifikke logaritmer med to specifikke grundtal, jf. den generelle definition fra før.</p>
-<div id="tals-logaritme-og-naturlig-logaritme" class="Definition" title="10-tals-logaritme og Naturlig logaritme">
-<p></p><details class="Definition fbx-default closebutton" open=""><summary><strong>Definition 8.6: </strong>10-tals-logaritme og Naturlig logaritme</summary><div>Hvis <span class="math inline">\(a&gt;0\)</span>, <span class="math inline">\(a \neq 1\)</span> og <span class="math inline">\(b&gt;0\)</span> definerer vi <span class="math inline">\(10\)</span>-talslogaritmen, <span class="math inline">\(\log()\)</span> som værende løsningen til ligningen<p></p>
-<p><span class="math display">\[
-\begin{aligned}
-10^x=y \Leftrightarrow x=\log(y)
-\end{aligned}
-\]</span></p>
-<p>Ligeså definerer vi den naturlige logaritme, <span class="math inline">\(\ln()\)</span>, som værende løsningen til ligningen</p>
-<p><span class="math display">\[
-\begin{aligned}
-\textrm{e}^x=y \Leftrightarrow x=\log_\textrm{e}(y)=\ln(y)
-\end{aligned}
-\]</span></p>
-<p>hvor <span class="math inline">\(\textrm{e}=2,718281828459...\)</span> er <code>Eulers tal</code>.</p>
-</div></details>
-</div>
-<p>Det kan virke underligt at definere en naturlig logaritme med et irrationelt grundtal. Hvad er der “naturligt” ved det, kunne man med rette spørge. Umiddelbart er det også svært at se, men i forbindelse med B-niveau viser der sig nogle pæne egenskaber for netop det grundtal, ligesom det har stor anvendelse i naturvidenskab, når man kigger på alt fra cellevækst, absorption af lys i stof, til radioaktive atomer og absorption af stråling i mennesker.</p>
-</section>
-<section id="løsning-af-eksponentielle-ligninger" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="løsning-af-eksponentielle-ligninger"><span class="header-section-number">8.3</span> Løsning af eksponentielle ligninger</h2>
-<div id="eksempel-med-kapitalfremskrivning" class="Eksempel" title="Eksempel med kapitalfremskrivning">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 8.7: </strong>Eksempel med kapitalfremskrivning</summary><div>Med logaritmer kan vi nu algebratisk løse ligningen m.h.t antal terminer, <span class="math inline">\(n\)</span>.<p></p>
-<p>Vi har <span class="math inline">\(K_0=1000\)</span>, <span class="math inline">\(r=0,02\)</span> og <span class="math inline">\(K_n=1250\)</span>.</p>
-<p>Sagt med ord ønsker vi at bestemme det antal terminer, som 1000 kr. skal stå på en opsparingskonto med 4% p.a., før vi kan hæve 1250 kr.</p>
-<p><span class="math display">\[
-\begin{aligned}
-1000 \cdot 1,02^n &amp;= 1250 \Leftrightarrow \\
-1,02^n &amp;= \frac{1250}{1000} \Leftrightarrow \\
-n \cdot \log(1,02) &amp;=  \log\left(\frac{1250}{1000} \right) \Leftrightarrow \\
-n &amp;= \frac{\log\left(\frac{1250}{1000} \right)}{\log(1,02)} = 11,27.
-\end{aligned}
-\]</span></p>
-<p>Der skal altså gå mere end 11 terminer, d.v.s 12 terminer, før beløbet er over 1250 kr. på kontoen. (Her er det forkert at runde ned!)</p>
-</div></details>
-</div>
-<p>Vi kan nu forsætte eksemplet ovenfor og opstille en formel, der beregner antallet af terminer, <span class="math inline">\(n\)</span>, når renten, <span class="math inline">\(r\)</span>, begyndelseskapital, <span class="math inline">\(K_0\)</span> og slutkapital, <span class="math inline">\(K_n\)</span>, kendes.</p>
-<p><span class="math display">\[
-\begin{aligned}
-K_0 \cdot (1+r)^n &amp;= K_n \Leftrightarrow \\
-(1+r)^n &amp;= \frac{K_n}{K_0} \Leftrightarrow \\
-\log((1+r)^n) &amp;= \log\left(\frac{K_n}{K_0} \right) \\
-n \cdot \log(1+r) &amp;= \log\left(\frac{K_n}{K_0} \right) \\
-n &amp;= \frac{\log\left(\frac{K_n}{K_0} \right)}{\log(1+r)}
-\end{aligned}
-\]</span></p>
-<div id="løsning-af-eksponentiel-ligning" class="Eksempel" title="Løsning af eksponentiel ligning">
-<p></p><details class="Eksempel fbx-default closebutton" open=""><summary><strong>Eksempel 8.8: </strong>Løsning af eksponentiel ligning</summary><div>Ligeså kan vi se på den eksponentielle udvikling <span class="math inline">\(f(x)=5 \cdot 1,2^x\)</span> og undersøge, hvornår funktionsværdien er lig <span class="math inline">\(12\)</span>, d.v.s vi løser den såkaldte <em>eksponentielle ligning</em><p></p>
-<p><span class="math display">\[
-\begin{aligned}
-5 \cdot 1,2^x&amp;=12 \Leftrightarrow \\
-1,2^x &amp;= \frac{12}{5} \Leftrightarrow \\
-x \cdot \log(1,2) &amp;= \log(2,4) \Leftrightarrow \\
-x&amp;=\frac{\log(2,4)}{\log(1,2)} = 4,8
-\end{aligned}
-\]</span> Det vil sige, at vi ved indsættelse af denne <span class="math inline">\(x\)</span>-værdi får:</p>
-<p><span class="math display">\[
-5 \cdot 1,2^{4,8} = 11,9961 \approx 12
-\]</span></p>
-</div></details>
-</div>
-<p>Mere generelt kan vi se på løsninger af ligninger på formen <span class="math inline">\(b \cdot a^x=y\)</span> og følge samme fremgangsmåde <span class="math display">\[
-\begin{aligned}
-b \cdot a^x&amp;=y \Leftrightarrow \\
-a^x &amp;= \frac{y}{b} \Leftrightarrow \\
-x \cdot \log(a) &amp;= \log(\frac{y}{b}) \Leftrightarrow \\
-x&amp;=\frac{\log(\frac{y}{b})}{\log(a)}
-\end{aligned}
-\]</span></p>
-<div id="bestemmelse-af-logaritmeværdier" class="Opgave" title="Bestemmelse af logaritmeværdier">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 8.1: </strong>Bestemmelse af logaritmeværdier</summary><div>Beregn <span class="math inline">\(\log(10)\)</span>, <span class="math inline">\(\log(100)\)</span>, <span class="math inline">\(\log(1000)\)</span>, <span class="math inline">\(\log(1000000)\)</span> og <span class="math inline">\(\log(1000000000)\)</span>. <br> Beregn <span class="math inline">\(10^9\)</span>, <span class="math inline">\(10^6\)</span>, <span class="math inline">\(10^3\)</span>, <span class="math inline">\(10^2\)</span> og <span class="math inline">\(10^1\)</span>. <br> Hvordan vil du med ord formulere resultaterne?<p></p>
-</div></details>
-</div>
-<div id="opgaver-med-logaritmeligninger" class="Opgave" title="Opgaver med logaritmeligninger">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 8.2: </strong>Opgaver med logaritmeligninger</summary><div>Løs følgende ligninger v.h.a regneregler for logaritmer<p></p>
-<p><strong>a)</strong> <span class="math inline">\(\log_2(x)=5\)</span> <br> <strong>b)</strong> <span class="math inline">\(\log(2x)=2\)</span> <br> <strong>c)</strong> <span class="math inline">\(\log_8(5x)=\log_8(40)\)</span> <br> <strong>d)</strong> <span class="math inline">\(\log_3(x-2)=3\)</span> <br> <strong>e)</strong> <span class="math inline">\(\log(3x+1)=2\)</span> <br> <strong>f)</strong> <span class="math inline">\(\log_7(x+3)-\log_7(2)=2\)</span> <br> <strong>g)</strong> <span class="math inline">\(\log_4(3x-1)+\log_4(2)=3\)</span> <br> <strong>h)</strong> <span class="math inline">\(\log_9(x+1)+\log_9(3)=2\)</span></p>
-</div></details>
-</div>
-<div id="bestemmelse-af-antal-terminer" class="Opgave" title="Bestemmelse af antal terminer">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 8.3: </strong>Bestemmelse af antal terminer</summary><div>Bestem hvor mange år 1500 kr. skal stå på en konto <br> til en årlig rente på 3% for at vokse til 1800 kr.<p></p>
-</div></details>
-</div>
-<div id="løsning-af-eksponentielle-ligninger-1" class="Opgave" title="Løsning af eksponentielle ligninger">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 8.4: </strong>Løsning af eksponentielle ligninger</summary><div>Løs ligningerne:<p></p>
-<p><span class="math display">\[
-\begin{align}
-3^x &amp;= 8 \label{1}\\
-1,15^x &amp;= 2,9 \\
-0,89^x &amp;=0,5 \\
-5 \cdot 3^x &amp;=40 \\
-50 \cdot 0,72^x&amp;=32 \\
-4,28 \cdot 1,03^x&amp;=9,71
-\end{align}
-\]</span></p>
-</div></details>
-</div>
-<div id="bestemmelse-af-x-værdi-i-eksponentielle-ligninger" class="Opgave" title="Bestemmelse af x-værdi i eksponentielle ligninger">
-<p></p><details class="Opgave fbx-default closebutton"><summary><strong>Opgave 8.5: </strong>Bestemmelse af x-værdi i eksponentielle ligninger</summary><div>Bestem <span class="math inline">\(x\)</span> når:<br> <strong>a)</strong> <span class="math inline">\(f(x)=30 \cdot 1,25^x\)</span> og <span class="math inline">\(y=100\)</span> <br> <strong>b)</strong> <span class="math inline">\(f(x)=30 \cdot 1,15^x\)</span> og <span class="math inline">\(y=60\)</span> <br> <strong>c)</strong> <span class="math inline">\(f(x)=15 \cdot 1,32^x\)</span> og <span class="math inline">\(y=71\)</span> <br> <strong>d)</strong> <span class="math inline">\(f(x)=30 \cdot 0,75^x\)</span> og <span class="math inline">\(y=10\)</span> <br> <strong>e)</strong> <span class="math inline">\(f(x)=10 \cdot 0,85^x\)</span> og <span class="math inline">\(y=5\)</span> <br> <strong>f)</strong> <span class="math inline">\(f(x)=0,85^x\)</span> og <span class="math inline">\(y=0,5\)</span> <br> <strong>g)</strong> <span class="math inline">\(f(x)=1,62^x\)</span> og <span class="math inline">\(y=4\)</span><p></p>
-</div></details>
-</div>
+<p>Matematikken typisk gennemgået i det andet år af gymnasiet eller på et lignende B-niveau</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1088,13 +834,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./eksponentiel.html" class="pagination-link" aria-label="Eksponentialfunktion og eksponentiel udvikling">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Eksponentialfunktion og eksponentiel udvikling</span></span>
+      <a href="./potensfkt.html" class="pagination-link" aria-label="Potensfunktioner">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Potensfunktioner</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./trigonometri.html" class="pagination-link" aria-label="Trigonometri">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Trigonometri</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./andengrads.html" class="pagination-link" aria-label="Andengradsligningen">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Andengradsligningen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

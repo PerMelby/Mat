@@ -6,7 +6,7 @@ Antag som udgangspunkt, at sitet altid er under videre udvikling.
 
 Den er konstrueret v.h.a [Quarto-platformen](https://quarto.org){.external target="_blank"}.
 
-Undervejs har jeg brugt [følgende extension](https://github.com/ute/custom-numbered-blocks?tab=readme-ov-file){.external target="_blank"} kaldet `custom-callout` lavet af Ute Hahn fra Aarhus Universitet.
+Undervejs har jeg brugt [følgende extension](https://github.com/ute/custom-numbered-blocks?tab=readme-ov-file){.external target="_blank"} kaldet `custom-callout` lavet af **Ute Hahn** fra *Aarhus Universitet*.
 
 Matematikken er skrevet med $\LaTeX$ og graferne er lavet med pakken [matplotlib](https://matplotlib.org/){.external target="_blank"} (i sproget **Python**).
 
@@ -14,8 +14,8 @@ Undervejs er der også skrevet nogle sektioner (primært tabellerne) i rå `HTML
 
 Der arbejdes på at lave en version af sitet, der kan hentes ned som **pdf-fil**.
 
-Ligeså kan sitet ses i `darkmode`. Tryk på slideren over navigationen.
+Sitet ses i `darkmode`. Tryk på slideren over navigationen.
 
-Vejle, oktober 2024
+Version 0.1 - Maj 2025
 
 **Per Melby**<BR> *Lektor i Fysik og Matematik*
